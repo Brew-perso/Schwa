@@ -4,7 +4,7 @@ import { useTarget } from '../content/store'
 import { useSettings, instrFor } from '../data/settings'
 import { getMastery, evidenceLevel } from '../learning/mastery'
 import { nextStep, type Step } from '../learning/plan'
-import { pickBi, useT } from '../i18n'
+import { pickBi, reg, useT } from '../i18n'
 import type { Mastery } from '../data/db'
 import { TopBar } from '../components/Nav'
 import { Planet } from '../art/Planet'
@@ -16,7 +16,7 @@ import { closeMic } from '../audio/recorder'
 const STEPS: { step: Step; icon: React.ReactNode; fr: string; en: string; subFr: string; subEn: string }[] = [
   { step: 'discover', icon: <IconBook />, fr: 'Découvrir', en: 'Discover', subFr: 'Micro-leçon de 90 secondes : pourquoi, le geste, la règle', subEn: '90-second micro-lesson: why, the gesture, the rule' },
   { step: 'hear', icon: <IconEar />, fr: 'Entendre', en: 'Hear', subFr: 'Reconnaître la cible dans plusieurs voix et accents', subEn: 'Recognise the target across voices and accents' },
-  { step: 'produce', icon: <IconMic />, fr: 'Produire', en: 'Produce', subFr: 'Mots et paires « faites-vous comprendre »', subEn: 'Words and "make yourself understood" pairs' },
+  { step: 'produce', icon: <IconMic />, fr: 'Produire', en: 'Produce', subFr: 'Mots et paires « [faites-vous|fais-toi] comprendre »', subEn: 'Words and "make yourself understood" pairs' },
   { step: 'guided', icon: <IconTarget />, fr: 'En contexte', en: 'In context', subFr: 'Garder la cible quand le sens occupe l’attention', subEn: 'Keep the target while focusing on meaning' },
   { step: 'transfer', icon: <IconSpeech />, fr: 'Parler librement', en: 'Speak freely', subFr: 'Une mini-tâche de parole spontanée', subEn: 'A short spontaneous-speech task' },
 ]
@@ -76,7 +76,7 @@ export default function TargetScreen() {
             <span className="num">{i + 1}</span>
             <span>
               <span style={{ display: 'block', fontWeight: 700 }}>{lang === 'fr' ? x.fr : x.en}</span>
-              <span className="small muted">{lang === 'fr' ? x.subFr : x.subEn}</span>
+              <span className="small muted">{lang === 'fr' ? reg(x.subFr, s.register) : x.subEn}</span>
             </span>
             <IconArrowRight width={20} height={20} />
           </button>

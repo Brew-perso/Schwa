@@ -67,12 +67,12 @@ guided:
     fr: "Trois /ʊ/ : should, put, foot."
     en: "Three /ʊ/ sounds: should, put, foot."
 transfer:
-  - fr: "Parlez d'un livre ou d'un plat que vous aimez (book, good, cook, food, soup…)."
+  - fr: "[Parlez|Parle] d'un livre ou d'un plat que [vous aimez|tu aimes] (book, good, cook, food, soup…)."
     en: "Talk about a book or a dish you love (book, good, cook, food, soup…)."
     hint_words: [book, good, cook, food, soup, look]
 fiches:
   ou-tendu:
-    fr: "On a entendu « {heard} » : votre /ʊ/ était trop tendu. [Relâchez|Relâche] les lèvres et [raccourcissez|raccourcis] le son."
+    fr: "On a entendu « {heard} » : [votre|ton] /ʊ/ était trop tendu. [Relâchez|Relâche] les lèvres et [raccourcissez|raccourcis] le son."
     en: "I heard '{heard}': your /ʊ/ was too tense. Relax your lips and shorten the sound."
   ou-relache:
     fr: "On a entendu « {heard} » : pour /uː/, [arrondissez|arrondis] davantage et [avancez|avance] les lèvres."

@@ -91,12 +91,12 @@ diagnostic:
       checks: [b2-final-fall, b2-diphthongs]
   free:
     prompt:
-      fr: "Si vous le souhaitez, présentez-vous en quelques phrases : qui vous êtes, ce que vous aimez faire. (Facultatif — 30 secondes suffisent.)"
+      fr: "Si [vous le souhaitez, présentez-vous|tu le souhaites, présente-toi] en quelques phrases : qui [vous êtes, ce que vous aimez|tu es, ce que tu aimes] faire. (Facultatif — 30 secondes suffisent.)"
       en: "If you like, introduce yourself in a few sentences: who you are, what you enjoy doing. (Optional — 30 seconds is plenty.)"
 
 # Messages clés (cadre didactique §9.5)
 messages:
-  - fr: "L'objectif est d'être compris facilement, pas de perdre votre accent."
+  - fr: "L'objectif est d'être compris facilement, pas de perdre [votre|ton] accent."
     en: "The goal is to be understood easily, not to lose your accent."
   - fr: "Les francophones ont du mal à entendre l'accent des mots : ce n'est pas un manque d'oreille, c'est un effet du français, et ça s'entraîne."
     en: "French speakers find word stress hard to hear: it's not a lack of ear, it's a side effect of French — and it can be trained."
@@ -104,5 +104,5 @@ messages:
     en: "A mistake is information, not a grade."
   - fr: "Si c'est plus difficile aujourd'hui, c'est normal : c'est ce qui fixe l'acquis."
     en: "If it feels harder today, that's normal: it's what makes learning stick."
-  - fr: "Votre accent fait partie de vous. La clarté, elle, est une compétence."
+  - fr: "[Votre accent fait partie de vous|Ton accent fait partie de toi]. La clarté, elle, est une compétence."
     en: "Your accent is part of who you are. Clarity is a skill."

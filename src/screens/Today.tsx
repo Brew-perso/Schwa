@@ -97,7 +97,7 @@ export default function Today() {
           </p>
           <p className="small muted" style={{ margin: 0 }}>
             {streak > 0
-              ? (lang === 'fr' ? `${streak} semaine${streak > 1 ? 's' : ''} d’affilée à votre objectif. Les jours de repos comptent aussi.` : `${streak} week${streak > 1 ? 's' : ''} in a row at your goal. Rest days count too.`)
+              ? (lang === 'fr' ? reg(`${streak} semaine${streak > 1 ? 's' : ''} d’affilée à [votre|ton] objectif. Les jours de repos comptent aussi.`, s.register) : `${streak} week${streak > 1 ? 's' : ''} in a row at your goal. Rest days count too.`)
               : (lang === 'fr' ? reg(`Objectif : ${s.weeklyGoal} séances cette semaine, au rythme qui [vous|te] convient.`, s.register) : `Goal: ${s.weeklyGoal} sessions this week, at your own pace.`)}
           </p>
         </Paper>

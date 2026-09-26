@@ -72,7 +72,7 @@ guided:
     fr: "re-LA-tion-ship, re-MARK-a-ble."
     en: "re-LA-tion-ship, re-MARK-a-ble."
 transfer:
-  - fr: "Parlez d'un emploi, d'un stage ou d'une expérience de travail. Utilisez : employment, manager, equipment, agreement, carefully."
+  - fr: "[Parlez|Parle] d'un emploi, d'un stage ou d'une expérience de travail. [Utilisez|Utilise] : employment, manager, equipment, agreement, carefully."
     en: "Talk about a job, an internship or a work experience. Use: employment, manager, equipment, agreement, carefully."
     hint_words: [employment, manager, equipment, agreement, carefully]
 fiches:

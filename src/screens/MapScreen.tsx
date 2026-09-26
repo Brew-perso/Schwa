@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import { useCourse } from '../content/store'
 import { useSettings } from '../data/settings'
 import { allMastery, evidenceLevel } from '../learning/mastery'
-import { pickBi } from '../i18n'
+import { pickBi, reg } from '../i18n'
 import type { Mastery } from '../data/db'
 import { Planet } from '../art/Planet'
 import { StarChart } from '../art/StarChart'
@@ -30,7 +30,7 @@ export default function MapScreen() {
         <h1 style={{ position: 'relative' }}>{lang === 'fr' ? 'Carte du ciel' : 'Sky map'}</h1>
         <p className="muted" style={{ position: 'relative', maxWidth: '44ch' }}>
           {lang === 'fr'
-            ? 'Quatre orbites, du décollage (A2) à l’espace profond (C1). Chaque planète est une cible ; les étoiles ★ sont vos priorités. Tout est accessible : vous tracez votre route.'
+            ? reg('Quatre orbites, du décollage (A2) à l’espace profond (C1). Chaque planète est une cible ; les étoiles ★ sont [vos|tes] priorités. Tout est accessible : [vous tracez votre|tu traces ta] route.', s.register)
             : 'Four orbits, from lift-off (A2) to deep space (C1). Each planet is a target; stars ★ mark your priorities. Everything is open: you chart your own course.'}
         </p>
       </div>

@@ -68,7 +68,7 @@ guided:
     fr: "des-SERT puis DES-ert : seul l'accent les distingue."
     en: "des-SERT then DES-ert: only stress tells them apart."
 transfer:
-  - fr: "Présentez en une minute un sujet de votre domaine en utilisant au moins cinq mots transparents (image, focus, area, category, technique…)."
+  - fr: "[Présentez|Présente] en une minute un sujet de [votre|ton] domaine en utilisant au moins cinq mots transparents (image, focus, area, category, technique…)."
     en: "Present a topic from your field in one minute using at least five cognates (image, focus, area, category, technique…)."
     hint_words: [image, focus, area, category, technique, purpose]
 fiches:

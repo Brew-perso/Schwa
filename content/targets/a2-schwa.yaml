@@ -31,7 +31,7 @@ lesson:
     french: "Tony finit quarante sorbets."
     english: "Tony finished forty ice creams."
   - type: listen
-    fr: "Repérez le petit /ə/ dans chaque mot :"
+    fr: "[Repérez|Repère] le petit /ə/ dans chaque mot :"
     en: "Spot the tiny /ə/ in each word:"
     items: [banana, about, problem, London]
   - type: gesture
@@ -87,7 +87,7 @@ guided:
     fr: "Quatre syllabes fortes, et des syllabes faibles écrasées entre elles : TO-ny FI-nished FOR-ty ICE-creams."
     en: "Four strong syllables, with weak ones squashed between them: TO-ny FI-nished FOR-ty ICE-creams."
 transfer:
-  - fr: "Qu'avez-vous mangé aujourd'hui ? Répondez en quelques phrases (banana, potato, tomato, lemon…)."
+  - fr: "[Qu'avez-vous|Qu'as-tu] mangé aujourd'hui ? [Répondez|Réponds] en quelques phrases (banana, potato, tomato, lemon…)."
     en: "What have you eaten today? Answer in a few sentences (banana, potato, tomato, lemon…)."
     hint_words: [banana, potato, tomato, lemon, chocolate]
 fiches:

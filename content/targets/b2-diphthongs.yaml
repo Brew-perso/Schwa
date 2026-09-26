@@ -71,7 +71,7 @@ guided:
     fr: "Deux voyelles différentes, deux mots différents."
     en: "Two different vowels, two different words."
 transfer:
-  - fr: "Parlez d'un voyage en bateau, d'une balade ou d'un spectacle (boat, road, show, walk, audience…)."
+  - fr: "[Parlez|Parle] d'un voyage en bateau, d'une balade ou d'un spectacle (boat, road, show, walk, audience…)."
     en: "Talk about a boat trip, a walk or a show (boat, road, show, walk, audience…)."
     hint_words: [boat, road, show, walk, audience, home]
 fiches:
@@ -82,5 +82,5 @@ fiches:
     fr: "Dans « {word} », la voyelle a glissé comme une diphtongue. /ɔː/ est stable : lèvres arrondies du début à la fin, sans bouger."
     en: "In '{word}', the vowel glided like a diphthong. /ɔː/ is steady: lips rounded from start to finish, without moving."
   diphtongue-aplatie-ei:
-    fr: "Votre /eɪ/ sonnait comme un « é » français. [Ajoutez|Ajoute] un petit glissement vers « i » : é-i."
+    fr: "[Votre|Ton] /eɪ/ sonnait comme un « é » français. [Ajoutez|Ajoute] un petit glissement vers « i » : é-i."
     en: "Your /eɪ/ sounded like a French 'é'. Add a small glide towards 'i': é-i."

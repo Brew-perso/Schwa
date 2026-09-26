@@ -37,8 +37,8 @@ perception:
   task: focus
   items:
     - {text: "I drove to London yesterday.", focus: 0, question: {en: "Who drove to London?", fr: "Qui est allé à Londres ?"}}
-    - {text: "I drove to London yesterday.", focus: 1, question: {en: "Did you take the train?", fr: "Vous avez pris le train ?"}}
-    - {text: "I drove to London yesterday.", focus: 3, question: {en: "Did you drive to Oxford?", fr: "Vous êtes allé à Oxford ?"}}
+    - {text: "I drove to London yesterday.", focus: 1, question: {en: "Did you take the train?", fr: "[Vous avez|Tu as] pris le train ?"}}
+    - {text: "I drove to London yesterday.", focus: 3, question: {en: "Did you drive to Oxford?", fr: "[Vous êtes allé|Tu es allé] à Oxford ?"}}
     - {text: "I drove to London yesterday.", focus: 4, question: {en: "Did you drive there today?", fr: "C'était aujourd'hui ?"}}
     - {text: "Is that your pen?", focus: 2, question: {en: "Whose pen is it?", fr: "À qui est ce stylo ?"}}
     - {text: "Is that your pen?", focus: 3, question: {en: "Is it a pen or a pencil?", fr: "Stylo ou crayon ?"}}
@@ -56,7 +56,7 @@ guided:
     fr: "Sept mots, sept sens : [essayez|essaie] de déplacer le focus sur chacun d'eux."
     en: "Seven words, seven meanings: try moving the focus onto each one."
 transfer:
-  - fr: "Corrigez poliment trois fausses informations sur vous (« You're from Lyon, right? — No, I'm from MARSEILLE. »). Inventez-les si besoin."
+  - fr: "[Corrigez|Corrige] poliment trois fausses informations sur [vous|toi] (« You're from Lyon, right? — No, I'm from MARSEILLE. »). [Inventez-les|Invente-les] si besoin."
     en: "Politely correct three false statements about you ('You're from Lyon, right? — No, I'm from MARSEILLE.'). Make them up if needed."
     hint_words: [no, actually, not, from, live]
 fiches:

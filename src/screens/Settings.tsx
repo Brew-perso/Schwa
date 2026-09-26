@@ -32,7 +32,7 @@ export default function Settings() {
 
       <Paper seed="set-learning" tape={L('Mon apprentissage', 'My learning')}>
         <div className="setting">
-          <div><div className="s-title">{L('Modèle de référence', 'Reference accent')}</div><div className="s-sub">{L('Américain général (GA) ou britannique standard (SBE). Toute variété cohérente est légitime ; changer ne perd rien de vos acquis.', 'General American (GA) or Standard British (SBE). Any consistent variety is legitimate; switching keeps your progress.')}</div></div>
+          <div><div className="s-title">{L('Modèle de référence', 'Reference accent')}</div><div className="s-sub">{L('Américain général (GA) ou britannique standard (SBE). Toute variété cohérente est légitime ; changer ne perd rien de [vos|tes] acquis.', 'General American (GA) or Standard British (SBE). Any consistent variety is legitimate; switching keeps your progress.')}</div></div>
           <Choice label="variety" value={s.variety} onChange={(v) => up({ variety: v })} options={[{ v: 'GA', l: 'GA 🇺🇸' }, { v: 'SBE', l: 'SBE 🇬🇧' }]} />
         </div>
         <div className="setting">
@@ -106,7 +106,7 @@ export default function Settings() {
           <Link className="btn small" to="/welcome/calibration">{L('Lancer', 'Start')}</Link>
         </div>
         <div className="setting">
-          <div><div className="s-title">{L('Refaire le diagnostic', 'Redo the diagnostic')}</div><div className="s-sub">{L('Pour mettre à jour vos priorités (conseillé à chaque changement d’orbite).', 'To update your priorities (recommended at each new orbit).')}</div></div>
+          <div><div className="s-title">{L('Refaire le diagnostic', 'Redo the diagnostic')}</div><div className="s-sub">{L('Pour mettre à jour [vos|tes] priorités (conseillé à chaque changement d’orbite).', 'To update your priorities (recommended at each new orbit).')}</div></div>
           <Link className="btn small" to="/welcome/diagnostic">{L('Lancer', 'Start')}</Link>
         </div>
       </Paper>
@@ -121,7 +121,7 @@ export default function Settings() {
           <input type="text" style={{ maxWidth: 140 }} value={s.classCode} onChange={(e) => set({ classCode: e.target.value.toUpperCase().slice(0, 12) })} />
         </div>
         <div className="setting">
-          <div><div className="s-title">{L('Envoyer mon bilan', 'Send my report')}</div><div className="s-sub">{L('Un fichier avec vos niveaux par cible et votre régularité — sans enregistrement. Rien n’est envoyé automatiquement.', 'A file with your levels per target and regularity — no recordings. Nothing is sent automatically.')}</div></div>
+          <div><div className="s-title">{L('Envoyer mon bilan', 'Send my report')}</div><div className="s-sub">{L('Un fichier avec [vos|tes] niveaux par cible et [votre|ta] régularité — sans enregistrement. Rien n’est envoyé automatiquement.', 'A file with your levels per target and regularity — no recordings. Nothing is sent automatically.')}</div></div>
           <button className="btn small" disabled={exporting} onClick={async () => { setExporting(true); downloadJson(await buildReport(s), `schwa-bilan-${(s.name || 'anonyme').toLowerCase()}-${new Date().toISOString().slice(0, 10)}.json`); setExporting(false) }}><IconDownload width={18} height={18} /> {L('Exporter', 'Export')}</button>
         </div>
         <div className="setting">

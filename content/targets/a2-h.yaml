@@ -75,14 +75,14 @@ guided:
     en: "Warm it up or eat it? Only the /h/ tells."
   - text: "The hair is very dry."
     alt: "The air is very dry."
-    fr: "Cheveux ou air ? Faites-vous comprendre."
+    fr: "Cheveux ou air ? [Faites-vous|Fais-toi] comprendre."
     en: "Hair or air? Make yourself understood."
   - text: "Can you hold it?"
     alt: "Is it old?"
     fr: "« hold » souffle, « old » s'enchaîne."
     en: "'hold' breathes, 'old' links."
 transfer:
-  - fr: "Décrivez votre maison ou votre appartement idéal (house, home, hall, high ceilings…) en quelques phrases."
+  - fr: "[Décrivez votre maison ou votre|Décris ta maison ou ton] appartement idéal (house, home, hall, high ceilings…) en quelques phrases."
     en: "Describe your ideal house or flat in a few sentences (house, home, hall, high ceilings…)."
     hint_words: [house, home, hall, high, huge, heating]
 fiches:

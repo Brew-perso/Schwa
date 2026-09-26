@@ -96,23 +96,23 @@ export function CalibrationFlow({ onDone }: { onDone: () => void }) {
   const applied = micSettings()
   return (
     <div className="stack" style={{ ['--stack' as string]: '16px' }}>
-      <h2>{L('Faisons connaissance avec votre voix', 'Let’s get to know your voice')}</h2>
+      <h2>{L('Faisons connaissance avec [votre|ta] voix', 'Let’s get to know your voice')}</h2>
       {phase === 'mic' && (
         <Paper seed="cal-mic" tape={L('Réglage du micro', 'Microphone setup')}>
           <div className="stack" style={{ ['--stack' as string]: '12px' }}>
             <div className="row"><IconHeadphones width={34} height={34} style={{ color: 'var(--teal)', flex: 'none' }} /><p style={{ margin: 0 }}>{L('Un casque avec micro donne les meilleurs résultats. Un endroit calme aussi — mais pas besoin d’un studio.', 'A headset with a mic gives the best results. A quiet place too — no studio needed.')}</p></div>
-            <p className="small muted" style={{ margin: 0 }}>{L('Votre voix est analysée sur cet appareil et n’est envoyée nulle part.', 'Your voice is analysed on this device and sent nowhere.')}</p>
+            <p className="small muted" style={{ margin: 0 }}>{L('[Votre|Ta] voix est analysée sur cet appareil et n’est envoyée nulle part.', 'Your voice is analysed on this device and sent nowhere.')}</p>
             <button className="btn primary" onClick={askMic}><IconMic width={20} height={20} /> {L('Autoriser le micro', 'Allow the microphone')}</button>
             {err && <p style={{ color: 'var(--rework)', margin: 0 }}>{err}</p>}
           </div>
         </Paper>
       )}
       {phase === 'noise' && (
-        <Paper seed="cal-noise" tape={L('Silence, s’il vous plaît', 'Quiet, please')}>
+        <Paper seed="cal-noise" tape={L('Silence, [s’il vous plaît|s’il te plaît]', 'Quiet, please')}>
           <div className="stack center" style={{ ['--stack' as string]: '12px' }}>
             {noiseDb === null ? (
               <>
-                <p style={{ margin: 0 }}>{L('Restez silencieux deux secondes : j’écoute le bruit de la pièce.', 'Stay silent for two seconds: I’m listening to the room.')}</p>
+                <p style={{ margin: 0 }}>{L('[Restez|Reste] en silence deux secondes : j’écoute le bruit de la pièce.', 'Stay silent for two seconds: I’m listening to the room.')}</p>
                 <div className="bar" style={{ maxWidth: 300, margin: '0 auto' }}><span style={{ width: `${level * 100}%`, background: 'var(--mustard)' }} /></div>
               </>
             ) : (
@@ -128,7 +128,7 @@ export function CalibrationFlow({ onDone }: { onDone: () => void }) {
       {phase === 'phrases' && cur && (
         <Paper seed={'cal-' + k} tape={`${k + 1} / ${phrases.length}`}>
           <div className="stack center" style={{ ['--stack' as string]: '14px' }}>
-            <p className="small muted" style={{ margin: 0 }}>{L('Lisez simplement cette phrase, à votre rythme. Ce n’est pas un test.', 'Just read this sentence at your own pace. It’s not a test.')}</p>
+            <p className="small muted" style={{ margin: 0 }}>{L('[Lisez|Lis] simplement cette phrase, à [votre|ton] rythme. Ce n’est pas un test.', 'Just read this sentence at your own pace. It’s not a test.')}</p>
             <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', margin: 0 }}>{cur.text}</p>
             <AudioButton audio={cur.audio[s.variety].m[0]} />
             <RecordButton onRecorded={onRecorded} busy={busy} />
@@ -140,8 +140,8 @@ export function CalibrationFlow({ onDone }: { onDone: () => void }) {
         <Paper seed="cal-done" tone="mint">
           <div className="stack center" style={{ ['--stack' as string]: '12px' }}>
             <Swallow pose="listen" size={110} />
-            <p style={{ margin: 0, fontWeight: 700 }}>{L('Votre voix est calibrée.', 'Your voice is calibrated.')}</p>
-            <p className="small muted" style={{ margin: 0 }}>{L('La mélodie et la carte des voyelles seront affichées par rapport à votre propre voix — jamais par rapport à une hauteur « normale ».', 'Melody and vowel map will be shown relative to your own voice — never to a "normal" pitch.')}</p>
+            <p style={{ margin: 0, fontWeight: 700 }}>{L('[Votre|Ta] voix est calibrée.', 'Your voice is calibrated.')}</p>
+            <p className="small muted" style={{ margin: 0 }}>{L('La mélodie et la carte des voyelles seront affichées par rapport à [votre|ta] propre voix — jamais par rapport à une hauteur « normale ».', 'Melody and vowel map will be shown relative to your own voice — never to a "normal" pitch.')}</p>
             <button className="btn primary" onClick={onDone}>{L('Continuer', 'Continue')} <IconArrowRight width={20} height={20} /></button>
           </div>
         </Paper>

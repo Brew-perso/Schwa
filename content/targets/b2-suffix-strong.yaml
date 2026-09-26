@@ -34,7 +34,7 @@ lesson:
     q: {fr: "Où est l'accent dans « economic » ?", en: "Where is the stress in 'economic'?"}
     options: ["E-co-no-mic", "e-CO-no-mic", "e-co-NO-mic"]
     answer: 2
-    explain: {fr: "-ic place l'accent juste avant : e-co-NO-mic. Comparez : e-CO-no-my.", en: "-ic puts stress right before it: e-co-NO-mic. Compare: e-CO-no-my."}
+    explain: {fr: "-ic place l'accent juste avant : e-co-NO-mic. [Comparez|Compare] : e-CO-no-my.", en: "-ic puts stress right before it: e-co-NO-mic. Compare: e-CO-no-my."}
 perception:
   task: stress
   items:
@@ -78,7 +78,7 @@ guided:
     fr: "po-li-TI-cian (-ian) mais PO-li-tics."
     en: "po-li-TI-cian (-ian) but PO-li-tics."
 transfer:
-  - fr: "Présentez brièvement votre domaine d'études ou votre métier en utilisant au moins trois mots à suffixe fort (-ic, -ion, -ity, -ical, -ian)."
+  - fr: "[Présentez brièvement votre domaine d'études ou votre|Présente brièvement ton domaine d'études ou ton] métier en utilisant au moins trois mots à suffixe fort (-ic, -ion, -ity, -ical, -ian)."
     en: "Briefly present your field of study or your job using at least three words with strong suffixes (-ic, -ion, -ity, -ical, -ian)."
     hint_words: [education, economic, university, scientific, technician]
 fiches:

@@ -4,7 +4,7 @@ import { useCourse } from '../content/store'
 import { useSettings } from '../data/settings'
 import { db, type PortfolioEntry, type SessionLog } from '../data/db'
 import { allMastery, evidenceLevel } from '../learning/mastery'
-import { pickBi } from '../i18n'
+import { pickBi, reg } from '../i18n'
 import type { Mastery } from '../data/db'
 import { Paper } from '../components/Paper'
 import { Planet } from '../art/Planet'
@@ -67,7 +67,7 @@ export default function Journal() {
           ))}
           <p className="small muted" style={{ margin: 0 }}>
             {lang === 'fr'
-              ? 'Progression mesurée par les niveaux de preuve (N1 à N5), domaine par domaine. Ce profil est indépendant de votre niveau général d’anglais.'
+              ? reg('Progression mesurée par les niveaux de preuve (N1 à N5), domaine par domaine. Ce profil est indépendant de [votre|ton] niveau général d’anglais.', s.register)
               : 'Progress measured by evidence levels (N1 to N5), domain by domain. This profile is independent of your general English level.'}
           </p>
         </div>
@@ -76,10 +76,10 @@ export default function Journal() {
       <Paper seed="portfolio" tone="kraft" tape={lang === 'fr' ? 'Portfolio sonore' : 'Sound portfolio'} tapeTone="coral">
         {j0 && (
           <p className="small" style={{ marginTop: 0 }}>
-            {lang === 'fr' ? 'Réécoutez votre premier enregistrement et comparez avec aujourd’hui : c’est la meilleure preuve que votre voix change.' : 'Listen to your first recording and compare with today: the best proof that your voice is changing.'}
+            {lang === 'fr' ? reg('[Réécoutez votre|Réécoute ton] premier enregistrement et [comparez|compare] avec aujourd’hui : c’est la meilleure preuve que [votre|ta] voix change.', s.register) : 'Listen to your first recording and compare with today: the best proof that your voice is changing.'}
           </p>
         )}
-        {port.length === 0 && <p className="muted" style={{ margin: 0 }}>{lang === 'fr' ? 'Vos enregistrements choisis (diagnostic, parole libre) apparaîtront ici. Ils restent sur votre appareil.' : 'Your chosen recordings (diagnostic, free speech) will appear here. They stay on your device.'}</p>}
+        {port.length === 0 && <p className="muted" style={{ margin: 0 }}>{lang === 'fr' ? reg('[Vos|Tes] enregistrements choisis (diagnostic, parole libre) apparaîtront ici. Ils restent sur [votre|ton] appareil.', s.register) : 'Your chosen recordings (diagnostic, free speech) will appear here. They stay on your device.'}</p>}
         {port.map((p) => (
           <div key={p.id} className="portfolio-row">
             <button className="audio-btn" style={{ width: 42, height: 42 }} onClick={() => void play(p)} aria-label="Écouter"><IconEar /></button>

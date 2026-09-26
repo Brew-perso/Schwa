@@ -19,7 +19,7 @@ errors:
   - {target: rise, realized: fall, fiche: question-descendante, weight: 0.4}
 lesson:
   - type: text
-    fr: "Affirmation, question ouverte (wh-), ordre : la voix descend sur le dernier mot fort. Question fermée (yes/no) : elle monte. C'est ce contraste qui dit à votre interlocuteur si vous affirmez ou si vous demandez."
+    fr: "Affirmation, question ouverte (wh-), ordre : la voix descend sur le dernier mot fort. Question fermée (yes/no) : elle monte. C'est ce contraste qui dit à [votre|ton] interlocuteur si [vous affirmez ou si vous demandez|tu affirmes ou si tu demandes]."
     en: "Statement, wh- question, command: the voice falls on the last key word. Yes/no question: it rises. This contrast tells your listener whether you're stating or asking."
   - type: contrast
     fr: "Écoutez la mélodie française, qui monte en fin de groupe, puis la mélodie anglaise, qui descend."
@@ -31,7 +31,7 @@ lesson:
     fr: "[Dessinez|Dessine] la courbe avec la main pendant que [vous parlez|tu parles] : la main plonge sur le dernier mot fort. [Imaginez|Imagine] que [vous posez|tu poses] un objet sur une table."
     en: "Draw the curve with your hand while you speak: your hand dives on the last key word. Imagine putting an object down on a table."
   - type: rule
-    fr: "Pas de valeurs en hertz ici : seule la forme compte. Votre courbe est comparée à celle du modèle, après normalisation sur votre propre voix."
+    fr: "Pas de valeurs en hertz ici : seule la forme compte. [Votre|Ta] courbe est comparée à celle du modèle, après normalisation sur [votre|ta] propre voix."
     en: "No hertz values here: only the shape matters. Your curve is compared with the model's, normalised to your own voice."
   - type: quiz
     q: {fr: "« Where do you live? » se termine…", en: "'Where do you live?' ends…"}
@@ -68,12 +68,12 @@ guided:
     fr: "Choix fermé : montée sur « tea », descente sur « coffee »."
     en: "Closed choice: rise on 'tea', fall on 'coffee'."
 transfer:
-  - fr: "Présentez-vous en quatre affirmations (nom, ville, études ou travail, loisir). Veillez à descendre à la fin de chacune."
+  - fr: "[Présentez-vous|Présente-toi] en quatre affirmations (nom, ville, études ou travail, loisir). [Veillez|Veille] à descendre à la fin de chacune."
     en: "Introduce yourself in four statements (name, city, studies or job, hobby). Make sure you fall at the end of each one."
     hint_words: [name, live, work, study, like]
 fiches:
   montee-finale:
-    fr: "Votre voix est montée à la fin, ce qui peut sonner comme une question ou une hésitation. Sur « {nucleus} », [faites|fais] plonger la voix, comme pour poser un objet."
+    fr: "[Votre|Ta] voix est montée à la fin, ce qui peut sonner comme une question ou une hésitation. Sur « {nucleus} », [faites|fais] plonger la voix, comme pour poser un objet."
     en: "Your voice rose at the end, which can sound like a question or hesitation. On '{nucleus}', let your voice dive, as if putting something down."
   melodie-plate:
     fr: "La mélodie est restée plate à la fin. [Osez|Ose] un vrai mouvement descendant sur le dernier mot fort."

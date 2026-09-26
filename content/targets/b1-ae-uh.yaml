@@ -75,10 +75,10 @@ guided:
     en: "/æ/ then /ʌ/: two words, two mouth shapes."
   - text: "Did you bring the cap?"
     alt: "Did you bring the cup?"
-    fr: "Casquette ou tasse ? Faites-vous comprendre."
+    fr: "Casquette ou tasse ? [Faites-vous|Fais-toi] comprendre."
     en: "Cap or cup? Make yourself understood."
 transfer:
-  - fr: "Racontez un moment amusant (fun, funny, lucky, much, love…) en quelques phrases."
+  - fr: "[Racontez|Raconte] un moment amusant (fun, funny, lucky, much, love…) en quelques phrases."
     en: "Tell us about a fun moment (fun, funny, lucky, much, love…) in a few sentences."
     hint_words: [fun, funny, lucky, much, love, cousin]
 fiches:
@@ -95,5 +95,5 @@ fiches:
     fr: "On a entendu « {heard} ». Pour /æ/, [laissez|laisse] vraiment tomber la mâchoire, lèvres étirées."
     en: "I heard '{heard}'. For /æ/, really drop your jaw, with lips spread."
   ae-vers-e:
-    fr: "Votre /æ/ ressemblait à un « è ». [Ouvrez|Ouvre] davantage : la mâchoire descend nettement."
+    fr: "[Votre|Ton] /æ/ ressemblait à un « è ». [Ouvrez|Ouvre] davantage : la mâchoire descend nettement."
     en: "Your /æ/ sounded like 'è'. Open wider: your jaw clearly drops."

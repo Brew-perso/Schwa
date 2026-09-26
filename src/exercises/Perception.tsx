@@ -187,7 +187,7 @@ export function PerceptionItemView({ item, target, onAnswer, onNext }: {
             style={answered && x === item ? { borderColor: 'var(--clear)', background: 'var(--clear-bg)' } : answered && i === picked ? { borderColor: 'var(--rework)', background: 'var(--rework-bg)' } : undefined}
             onClick={() => finish(x === item, i)}>
             <span className="choice-title">{x.question ? pickBi(x.question, 'en', s.register) : ''}</span>
-            {lang === 'fr' && x.question && <span className="choice-sub">{x.question.fr}</span>}
+            {lang === 'fr' && x.question && <span className="choice-sub">{reg(x.question.fr, s.register)}</span>}
           </button>
         ))}
       </div>

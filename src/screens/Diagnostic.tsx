@@ -46,8 +46,8 @@ export function DiagnosticFlow({ onDone }: { onDone: () => void }) {
       {phase === 'intro' && (
         <Paper seed="diag-intro" tone="kraft" tape={L('Brise-glace', 'Ice-breaker')}>
           <div className="stack" style={{ ['--stack' as string]: '12px' }}>
-            <h2 style={{ margin: 0 }}>{L('Quelques minutes pour régler votre parcours', 'A few minutes to set up your course')}</h2>
-            <p style={{ margin: 0 }}>{L('Vous allez écouter quelques mots, repérer des syllabes fortes, lire cinq phrases, puis (si vous le souhaitez) parler librement 30 secondes. Ce n’est pas une évaluation : cela sert seulement à choisir par où commencer. Vos priorités seront réajustées en continu.', 'You’ll listen to a few words, spot strong syllables, read five sentences, then (if you wish) speak freely for 30 seconds. It is not an assessment: it only helps choose where to start. Your priorities will keep adjusting.')}</p>
+            <h2 style={{ margin: 0 }}>{L('Quelques minutes pour régler [votre|ton] parcours', 'A few minutes to set up your course')}</h2>
+            <p style={{ margin: 0 }}>{L('[Vous allez|Tu vas] écouter quelques mots, repérer des syllabes fortes, lire cinq phrases, puis (si [vous le souhaitez|tu le souhaites]) parler librement 30 secondes. Ce n’est pas une évaluation : cela sert seulement à choisir par où commencer. [Vos|Tes] priorités seront réajustées en continu.', 'You’ll listen to a few words, spot strong syllables, read five sentences, then (if you wish) speak freely for 30 seconds. It is not an assessment: it only helps choose where to start. Your priorities will keep adjusting.')}</p>
             <button className="btn primary" onClick={() => { void engine.init().catch(() => {}); setPhase('perception') }}>{L('C’est parti', 'Let’s go')} <IconArrowRight width={20} height={20} /></button>
           </div>
         </Paper>
@@ -59,7 +59,7 @@ export function DiagnosticFlow({ onDone }: { onDone: () => void }) {
         return (
           <Paper seed={'dp' + k} tape={`${L('Écouter', 'Listen')} · ${k + 1}/${d.perception.length}`}>
             <div className="stack center" style={{ ['--stack' as string]: '14px' }}>
-              <p className="label" style={{ margin: 0 }}>{L('Quel mot entendez-vous ?', 'Which word do you hear?')}</p>
+              <p className="label" style={{ margin: 0 }}>{L('Quel mot [entendez-vous|entends-tu] ?', 'Which word do you hear?')}</p>
               <button className="audio-btn" style={{ width: 76, height: 76, margin: '0 auto' }} onClick={() => void playKey(au.f)} aria-label="Écouter"><IconPlay /></button>
               <div className="tiles">
                 {it.options.map((o, i) => (
@@ -112,7 +112,7 @@ export function DiagnosticFlow({ onDone }: { onDone: () => void }) {
         return (
           <Paper seed={'dr' + k} tape={`${L('Lire', 'Read')} · ${k + 1}/${d.reading.length}`}>
             <div className="stack center" style={{ ['--stack' as string]: '14px' }}>
-              <p className="small muted" style={{ margin: 0 }}>{L('Lisez la phrase à voix haute, naturellement. Vous pouvez écouter le modèle après.', 'Read the sentence aloud, naturally. You can listen to the model afterwards.')}</p>
+              <p className="small muted" style={{ margin: 0 }}>{L('[Lisez|Lis] la phrase à voix haute, naturellement. [Vous pouvez|Tu peux] écouter le modèle après.', 'Read the sentence aloud, naturally. You can listen to the model afterwards.')}</p>
               <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', margin: 0 }}>{it.text}</p>
               <RecordButton key={k} onRecorded={onRec} busy={busy} />
               <AudioButton audio={it.audio[v].m[0]} size="sm" label={L('Écouter le modèle', 'Listen to the model')} />
@@ -135,7 +135,7 @@ export function DiagnosticFlow({ onDone }: { onDone: () => void }) {
         </Paper>
       )}
       {phase === 'result' && result && (
-        <Paper seed="dres" tone="card" tape={L('Votre plan de vol', 'Your flight plan')} tapeTone="teal">
+        <Paper seed="dres" tone="card" tape={L('[Votre|Ton] plan de vol', 'Your flight plan')} tapeTone="teal">
           <div className="stack" style={{ ['--stack' as string]: '14px' }}>
             <div className="row"><Swallow pose="fly" size={140} /><p style={{ margin: 0, fontWeight: 600 }}>{L('Merci ! Voici par où nous allons commencer — les cibles qui comptent le plus pour être compris facilement.', 'Thank you! Here is where we’ll start — the targets that matter most for being understood easily.')}</p></div>
             <div className="stack" style={{ ['--stack' as string]: '10px' }}>
@@ -149,7 +149,7 @@ export function DiagnosticFlow({ onDone }: { onDone: () => void }) {
                 )
               })}
             </div>
-            <p className="small muted" style={{ margin: 0 }}>{L('Ce plan n’est jamais figé : si vous progressez plus vite, il s’ajuste tout seul. Et toute la carte du ciel reste ouverte.', 'This plan is never fixed: if you progress faster, it adjusts. And the whole sky map stays open.')}</p>
+            <p className="small muted" style={{ margin: 0 }}>{L('Ce plan n’est jamais figé : si [vous progressez|tu progresses] plus vite, il s’ajuste tout seul. Et toute la carte du ciel reste ouverte.', 'This plan is never fixed: if you progress faster, it adjusts. And the whole sky map stays open.')}</p>
             <button className="btn primary big" onClick={onDone}>{L('C’est parti', 'Let’s go')} <IconArrowRight width={22} height={22} /></button>
           </div>
         </Paper>

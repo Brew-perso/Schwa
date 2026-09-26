@@ -64,13 +64,13 @@ production:
   - {text: "Write a note, not a letter."}
 guided:
   - text: "We made a plan for the plane."
-    fr: "/eɪ/, /æ/, /eɪ/ : l'orthographe vous guide."
+    fr: "/eɪ/, /æ/, /eɪ/ : l'orthographe [vous|te] guide."
     en: "/eɪ/, /æ/, /eɪ/: the spelling guides you."
   - text: "Did the kite bite the kit?"
     fr: "Une phrase absurde pour alterner /aɪ/ et /ɪ/."
     en: "A silly sentence to alternate /aɪ/ and /ɪ/."
 transfer:
-  - fr: "Lisez à voix haute ces mots que vous n'avez peut-être jamais vus, en appliquant la règle : « gibe, glib, slate, slat, mope, mop ». Puis faites une phrase avec l'un d'eux."
+  - fr: "[Lisez|Lis] à voix haute ces mots que [vous n'avez|tu n'as] peut-être jamais vus, en appliquant la règle : « gibe, glib, slate, slat, mope, mop ». Puis [faites|fais] une phrase avec l'un d'eux."
     en: "Read aloud these words you may never have seen, applying the rule: 'gibe, glib, slate, slat, mope, mop'. Then make a sentence with one of them."
     hint_words: [slate, slat, mope, mop]
 fiches:

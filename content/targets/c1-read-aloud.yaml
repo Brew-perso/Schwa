@@ -41,7 +41,7 @@ guided:
     fr: "Ouverture d'un discours : groupes de sens nets, descentes finales assurées."
     en: "Opening a speech: clear thought groups, confident final falls."
 transfer:
-  - fr: "Choisissez un paragraphe d'un article ou d'un livre que vous étudiez. Préparez-le (découpage, mots forts), puis enregistrez-le. Comparez avec votre première lecture à froid."
+  - fr: "[Choisissez|Choisis] un paragraphe d'un article ou d'un livre que [vous étudiez|tu étudies]. [Préparez-le|Prépare-le] (découpage, mots forts), puis [enregistrez-le|enregistre-le]. [Comparez avec votre|Compare avec ta] première lecture à froid."
     en: "Choose a paragraph from an article or book you're studying. Prepare it (chunking, key words), then record it. Compare with your first cold reading."
     hint_words: []
 fiches:
@@ -49,5 +49,5 @@ fiches:
     fr: "Un mot long a été accentué à la française : « {word} » → « {stressed} ». [Vérifiez-le|Vérifie-le] avant la prochaine lecture."
     en: "A long word was stressed the French way: '{word}' → '{stressed}'. Check it before your next reading."
   lecture-melodie:
-    fr: "Votre voix est montée en fin de phrase affirmative. [Posez|Pose] la voix sur le dernier mot fort."
+    fr: "[Votre|Ta] voix est montée en fin de phrase affirmative. [Posez|Pose] la voix sur le dernier mot fort."
     en: "Your voice rose at the end of a statement. Let your voice settle on the last key word."

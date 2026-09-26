@@ -70,7 +70,7 @@ guided:
     fr: "ex-PORT puis EX-port."
     en: "ex-PORT then EX-port."
 transfer:
-  - fr: "Décrivez un cadeau que vous avez offert ou reçu, et comment vous l'avez présenté (present, record, object, increase…)."
+  - fr: "[Décrivez|Décris] un cadeau que [vous avez|tu as] offert ou reçu, et comment [vous l'avez|tu l'as] présenté (present, record, object, increase…)."
     en: "Describe a present you gave or received, and how you presented it (present, record, object, increase…)."
     hint_words: [present, record, object, increase]
 fiches:

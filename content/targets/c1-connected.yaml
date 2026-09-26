@@ -54,10 +54,10 @@ guided:
     fr: "Élision (las night), assimilation (hambag)."
     en: "Elision (las' night), assimilation (hambag)."
 transfer:
-  - fr: "Racontez votre soirée d'hier comme à un ami, en débit naturel (last night, did you, want to, going to…)."
+  - fr: "[Racontez votre|Raconte ta] soirée d'hier comme à un ami, en débit naturel (last night, did you, want to, going to…)."
     en: "Tell a friend about last night at natural speed (last night, did you, want to, going to…)."
     hint_words: [last night, going to, want to, did you]
 fiches:
   sur-articule:
-    fr: "Votre articulation était très complète : c'est parfaitement clair. Pour gagner en fluidité, [essayez|essaie] de laisser « {link} » se fondre."
+    fr: "[Votre|Ton] articulation était très complète : c'est parfaitement clair. Pour gagner en fluidité, [essayez|essaie] de laisser « {link} » se fondre."
     en: "Your articulation was very full: perfectly clear. To sound more fluent, try letting '{link}' blend."

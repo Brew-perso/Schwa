@@ -7,7 +7,7 @@ planet: {color: indigo, motif: dots}
 title: {fr: "Les formes faibles", en: "Weak forms"}
 tagline: {fr: "to, for, of, can, and… les petits mots qui se font tout petits", en: "to, for, of, can, and… small words that stay small"}
 why:
-  fr: "Les mots-outils (to, of, and, can, was…) ont une forme « forte » et une forme « faible ». Dans la phrase, on utilise presque toujours la forme faible. Les reconnaître change tout pour comprendre l'anglais parlé ; les produire rend votre rythme naturel et authentique."
+  fr: "Les mots-outils (to, of, and, can, was…) ont une forme « forte » et une forme « faible ». Dans la phrase, on utilise presque toujours la forme faible. Les reconnaître change tout pour comprendre l'anglais parlé ; les produire rend [votre|ton] rythme naturel et authentique."
   en: "Function words (to, of, and, can, was…) have a 'strong' and a 'weak' form. In a sentence, the weak form is used almost all the time. Recognising them transforms your listening; producing them makes your rhythm natural and authentic."
 criterion:
   fr: "Dans « I want to go to the shop », mes « to » sont réduits à /tə/, et je reconnais les formes faibles à l'oreille."
@@ -71,7 +71,7 @@ guided:
     fr: "Le « to » final garde sa forme forte /tuː/ ; le « are » est faible."
     en: "The final 'to' keeps its strong form /tuː/; 'are' is weak."
 transfer:
-  - fr: "Commandez un repas au restaurant (a cup of…, a glass of…, and…, for…). Deux ou trois phrases suffisent."
+  - fr: "[Commandez|Commande] un repas au restaurant (a cup of…, a glass of…, and…, for…). Deux ou trois phrases suffisent."
     en: "Order a meal at a restaurant (a cup of…, a glass of…, and…, for…). Two or three sentences are enough."
     hint_words: [cup, glass, and, for, some]
 fiches:

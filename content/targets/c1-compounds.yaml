@@ -60,7 +60,7 @@ guided:
     fr: "BLACKbird (merle) puis black BIRD (n'importe quel oiseau noir)."
     en: "BLACKbird (the species) then black BIRD (any black bird)."
 transfer:
-  - fr: "Décrivez votre quartier : commerces, lieux, équipements (bus stop, bookshop, car park, swimming pool, playground…)."
+  - fr: "[Décrivez votre|Décris ton] quartier : commerces, lieux, équipements (bus stop, bookshop, car park, swimming pool, playground…)."
     en: "Describe your neighbourhood: shops, places, facilities (bus stop, bookshop, car park, swimming pool, playground…)."
     hint_words: [bus stop, bookshop, car park, swimming pool, playground]
 fiches:

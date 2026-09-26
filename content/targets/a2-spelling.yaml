@@ -78,7 +78,7 @@ guided:
     fr: "« double E » pour deux lettres identiques."
     en: "'double E' for two identical letters."
 transfer:
-  - fr: "Au téléphone, un hôtel vous demande votre nom de famille et votre adresse e-mail. Épelez-les (vous pouvez utiliser des informations fictives)."
+  - fr: "Au téléphone, un hôtel [vous demande votre nom de famille et votre|te demande ton nom de famille et ton] adresse e-mail. [Épelez-les (vous pouvez|Épelle-les (tu peux] utiliser des informations fictives)."
     en: "On the phone, a hotel asks for your surname and email address. Spell them out (you can use made-up details)."
     hint_words: []
 fiches:

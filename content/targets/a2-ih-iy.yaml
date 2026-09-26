@@ -71,7 +71,7 @@ production:
 guided:
   - text: "Do you live here?"
     alt: "Do you leave here?"
-    fr: "Habiter ou partir ? Le sens dépend de votre voyelle."
+    fr: "Habiter ou partir ? Le sens dépend de [votre|ta] voyelle."
     en: "Live or leave? The meaning depends on your vowel."
   - text: "Look at that ship!"
     alt: "Look at that sheep!"
@@ -81,12 +81,12 @@ guided:
     fr: "Les deux sons dans la même phrase : /iː/, /ɪ/, /iː/."
     en: "Both sounds in one sentence: /iː/, /ɪ/, /iː/."
 transfer:
-  - fr: "Où habitez-vous et qu'aimez-vous y faire ? Employez « live », « city », « keep », « see », « visit »."
+  - fr: "Où [habitez-vous|habites-tu] et [qu'aimez-vous|qu'aimes-tu] y faire ? [Employez|Emploie] « live », « city », « keep », « see », « visit »."
     en: "Where do you live and what do you like doing there? Use 'live', 'city', 'keep', 'see', 'visit'."
     hint_words: [live, city, keep, see, visit, beach]
 fiches:
   i-tendu:
-    fr: "On a entendu « {heard} » : votre /ɪ/ était trop tendu, comme un « i » français. [Relâchez|Relâche] la langue et [ouvrez|ouvre] très légèrement la bouche, vers le « é »."
+    fr: "On a entendu « {heard} » : [votre|ton] /ɪ/ était trop tendu, comme un « i » français. [Relâchez|Relâche] la langue et [ouvrez|ouvre] très légèrement la bouche, vers le « é »."
     en: "I heard '{heard}': your /ɪ/ was too tense, like a French 'i'. Relax your tongue and open your mouth very slightly, towards 'é'."
   i-relache:
     fr: "On a entendu « {heard} » : [étirez|étire] les lèvres comme pour sourire et [tendez|tends] la langue vers le haut pour /iː/."

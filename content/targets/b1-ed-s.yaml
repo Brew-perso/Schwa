@@ -84,7 +84,7 @@ guided:
     fr: "/s/, /s/, /z/, /ɪz/."
     en: "/s/, /s/, /z/, /ɪz/."
 transfer:
-  - fr: "Racontez votre dernier week-end au passé (visited, watched, played, cooked, stayed…)."
+  - fr: "[Racontez votre|Raconte ton] dernier week-end au passé (visited, watched, played, cooked, stayed…)."
     en: "Tell us about your last weekend in the past tense (visited, watched, played, cooked, stayed…)."
     hint_words: [visited, watched, played, cooked, stayed, walked]
 fiches:

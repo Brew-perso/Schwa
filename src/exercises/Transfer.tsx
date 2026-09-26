@@ -105,7 +105,7 @@ export function TransferTask({ target, onDone }: { target: Target; onDone: (vali
             ))}
           </div>
           <p className="small muted" style={{ margin: 0 }}>
-            {lang === 'fr' ? 'Votre auto-évaluation valide ce palier à titre provisoire ; un enseignant ou un pair peut le confirmer à partir du fichier audio.' : 'Your self-assessment validates this level provisionally; a teacher or peer can confirm it from the audio file.'}
+            {lang === 'fr' ? reg('[Votre|Ton] auto-évaluation valide ce palier à titre provisoire ; un·e enseignant·e ou un pair peut le confirmer à partir du fichier audio.', s.register) : 'Your self-assessment validates this level provisionally; a teacher or peer can confirm it from the audio file.'}
           </p>
           <div className="center"><button className="btn primary" disabled={self === null} onClick={() => onDone(self === 2 ? 'self' : null)}>{t('continue')} <IconArrowRight width={20} height={20} /></button></div>
         </div>

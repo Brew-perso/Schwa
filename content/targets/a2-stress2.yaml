@@ -7,7 +7,7 @@ planet: {color: coral, motif: rings}
 title: {fr: "La syllabe forte", en: "The strong syllable"}
 tagline: {fr: "Mots de deux syllabes : DA-da ou da-DA ?", en: "Two-syllable words: DA-da or da-DA?"}
 why:
-  fr: "L'accent de mot est le premier facteur de compréhension de votre anglais : un mot mal accentué peut devenir méconnaissable. Le français accentue la fin des groupes ; l'anglais choisit une syllabe par mot, et elle ne bouge pas."
+  fr: "L'accent de mot est le premier facteur de compréhension de [votre|ton] anglais : un mot mal accentué peut devenir méconnaissable. Le français accentue la fin des groupes ; l'anglais choisit une syllabe par mot, et elle ne bouge pas."
   en: "Word stress is the number-one factor in being understood: a wrongly stressed word can become unrecognisable. French stresses the end of phrases; English picks one syllable per word, and it doesn't move."
 criterion:
   fr: "Je repère la syllabe forte à l'oreille et je la rends plus longue, plus claire et plus mélodique que l'autre."
@@ -18,7 +18,7 @@ errors:
   - {target: stress, realized: flat, fiche: accent-plat, weight: 0.8}
 lesson:
   - type: text
-    fr: "Dans un mot anglais, une syllabe « gagne » : elle est plus longue, plus claire, et la voix y change de hauteur. Les autres rapetissent. C'est ce relief que l'oreille de votre interlocuteur utilise pour reconnaître le mot."
+    fr: "Dans un mot anglais, une syllabe « gagne » : elle est plus longue, plus claire, et la voix y change de hauteur. Les autres rapetissent. C'est ce relief que l'oreille de [votre|ton] interlocuteur utilise pour reconnaître le mot."
     en: "In an English word, one syllable 'wins': it's longer, clearer, and the voice changes pitch on it. The others shrink. Your listener uses this shape to recognise the word."
   - type: contrast
     fr: "En français, l'accent tombe sur la fin : « un pro-blème ». En anglais : PRO-blem."
@@ -33,7 +33,7 @@ lesson:
     en: "Basic rule: most two-syllable nouns and adjectives are stressed on the 1st syllable (TA-ble, HAP-py). Many verbs, and words starting with a prefix like be-, for-, de-, re-, a-, are stressed on the 2nd (be-GIN, for-GET, de-CIDE)."
   - type: gesture
     art: bubbles
-    fr: "[Frappez|Frappe] dans vos mains sur la syllabe forte, [effleurez|effleure] sur la faible : CLAP-tap pour « happy », tap-CLAP pour « hotel »."
+    fr: "[Frappez|Frappe] dans [vos|tes] mains sur la syllabe forte, [effleurez|effleure] sur la faible : CLAP-tap pour « happy », tap-CLAP pour « hotel »."
     en: "Clap on the strong syllable, tap lightly on the weak one: CLAP-tap for 'happy', tap-CLAP for 'hotel'."
   - type: quiz
     q: {fr: "« career » (carrière) se prononce…", en: "'career' is pronounced…"}
@@ -98,7 +98,7 @@ guided:
     fr: "for-GET, CON-cept."
     en: "for-GET, CON-cept."
 transfer:
-  - fr: "Décrivez votre lieu de vacances idéal en quelques phrases. Essayez de placer : hotel, garden, water, relax, enjoy."
+  - fr: "[Décrivez votre|Décris ton] lieu de vacances idéal en quelques phrases. [Essayez|Essaie] de placer : hotel, garden, water, relax, enjoy."
     en: "Describe your ideal holiday spot in a few sentences. Try to use: hotel, garden, water, relax, enjoy."
     hint_words: [hotel, garden, water, relax, enjoy]
 fiches:

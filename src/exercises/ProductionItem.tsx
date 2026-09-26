@@ -255,7 +255,7 @@ function Feedback({ result, item, target, prep, lang, register, units, variety, 
       {predictedMatch !== null && (
         <p className="small muted" style={{ margin: 0 }}>
           {lang === 'fr'
-            ? (predictedMatch ? reg('Votre prédiction était juste : [vous entendez|tu entends] bien votre propre voix.', register) : reg('Votre ressenti et l’outil divergent : [réécoutez|réécoute] le modèle puis [vous-même|toi-même].', register))
+            ? (predictedMatch ? reg('[Votre|Ta] prédiction était juste : [vous entendez|tu entends] bien [votre|ta] propre voix.', register) : reg('[Votre|Ton] ressenti et l’outil divergent : [réécoutez|réécoute] le modèle puis [vous-même|toi-même].', register))
             : (predictedMatch ? 'Your prediction was right: you hear your own voice well.' : 'Your impression and the tool differ: listen to the model, then yourself.')}
         </p>
       )}
@@ -267,7 +267,7 @@ function Feedback({ result, item, target, prep, lang, register, units, variety, 
               const syl = result.syllables[w]
               return ref.words[w] && ref.words[w].syl.length > 1 ? (
                 <div key={w}>
-                  <div className="label" style={{ marginBottom: 6 }}>{ref.words[w].w} — {lang === 'fr' ? 'modèle (haut), vous (bas)' : 'model (top), you (bottom)'}</div>
+                  <div className="label" style={{ marginBottom: 6 }}>{ref.words[w].w} — {lang === 'fr' ? reg('modèle (haut), [vous|toi] (bas)', register) : 'model (top), you (bottom)'}</div>
                   <Bubbles word={ref.words[w]} units={units} stress={st} learner={syl?.prom} perceived={syl?.perceived} />
                 </div>
               ) : null
@@ -291,7 +291,7 @@ function Feedback({ result, item, target, prep, lang, register, units, variety, 
             )}
             <p className="small muted" style={{ margin: 0 }}>
               {lang === 'fr'
-                ? 'Indice calculé sur votre appareil par un modèle de reconnaissance ; c’est une aide, pas un jugement. Faites confiance à votre oreille autant qu’à l’outil.'
+                ? reg('Indice calculé sur [votre|ton] appareil par un modèle de reconnaissance ; c’est une aide, pas un jugement. [Faites confiance à votre|Fais confiance à ton] oreille autant qu’à l’outil.', register)
                 : 'This hint is computed on your device by a recognition model; it is a help, not a judgement. Trust your ear as much as the tool.'}
             </p>
           </div>

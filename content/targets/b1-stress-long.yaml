@@ -87,7 +87,7 @@ guided:
     fr: "spe-CI-fic, CHA-rac-ter : deux mots souvent mal accentués."
     en: "spe-CI-fic, CHA-rac-ter: two words often mis-stressed."
 transfer:
-  - fr: "Décrivez un musée, un film ou un livre qui vous a marqué. Essayez d'utiliser : museum, character, interesting, photograph, development."
+  - fr: "[Décrivez|Décris] un musée, un film ou un livre qui [vous|t'] a marqué. [Essayez|Essaie] d'utiliser : museum, character, interesting, photograph, development."
     en: "Describe a museum, film or book that made an impression on you. Try to use: museum, character, interesting, photograph, development."
     hint_words: [museum, character, interesting, photograph, development]
 fiches:

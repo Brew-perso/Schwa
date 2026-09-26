@@ -7,7 +7,7 @@ planet: {color: coral, motif: stars}
 title: {fr: "Le mot fort de la phrase", en: "The key word in the sentence"}
 tagline: {fr: "Une phrase, un sommet mélodique", en: "One sentence, one melodic peak"}
 why:
-  fr: "Dans chaque groupe de mots, l'anglais met en relief un mot principal : le « noyau ». Par défaut, c'est le dernier mot porteur de sens. Le placer au bon endroit aide votre interlocuteur à suivre ce qui est nouveau et important."
+  fr: "Dans chaque groupe de mots, l'anglais met en relief un mot principal : le « noyau ». Par défaut, c'est le dernier mot porteur de sens. Le placer au bon endroit aide [votre|ton] interlocuteur à suivre ce qui est nouveau et important."
   en: "In every group of words, English highlights one main word: the 'nucleus'. By default, it's the last content word. Putting it in the right place helps your listener follow what's new and important."
 criterion:
   fr: "Dans une phrase simple, je fais ressortir le dernier mot porteur de sens, et ma voix descend après lui."
@@ -65,7 +65,7 @@ guided:
     fr: "Deux groupes possibles : We met in PARIS | last SUMMER."
     en: "Two possible groups: We met in PARIS | last SUMMER."
 transfer:
-  - fr: "Présentez trois membres de votre famille ou trois amis en une phrase chacun (« My brother is a teacher. »)."
+  - fr: "[Présentez|Présente] trois membres de [votre|ta] famille ou trois amis en une phrase chacun (« My brother is a teacher. »)."
     en: "Introduce three family members or friends in one sentence each ('My brother is a teacher.')."
     hint_words: [brother, sister, friend, teacher, lives]
 fiches:

@@ -37,7 +37,7 @@ export const STRINGS = {
   qc_too_quiet: { fr: "Je n'ai pas bien entendu : [rapprochez-vous|rapproche-toi] du micro et [réessayez|réessaie].", en: "I didn't hear you well: move closer to the mic and try again." },
   qc_clipped: { fr: 'Le son sature : [éloignez|éloigne] un peu le micro.', en: 'The sound is clipping: move the mic a little further away.' },
   qc_mismatch: { fr: "Je n'ai pas bien reconnu la phrase attendue. [Écoutez|Écoute] le modèle, puis [réessayez|réessaie] — c'est peut-être aussi un bruit de fond.", en: "I couldn't match what I heard with the expected sentence. Listen to the model and try again — background noise can also be the cause." },
-  unsure_msg: { fr: "Je n'ai pas assez d'indices pour trancher : [écoutez|écoute] et [comparez|compare] vous-même.", en: "I don't have enough evidence to decide: listen and compare for yourself." },
+  unsure_msg: { fr: "Je n'ai pas assez d'indices pour trancher : [écoutez|écoute] et [comparez vous-même|compare toi-même].", en: "I don't have enough evidence to decide: listen and compare for yourself." },
 
   predict_q: { fr: 'Avant d’essayer : comment [pensez-vous|penses-tu] que ça va sonner ?', en: 'Before you try: how do you think it will sound?' },
   predict_1: { fr: 'Pas encore', en: 'Not yet' },

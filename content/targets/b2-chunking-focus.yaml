@@ -51,12 +51,12 @@ guided:
     fr: "Trois annonces, trois groupes après chaque connecteur."
     en: "Three signposts, a group after each connector."
 transfer:
-  - fr: "Présentez un projet (réel ou imaginaire) en une minute : contexte, objectif, étapes. Utilisez des connecteurs (first, then, finally)."
+  - fr: "[Présentez|Présente] un projet (réel ou imaginaire) en une minute : contexte, objectif, étapes. [Utilisez|Utilise] des connecteurs (first, then, finally)."
     en: "Present a project (real or imaginary) in one minute: context, goal, steps. Use connectors (first, then, finally)."
     hint_words: [first, then, finally, project, goal]
 fiches:
   groupes-courts:
-    fr: "Votre discours était découpé en très petits morceaux. [Regroupez|Regroupe] les mots qui vont ensemble : « {chunk} » se dit d'un seul souffle."
+    fr: "[Votre|Ton] discours était découpé en très petits morceaux. [Regroupez|Regroupe] les mots qui vont ensemble : « {chunk} » se dit d'un seul souffle."
     en: "Your speech was cut into very small pieces. Group the words that belong together: '{chunk}' is said in one breath."
   sans-pause:
     fr: "Tout s'est enchaîné sans respiration. [Marquez|Marque] une micro-pause après « {chunk} »."

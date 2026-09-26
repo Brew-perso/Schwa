@@ -22,7 +22,7 @@ lesson:
     fr: "En français, on prononce toutes les syllabes écrites, avec la même énergie : cho-co-lat. L'anglais, lui, « avale » souvent des syllabes non accentuées."
     en: "In French, every written syllable is pronounced with the same energy: cho-co-lat. English often 'swallows' unstressed syllables."
   - type: contrast
-    fr: "Écoutez le mot français, puis le mot anglais. Combien de temps entendez-vous dans chacun ?"
+    fr: "[Écoutez|Écoute] le mot français, puis le mot anglais. Combien de temps [entendez-vous|entends-tu] dans chacun ?"
     en: "Listen to the French word, then the English one. How many beats do you hear in each?"
     french: "chocolat"
     english: "chocolate"
@@ -32,7 +32,7 @@ lesson:
     items: [every, family, different]
   - type: gesture
     art: tap
-    fr: "[Tapotez|Tapote] la table à chaque syllabe que vous [entendez|entends] — pas à chaque voyelle que vous [voyez|vois]. Et [terminez|termine] les mots sur la consonne : « walked », sans « e » à la fin."
+    fr: "[Tapotez|Tapote] la table à chaque syllabe que [vous entendez|tu entends] — pas à chaque voyelle que [vous voyez|tu vois]. Et [terminez|termine] les mots sur la consonne : « walked », sans « e » à la fin."
     en: "Tap the table for each syllable you hear — not for each vowel you see. And end words on the consonant: 'walked', with no 'e' at the end."
   - type: quiz
     q: {fr: "Combien de syllabes dans « Wednesday » ?", en: "How many syllables in 'Wednesday'?"}
@@ -69,7 +69,7 @@ guided:
     fr: "IN-tres-ting, BIZ-ness."
     en: "IN-tres-ting, BIZ-ness."
 transfer:
-  - fr: "Racontez en deux ou trois phrases ce que vous avez fait mercredi dernier (Wednesday). Utilisez des verbes au passé : walked, played, watched…"
+  - fr: "[Racontez|Raconte] en deux ou trois phrases ce que [vous avez|tu as] fait mercredi dernier (Wednesday). [Utilisez|Utilise] des verbes au passé : walked, played, watched…"
     en: "Tell in two or three sentences what you did last Wednesday. Use past-tense verbs: walked, played, watched…"
     hint_words: [Wednesday, walked, played, watched, evening]
 fiches:

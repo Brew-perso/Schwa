@@ -74,13 +74,13 @@ production:
 guided:
   - text: "I think it's thick."
     alt: "I sink, it's sick."
-    fr: "Pensée ou naufrage ? Faites-vous comprendre."
+    fr: "Pensée ou naufrage ? [Faites-vous|Fais-toi] comprendre."
     en: "Thinking or sinking? Make yourself understood."
   - text: "We need three trees."
     fr: "/θr/ puis /tr/ : la langue avance, puis recule."
     en: "/θr/ then /tr/: the tongue moves forward, then back."
 transfer:
-  - fr: "Quelles sont trois choses pour lesquelles vous êtes reconnaissant(e) ce mois-ci ? (I'm thankful for… / I think… / three things…)"
+  - fr: "Quelles sont trois choses pour lesquelles [vous êtes|tu es] reconnaissant(e) ce mois-ci ? (I'm thankful for… / I think… / three things…)"
     en: "What are three things you're thankful for this month? (I'm thankful for… / I think… / three things…)"
     hint_words: [thankful, think, three, things, month, birthday]
 fiches:
@@ -94,8 +94,8 @@ fiches:
     fr: "On a entendu « {heard} » : la langue a bloqué l'air puis l'a relâché d'un coup. Pour TH, l'air doit passer en continu, comme un léger souffle."
     en: "I heard '{heard}': your tongue stopped the air and released it all at once. For TH, the air must flow continuously, like a gentle breath."
   th-z:
-    fr: "Votre « {word} » sonnait comme un /z/ : c'est très courant et rarement gênant. Pour l'affiner : la pointe de la langue contre les dents, la voix qui vibre."
+    fr: "[Votre|Ton] « {word} » sonnait comme un /z/ : c'est très courant et rarement gênant. Pour l'affiner : la pointe de la langue contre les dents, la voix qui vibre."
     en: "Your '{word}' sounded like /z/: very common and rarely a problem. To refine it: tongue tip against your teeth, voice buzzing."
   th-d:
-    fr: "Votre « {word} » sonnait comme un /d/. [Laissez|Laisse] passer l'air entre la langue et les dents au lieu de le bloquer."
+    fr: "[Votre|Ton] « {word} » sonnait comme un /d/. [Laissez|Laisse] passer l'air entre la langue et les dents au lieu de le bloquer."
     en: "Your '{word}' sounded like /d/. Let the air flow between your tongue and teeth instead of blocking it."

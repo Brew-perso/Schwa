@@ -25,7 +25,7 @@ lesson:
     en: "Listen to the continuous chain:"
     items: ["an apple", "turn it off", "go out", "far away"]
   - type: rule
-    fr: "Le /h/ intrusif : devant un mot qui commence par une voyelle, n'ajoutez pas de souffle. « It's an old hotel » : an‿old, avec un seul /h/ (hotel)."
+    fr: "Le /h/ intrusif : devant un mot qui commence par une voyelle, [n'ajoutez|n'ajoute] pas de souffle. « It's an old hotel » : an‿old, avec un seul /h/ (hotel)."
     en: "Intrusive /h/: before a vowel-initial word, don't add breath. 'It's an old hotel': an‿old, with just one /h/ (hotel)."
   - type: gesture
     art: bubbles
@@ -60,7 +60,7 @@ guided:
     fr: "Is‿it‿open‿or… sans aucun /h/."
     en: "Is‿it‿open‿or… without any /h/."
 transfer:
-  - fr: "Décrivez votre routine du matin avec des verbes à particule (get up, put on, turn off, go out…)."
+  - fr: "[Décrivez votre|Décris ta] routine du matin avec des verbes à particule (get up, put on, turn off, go out…)."
     en: "Describe your morning routine using phrasal verbs (get up, put on, turn off, go out…)."
     hint_words: [get up, put on, turn off, go out, pick up]
 fiches:
