@@ -42,7 +42,7 @@ export function LessonPlayer({ target, onDone }: { target: Target; onDone: () =>
                 <h2 style={{ marginTop: 8 }}>{pickBi(target.title, lang, s.register)}</h2>
                 <p className="italic-display" style={{ fontSize: '1.15rem', color: 'var(--text-2)' }}>{pickBi(target.tagline, lang, s.register)}</p>
               </div>
-              <Bird pose="listen" size={92} />
+              <Bird pose="perch-left" size={88} />
             </div>
           )}
           <BlockBody b={b} target={target} lang={lang} register={s.register} quizPick={quizPick} setQuizPick={setQuizPick} />

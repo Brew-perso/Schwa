@@ -233,7 +233,7 @@ function Feedback({ result, item, target, prep, lang, register, units, variety, 
         )}
       </div>
       <div className="fb-coach">
-        <Bird pose={overall === 'clear' ? 'perch' : 'listen'} size={58} />
+        <Bird pose="perch" size={72} />
         <p className="fb-consigne" style={{ margin: 0 }}>{consigne}</p>
       </div>
       {cards && (

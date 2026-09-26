@@ -61,7 +61,7 @@
 .fb-consigne { font-size: 1.08rem; font-weight: 600; }
 /* the bird sits by the gesture instruction, like the "Action / Geste" note of the art direction */
 .fb-coach { display: flex; align-items: flex-end; gap: 10px; }
-.fb-coach > svg { flex: none; margin-bottom: -4px; }
+.fb-coach > img { flex: none; margin-bottom: -2px; }
 .cmp-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .cmp-card { border: 2px solid var(--rule); border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
 .cmp-card .big { font-family: var(--font-display); font-size: 1.6rem; font-weight: 620; line-height: 1.1; }
