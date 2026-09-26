@@ -24,6 +24,7 @@ torch.onnx.export(w,(x,),OUT+'/schwa-head.onnx',input_names=['enc'],output_names
 # verify
 s=ort.InferenceSession(OUT+'/schwa-head.onnx')
 a=s.run(None,{'enc':x.numpy()})[0]
+w.eval()  # torch.onnx.export leaves the module in training mode (dropout on)
 with torch.no_grad(): b=w(x).numpy()
 print('head max diff', np.abs(a-b).max())
 shutil.copy(M+'tokens.txt', OUT+'/bpe-tokens.txt')

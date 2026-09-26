@@ -38,7 +38,7 @@ export default defineConfig({
         runtimeCaching: [
           { urlPattern: ({ url }) => url.pathname.startsWith('/audio/'), handler: 'CacheFirst', options: { cacheName: 'schwa-audio', expiration: { maxEntries: 8000 } } },
           { urlPattern: ({ url }) => url.pathname.startsWith('/content/'), handler: 'StaleWhileRevalidate', options: { cacheName: 'schwa-content' } },
-          { urlPattern: ({ url }) => url.pathname.endsWith('.wasm') || url.pathname.startsWith('/models/'), handler: 'CacheFirst', options: { cacheName: 'schwa-runtime' } },
+          { urlPattern: ({ url }) => url.pathname.endsWith('.wasm'), handler: 'CacheFirst', options: { cacheName: 'schwa-runtime' } },
         ],
       },
     }),

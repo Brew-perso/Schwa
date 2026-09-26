@@ -84,8 +84,9 @@ details.more[open] > summary::before { content: '–'; }
 
 /* ---------- target header ---------- */
 .target-hero { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; }
-.ladder { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
-.ladder .rung { border: 2px solid var(--rule); border-radius: 12px; padding: 8px 6px; text-align: center; font-size: .78rem; font-weight: 700; color: var(--text-soft); background: var(--surface); }
+.ladder { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.ladder .rung { border: 2px solid var(--rule); border-radius: 12px; padding: 8px 6px; text-align: center; font-size: .78rem; font-weight: 700; line-height: 1.2; color: var(--text-soft); background: var(--surface); overflow-wrap: anywhere; hyphens: auto; }
+@media (max-width: 480px) { .ladder .rung { font-size: .68rem; padding: 8px 3px; } }
 .ladder .rung b { display: block; font-family: var(--font-display); font-size: 1.15rem; color: var(--text); }
 .ladder .rung.done { border-color: var(--clear); background: var(--clear-bg); color: var(--clear); }
 .ladder .rung.human { border-style: dashed; }

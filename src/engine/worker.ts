@@ -23,15 +23,16 @@ let units: string[] = []
 let bpe: string[] = []
 let initPromise: Promise<void> | null = null
 
+let cacheName = 'schwa-models-dev'
 async function fetchWithProgress(url: string, onProgress: (loaded: number, total: number) => void): Promise<ArrayBuffer> {
-  const cache = await caches.open('schwa-models-v1').catch(() => null)
+  const cache = await caches.open(cacheName).catch(() => null)
   const hit = cache ? await cache.match(url) : undefined
   if (hit) {
     const b = await hit.arrayBuffer()
     onProgress(b.byteLength, b.byteLength)
     return b
   }
-  const r = await fetch(url)
+  const r = await fetch(url, { cache: 'no-cache' }) // revalidate: file names are not versioned
   if (!r.ok || !r.body) throw new Error(`fetch ${url} ${r.status}`)
   const total = Number(r.headers.get('content-length')) || 0
   const reader = r.body.getReader()
@@ -52,8 +53,13 @@ async function fetchWithProgress(url: string, onProgress: (loaded: number, total
 }
 
 async function init() {
-  const meta = await (await fetch(BASE + 'models/engine.json')).json() as { encoder: string; head: string; units: string[]; bpe: string; version: string }
+  const meta = await (await fetch(BASE + 'models/engine.json', { cache: 'no-cache' })).json() as { encoder: string; head: string; units: string[]; bpe: string; version: string }
   units = meta.units
+  // one cache per engine version; older versions are dropped so an updated head is never shadowed
+  cacheName = 'schwa-models-' + meta.version
+  try {
+    for (const k of await caches.keys()) if (k.startsWith('schwa-models-') && k !== cacheName) await caches.delete(k)
+  } catch { /* Cache API unavailable (private mode): plain fetch */ }
   bpe = (await (await fetch(BASE + 'models/' + meta.bpe)).text()).split('\n').filter(Boolean).map((l) => l.split(' ')[0])
   const progress: Record<string, [number, number]> = {}
   const report = () => {
