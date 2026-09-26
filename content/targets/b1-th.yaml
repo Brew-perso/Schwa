@@ -1,0 +1,101 @@
+id: b1-th
+level: B1
+order: 6
+domain: articuler
+kind: segment
+planet: {color: teal, motif: crescent}
+title: {fr: "Les TH : /θ/ et /ð/", en: "TH sounds: /θ/ and /ð/"}
+tagline: {fr: "think, three · this, mother", en: "think, three · this, mother"}
+why:
+  fr: "Le TH est le son le plus célèbre… mais pas le plus gênant : un « z » à la place de « the » passe presque toujours. En revanche, « sink » pour « think » ou « tree » pour « three » peut créer un vrai malentendu. On le travaille pour la clarté et pour la confiance."
+  en: "TH is the most famous sound… but not the most disruptive: a 'z' instead of 'the' is almost always understood. However, 'sink' for 'think' or 'tree' for 'three' can cause real confusion. We practise it for clarity and confidence."
+criterion:
+  fr: "On entend « think » et « three », pas « sink » ni « tree » ; mon « the » est doux et voisé."
+  en: "People hear 'think' and 'three', not 'sink' or 'tree'; my 'the' is soft and voiced."
+phones: [θ, ð]
+errors:
+  - {target: θ, realized: s, fiche: th-s, weight: 0.7}
+  - {target: θ, realized: f, fiche: th-f, weight: 0.6}
+  - {target: θ, realized: t, fiche: th-t, weight: 0.6}
+  - {target: ð, realized: z, fiche: th-z, weight: 0.3}
+  - {target: ð, realized: d, fiche: th-d, weight: 0.3}
+lesson:
+  - type: text
+    fr: "Pour les deux TH, la pointe de la langue touche légèrement l'arrière des dents du haut — ou se glisse juste entre les dents. L'air passe entre la langue et les dents. /θ/ (think) est un souffle sans voix ; /ð/ (this) est le même geste, avec la voix qui vibre."
+    en: "For both TH sounds, the tip of the tongue lightly touches the back of the top teeth — or slips just between the teeth. Air flows between the tongue and teeth. /θ/ (think) is voiceless breath; /ð/ (this) is the same gesture, with the voice buzzing."
+  - type: gesture
+    art: sagittal:θ
+    fr: "Devant un miroir : la pointe de la langue doit être visible, à peine. [Soufflez|Souffle] doucement : c'est /θ/. [Ajoutez|Ajoute] la voix, sans bouger : c'est /ð/. Si [vous entendez|tu entends] « s », la langue est trop en arrière."
+    en: "In a mirror: the tip of your tongue should just be visible. Blow gently: that's /θ/. Add your voice without moving: that's /ð/. If you hear 's', your tongue is too far back."
+  - type: listen
+    fr: "Écoutez :"
+    en: "Listen:"
+    items: [think, sink, three, tree, thought, fought]
+  - type: rule
+    fr: "Bonne nouvelle : /ð/ se trouve surtout dans des petits mots très fréquents (the, this, that, they, there, with, mother) : un peu d'entraînement sur eux suffit. Et /θ/ dans des mots de sens : think, thank, three, thing, both, month."
+    en: "Good news: /ð/ mostly appears in small, very frequent words (the, this, that, they, there, with, mother): a little practice on those goes a long way. And /θ/ appears in content words: think, thank, three, thing, both, month."
+  - type: quiz
+    q: {fr: "Dans « thank you », le TH est…", en: "In 'thank you', the TH is…"}
+    options: ["/θ/, sans voix", "/ð/, avec la voix"]
+    answer: 0
+    explain: {fr: "/θ/ : un simple souffle. Les mots-outils (the, this, they) ont /ð/.", en: "/θ/: just breath. Function words (the, this, they) have /ð/."}
+perception:
+  task: identify
+  items:
+    - [think, sink]
+    - [thick, sick]
+    - [thing, sing]
+    - [path, pass]
+    - [three, tree]
+    - [thought, taught]
+    - [thank, tank]
+    - [thin, fin]
+    - [three, free]
+    - [thought, fought]
+    - [then, zen]
+    - [they, day]
+    - [those, doze]
+    - [breathe, breeze]
+    - [mouth, mouse]
+    - [faith, face]
+production:
+  - {pair: [think, sink]}
+  - {pair: [three, tree]}
+  - {pair: [thought, taught]}
+  - {pair: [thin, fin]}
+  - {text: thank}
+  - {text: month}
+  - {text: both}
+  - {text: mother}
+  - {text: "Thank you for the three things."}
+  - {text: "I think they thought about it."}
+  - {text: "This is my mother's birthday."}
+  - {text: "Both of them are thirty."}
+guided:
+  - text: "I think it's thick."
+    alt: "I sink, it's sick."
+    fr: "Pensée ou naufrage ? Faites-vous comprendre."
+    en: "Thinking or sinking? Make yourself understood."
+  - text: "We need three trees."
+    fr: "/θr/ puis /tr/ : la langue avance, puis recule."
+    en: "/θr/ then /tr/: the tongue moves forward, then back."
+transfer:
+  - fr: "Quelles sont trois choses pour lesquelles vous êtes reconnaissant(e) ce mois-ci ? (I'm thankful for… / I think… / three things…)"
+    en: "What are three things you're thankful for this month? (I'm thankful for… / I think… / three things…)"
+    hint_words: [thankful, think, three, things, month, birthday]
+fiches:
+  th-s:
+    fr: "On a entendu « {heard} » : la langue est restée derrière les dents. [Avancez-la|Avance-la] jusqu'à toucher le bord des dents du haut, et [soufflez|souffle]."
+    en: "I heard '{heard}': your tongue stayed behind your teeth. Bring it forward until it touches the edge of your top teeth, and blow."
+  th-f:
+    fr: "On a entendu « {heard} » : ce sont les lèvres qui ont fait le bruit. Pour TH, les lèvres ne bougent pas : c'est la langue, contre les dents du haut."
+    en: "I heard '{heard}': your lips made the noise. For TH, the lips don't move: it's the tongue, against the top teeth."
+  th-t:
+    fr: "On a entendu « {heard} » : la langue a bloqué l'air puis l'a relâché d'un coup. Pour TH, l'air doit passer en continu, comme un léger souffle."
+    en: "I heard '{heard}': your tongue stopped the air and released it all at once. For TH, the air must flow continuously, like a gentle breath."
+  th-z:
+    fr: "Votre « {word} » sonnait comme un /z/ : c'est très courant et rarement gênant. Pour l'affiner : la pointe de la langue contre les dents, la voix qui vibre."
+    en: "Your '{word}' sounded like /z/: very common and rarely a problem. To refine it: tongue tip against your teeth, voice buzzing."
+  th-d:
+    fr: "Votre « {word} » sonnait comme un /d/. [Laissez|Laisse] passer l'air entre la langue et les dents au lieu de le bloquer."
+    en: "Your '{word}' sounded like /d/. Let the air flow between your tongue and teeth instead of blocking it."

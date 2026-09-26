@@ -1,0 +1,68 @@
+id: c1-contrastive
+level: C1
+order: 2
+domain: prosodie
+kind: nucleus
+planet: {color: indigo, motif: stars}
+title: {fr: "Accent contrastif", en: "Contrastive stress"}
+tagline: {fr: "I drove to London yesterday — quatre sens, une phrase", en: "I drove to London yesterday — four meanings, one sentence"}
+why:
+  fr: "En anglais, déplacer le mot fort suffit à changer ce que l'on met en avant, là où le français utilise souvent la syntaxe (« c'est moi qui… »). Maîtriser le focus contrastif, c'est corriger, insister, nuancer — sans une phrase de plus."
+  en: "In English, moving the key word is enough to change what you highlight, where French often uses syntax ('c'est moi qui…'). Mastering contrastive focus lets you correct, insist and nuance — without adding a sentence."
+criterion:
+  fr: "Je déplace le mot fort selon ce que je veux corriger ou souligner, et la mélodie retombe ensuite."
+  en: "I move the key word according to what I want to correct or highlight, and the melody drops afterwards."
+phones: []
+errors:
+  - {target: nucleus, realized: other, fiche: focus-deplace, weight: 0.9}
+  - {target: nucleus, realized: flat, fiche: focus-plat, weight: 0.6}
+lesson:
+  - type: text
+    fr: "« I drove to London yesterday » : I drove (pas mon frère) · I DROVE (je n'ai pas pris le train) · to LONDON (pas à Oxford) · YESTERDAY (pas aujourd'hui). Après le mot contrastif, tout le reste de la phrase est « désaccentué » : la voix reste basse."
+    en: "'I drove to London yesterday': I drove (not my brother) · I DROVE (I didn't take the train) · to LONDON (not Oxford) · YESTERDAY (not today). After the contrastive word, the rest of the sentence is 'de-accented': the voice stays low."
+  - type: listen
+    fr: "Quatre versions, quatre sens :"
+    en: "Four versions, four meanings:"
+    items: ["I drove to London yesterday.", "I drove to London yesterday.", "I drove to London yesterday."]
+    focus: [0, 1, 3]
+  - type: rule
+    fr: "L'information déjà connue se désaccentue : « I'd like the red dress. — Sorry, we only have the BLUE dress. » (dress est déjà connu, BLUE est la nouveauté)."
+    en: "Given information is de-accented: 'I'd like the red dress. — Sorry, we only have the BLUE dress.' (dress is already known, BLUE is new)."
+  - type: quiz
+    q: {fr: "« Is that YOUR pen? » signifie plutôt :", en: "'Is that YOUR pen?' mostly means:"}
+    options: ["Est-ce un stylo (et pas un crayon) ?", "Est-ce le vôtre (et pas celui de quelqu'un d'autre) ?"]
+    answer: 1
+    explain: {fr: "Le focus sur YOUR oppose le possesseur.", en: "Focus on YOUR contrasts the owner."}
+perception:
+  task: focus
+  items:
+    - {text: "I drove to London yesterday.", focus: 0, question: {en: "Who drove to London?", fr: "Qui est allé à Londres ?"}}
+    - {text: "I drove to London yesterday.", focus: 1, question: {en: "Did you take the train?", fr: "Vous avez pris le train ?"}}
+    - {text: "I drove to London yesterday.", focus: 3, question: {en: "Did you drive to Oxford?", fr: "Vous êtes allé à Oxford ?"}}
+    - {text: "I drove to London yesterday.", focus: 4, question: {en: "Did you drive there today?", fr: "C'était aujourd'hui ?"}}
+    - {text: "Is that your pen?", focus: 2, question: {en: "Whose pen is it?", fr: "À qui est ce stylo ?"}}
+    - {text: "Is that your pen?", focus: 3, question: {en: "Is it a pen or a pencil?", fr: "Stylo ou crayon ?"}}
+    - {text: "Is that your pen?", focus: 1, question: {en: "This one or that one?", fr: "Celui-ci ou celui-là ?"}}
+production:
+  - {text: "I drove to London yesterday.", focus: 0}
+  - {text: "I drove to London yesterday.", focus: 1}
+  - {text: "I drove to London yesterday.", focus: 3}
+  - {text: "I drove to London yesterday.", focus: 4}
+  - {text: "Is that your pen?", focus: 2}
+  - {text: "Is that your pen?", focus: 3}
+  - {text: "We only have the blue dress.", focus: 4}
+guided:
+  - text: "I didn't say she stole the money."
+    fr: "Sept mots, sept sens : [essayez|essaie] de déplacer le focus sur chacun d'eux."
+    en: "Seven words, seven meanings: try moving the focus onto each one."
+transfer:
+  - fr: "Corrigez poliment trois fausses informations sur vous (« You're from Lyon, right? — No, I'm from MARSEILLE. »). Inventez-les si besoin."
+    en: "Politely correct three false statements about you ('You're from Lyon, right? — No, I'm from MARSEILLE.'). Make them up if needed."
+    hint_words: [no, actually, not, from, live]
+fiches:
+  focus-deplace:
+    fr: "Le relief est tombé sur « {heard} » : on comprend que [vous opposez|tu opposes] ce mot-là. Pour répondre à la question, c'est « {nucleus} » qui doit ressortir, et le reste retombe."
+    en: "The emphasis landed on '{heard}': the listener hears a contrast on that word. To answer the question, '{nucleus}' must stand out, and the rest drops."
+  focus-plat:
+    fr: "Aucun mot ne ressort nettement. [Faites|Fais] un vrai sommet sur « {nucleus} » et [aplatissez|aplatis] tout ce qui suit."
+    en: "No word clearly stands out. Make a real peak on '{nucleus}' and flatten everything after it."

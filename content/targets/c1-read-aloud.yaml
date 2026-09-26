@@ -1,0 +1,53 @@
+id: c1-read-aloud
+level: C1
+order: 6
+domain: aisance
+kind: reading
+planet: {color: coral, motif: stars}
+title: {fr: "Lecture à voix haute", en: "Reading aloud"}
+tagline: {fr: "Une lecture « inspirée et convaincante, et non plate et escamotée »", en: "A reading that is 'inspired and convincing, not flat and hurried'"}
+why:
+  fr: "La lecture préparée mobilise tout : accent de mot, formes faibles, groupes de sens, noyau, mélodie. C'est l'exercice de synthèse des oraux (colles, concours, présentations). Les jurys conseillent de vérifier au dictionnaire « tous les mots » du passage."
+  en: "Prepared reading brings everything together: word stress, weak forms, thought groups, nucleus, melody. It's the capstone exercise of oral exams and presentations. Examiners advise checking 'every word' of the passage in a dictionary."
+criterion:
+  fr: "Je lis un paragraphe préparé avec des groupes de sens clairs, des mots bien accentués et une mélodie qui descend en fin d'affirmation."
+  en: "I read a prepared paragraph with clear thought groups, well-stressed words and a melody that falls at the end of statements."
+phones: [h, θ, ð, ɪ, iː, ə]
+errors:
+  - {target: stress, realized: other, fiche: lecture-accent, weight: 1.0}
+  - {target: fall, realized: rise, fiche: lecture-melodie, weight: 0.6}
+lesson:
+  - type: text
+    fr: "Méthode en quatre temps : 1) Comprendre le texte et repérer les mots dont [vous n'êtes pas sûr(e)|tu n'es pas sûr(e)]. 2) Découper en groupes de sens (/) et souligner le mot fort de chaque groupe. 3) Vérifier les mots longs et les mots transparents. 4) Lire à voix haute, s'enregistrer, se réécouter — une seule priorité par essai."
+    en: "Four-step method: 1) Understand the text and spot the words you're unsure of. 2) Split into thought groups (/) and underline the key word in each. 3) Check long words and cognates. 4) Read aloud, record yourself, listen back — one priority per attempt."
+  - type: listen
+    fr: "Écoutez un modèle de lecture :"
+    en: "Listen to a model reading:"
+    items: ["Please call Stella. Ask her to bring these things with her from the store."]
+  - type: rule
+    fr: "Un modèle cohérent : les jurys acceptent toute variété d'anglais authentique (britannique, américaine…), à condition de ne pas les mélanger. Schwa signale les mélanges quand il les perçoit."
+    en: "One consistent model: examiners accept any authentic variety of English (British, American…), as long as you don't mix them. Schwa flags mixtures when it notices them."
+perception:
+  task: chunks
+  items:
+    - {text: "Please call Stella. Ask her to bring these things with her from the store.", chunks: ["Please call Stella", "Ask her to bring these things with her", "from the store"]}
+production:
+  - {text: "Please call Stella. Ask her to bring these things with her from the store: six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob."}
+  - {text: "The economy has been growing steadily, but many people feel that their standard of living has not improved."}
+  - {text: "In this passage, the author develops a comparison between the city and the countryside, and gradually reveals the character's anxiety."}
+  - {text: "Photography changed the way we see the world: for the first time, an image could capture a single moment with remarkable accuracy."}
+guided:
+  - text: "Ladies and gentlemen, thank you for coming. Tonight, I'd like to talk about three ideas that changed my life."
+    fr: "Ouverture d'un discours : groupes de sens nets, descentes finales assurées."
+    en: "Opening a speech: clear thought groups, confident final falls."
+transfer:
+  - fr: "Choisissez un paragraphe d'un article ou d'un livre que vous étudiez. Préparez-le (découpage, mots forts), puis enregistrez-le. Comparez avec votre première lecture à froid."
+    en: "Choose a paragraph from an article or book you're studying. Prepare it (chunking, key words), then record it. Compare with your first cold reading."
+    hint_words: []
+fiches:
+  lecture-accent:
+    fr: "Un mot long a été accentué à la française : « {word} » → « {stressed} ». [Vérifiez-le|Vérifie-le] avant la prochaine lecture."
+    en: "A long word was stressed the French way: '{word}' → '{stressed}'. Check it before your next reading."
+  lecture-melodie:
+    fr: "Votre voix est montée en fin de phrase affirmative. [Posez|Pose] la voix sur le dernier mot fort."
+    en: "Your voice rose at the end of a statement. Let your voice settle on the last key word."

@@ -1,0 +1,72 @@
+id: b2-linking
+level: B2
+order: 3
+domain: aisance
+kind: connected
+planet: {color: teal, motif: swirl}
+title: {fr: "Enchaîner les mots", en: "Linking words together"}
+tagline: {fr: "an‿apple, go‿(w)out, far‿(r)away", en: "an‿apple, go‿(w)out, far‿(r)away"}
+why:
+  fr: "L'anglais parlé ne s'arrête pas entre les mots : ils s'enchaînent en une chaîne continue. Les francophones marquent souvent chaque mot par un petit arrêt ou un /h/ parasite (« an hold house »), ce qui hache le discours et fatigue l'auditeur."
+  en: "Spoken English doesn't stop between words: they flow into one continuous chain. French speakers often mark each word with a small stop or a stray /h/ ('an hold house'), which chops up speech and tires the listener."
+criterion:
+  fr: "J'enchaîne consonne + voyelle sans coupure (« turn‿off ») et je n'ajoute pas de /h/ devant les mots qui commencent par une voyelle."
+  en: "I link consonant + vowel without a break ('turn‿off') and I don't add /h/ before vowel-initial words."
+phones: [h]
+errors:
+  - {target: '∅', realized: h, where: before-vowel, fiche: h-intrus-enchainement, weight: 0.7}
+  - {target: link, realized: pause, fiche: coupure, weight: 0.5}
+lesson:
+  - type: text
+    fr: "Trois enchaînements à connaître. 1) Consonne + voyelle : la consonne « saute » sur le mot suivant (an‿apple → a-napple). 2) Voyelle + voyelle : un petit /w/ ou /j/ fait le pont (go‿(w)out, I‿(j)agree). 3) En anglais britannique, un /r/ écrit se prononce devant une voyelle (far‿(r)away)."
+    en: "Three types of linking. 1) Consonant + vowel: the consonant 'jumps' to the next word (an‿apple → a-napple). 2) Vowel + vowel: a little /w/ or /j/ bridges them (go‿(w)out, I‿(j)agree). 3) In British English, a written /r/ is pronounced before a vowel (far‿(r)away)."
+  - type: listen
+    fr: "Écoutez la chaîne continue :"
+    en: "Listen to the continuous chain:"
+    items: ["an apple", "turn it off", "go out", "far away"]
+  - type: rule
+    fr: "Le /h/ intrusif : devant un mot qui commence par une voyelle, n'ajoutez pas de souffle. « It's an old hotel » : an‿old, avec un seul /h/ (hotel)."
+    en: "Intrusive /h/: before a vowel-initial word, don't add breath. 'It's an old hotel': an‿old, with just one /h/ (hotel)."
+  - type: gesture
+    art: bubbles
+    fr: "[Lisez|Lis] la phrase comme un seul long mot : « Turnitoff ». Puis [remettez|remets] le relief des syllabes fortes."
+    en: "Read the sentence as one long word: 'Turnitoff'. Then put back the shape of the strong syllables."
+  - type: quiz
+    q: {fr: "« an ice cream » ou « a nice cream » : à l'oral…", en: "'an ice cream' or 'a nice cream': in speech…"}
+    options: ["on les distingue toujours", "ils peuvent sonner pareil"]
+    answer: 1
+    explain: {fr: "Avec l'enchaînement, les deux peuvent sonner identiques : c'est le contexte qui tranche.", en: "With linking, they can sound identical: context decides."}
+perception:
+  task: identify
+  items:
+    - {texts: ["an ice cream", "a nice cream"]}
+    - {texts: ["an aim", "a name"]}
+    - {texts: ["an old house", "a hold house"]}
+    - {texts: ["I scream", "ice cream"]}
+    - {texts: ["that's tough", "that stuff"]}
+production:
+  - {text: "Turn it off.", links: ["turn it", "it off"]}
+  - {text: "Pick it up.", links: ["pick it", "it up"]}
+  - {text: "It's an old hotel.", links: ["an old"]}
+  - {text: "Go out and ask him.", links: ["go out", "and ask"]}
+  - {text: "I agree with you.", links: ["I agree"]}
+  - {text: "They live far away, in an old house.", links: ["far away", "in an", "an old"]}
+  - {text: "Hold on a minute.", links: ["hold on", "on a"]}
+guided:
+  - text: "Can I have an apple and an orange?"
+    fr: "Quatre enchaînements consonne + voyelle."
+    en: "Four consonant + vowel links."
+  - text: "Is it open or is it closed?"
+    fr: "Is‿it‿open‿or… sans aucun /h/."
+    en: "Is‿it‿open‿or… without any /h/."
+transfer:
+  - fr: "Décrivez votre routine du matin avec des verbes à particule (get up, put on, turn off, go out…)."
+    en: "Describe your morning routine using phrasal verbs (get up, put on, turn off, go out…)."
+    hint_words: [get up, put on, turn off, go out, pick up]
+fiches:
+  h-intrus-enchainement:
+    fr: "Un /h/ s'est glissé devant « {word} ». [Enchaînez|Enchaîne] la dernière consonne du mot précédent directement sur la voyelle : {link}."
+    en: "An /h/ slipped in before '{word}'. Link the last consonant of the previous word straight onto the vowel: {link}."
+  coupure:
+    fr: "Petite coupure entre « {link} ». [Lisez|Lis] ces deux mots comme un seul."
+    en: "A small break in '{link}'. Read these two words as one."

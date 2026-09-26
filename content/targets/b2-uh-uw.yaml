@@ -1,0 +1,79 @@
+id: b2-uh-uw
+level: B2
+order: 7
+domain: articuler
+kind: segment
+planet: {color: mint, motif: dots}
+title: {fr: "Full ou fool ? /ʊ/–/uː/", en: "Full or fool? /ʊ/–/uː/"}
+tagline: {fr: "Le frère de /ɪ/–/iː/, à l'arrière de la bouche", en: "The back-of-the-mouth sibling of /ɪ/–/iː/"}
+why:
+  fr: "Comme pour /ɪ/–/iː/, le français n'a qu'un « ou ». L'anglais oppose /uː/ (fool, pool, Luke), tendu et arrondi, à /ʊ/ (full, pull, look), relâché. Encore une fois : une question de qualité plus que de longueur."
+  en: "As with /ɪ/–/iː/, French has only one 'ou'. English contrasts /uː/ (fool, pool, Luke), tense and rounded, with /ʊ/ (full, pull, look), relaxed. Again: more about quality than length."
+criterion:
+  fr: "Mon interlocuteur distingue « full » et « fool », « look » et « Luke »."
+  en: "My listener can tell 'full' from 'fool', 'look' from 'Luke'."
+phones: [ʊ, uː]
+errors:
+  - {target: ʊ, realized: uː, fiche: ou-tendu, weight: 0.7}
+  - {target: uː, realized: ʊ, fiche: ou-relache, weight: 0.5}
+lesson:
+  - type: text
+    fr: "/uː/ (food, blue, school) : lèvres bien arrondies et avancées, langue tendue — proche du « ou » français. /ʊ/ (book, good, put) : un « ou » relâché, lèvres à peine arrondies, bouche un peu plus ouverte."
+    en: "/uː/ (food, blue, school): lips well rounded and pushed forward, tongue tense — close to French 'ou'. /ʊ/ (book, good, put): a relaxed 'ou', lips barely rounded, mouth slightly more open."
+  - type: listen
+    fr: "Écoutez les paires :"
+    en: "Listen to the pairs:"
+    items: [full, fool, pull, pool, look, Luke]
+  - type: gesture
+    art: vowels:ʊ-uː
+    fr: "Pour /uː/, [faites|fais] la moue. Pour /ʊ/, [relâchez|relâche] les lèvres comme pour un « euh » très court tirant vers « ou »."
+    en: "For /uː/, pout. For /ʊ/, relax your lips as for a very short 'uh' leaning towards 'oo'."
+  - type: rule
+    fr: "Orthographe : « oo » + k (book, look, cook) et les mots good, foot, stood, put, full, pull, push, could, would, should → /ʊ/. « oo » ailleurs (food, moon, school) → souvent /uː/."
+    en: "Spelling: 'oo' + k (book, look, cook) and the words good, foot, stood, put, full, pull, push, could, would, should → /ʊ/. 'oo' elsewhere (food, moon, school) → often /uː/."
+  - type: quiz
+    q: {fr: "Quel mot contient /ʊ/ ?", en: "Which word has /ʊ/?"}
+    options: ["food", "good", "blue"]
+    answer: 1
+    explain: {fr: "good /ɡʊd/. food et blue ont /uː/.", en: "good /ɡʊd/. food and blue have /uː/."}
+perception:
+  task: identify
+  items:
+    - [full, fool]
+    - [pull, pool]
+    - [look, Luke]
+    - [could, cooed]
+    - [would, wooed]
+    - [foot, food]
+    - [soot, suit]
+    - [hood, who'd]
+    - [stood, stewed]
+production:
+  - {pair: [full, fool]}
+  - {pair: [pull, pool]}
+  - {pair: [look, Luke]}
+  - {text: good}
+  - {text: book}
+  - {text: food}
+  - {text: school}
+  - {text: "Look at the good book."}
+  - {text: "Would you like some food?"}
+  - {text: "The pool is full."}
+guided:
+  - text: "Don't be a fool, the glass is full."
+    fr: "fool /uː/, full /ʊ/."
+    en: "fool /uː/, full /ʊ/."
+  - text: "You should put your foot down."
+    fr: "Trois /ʊ/ : should, put, foot."
+    en: "Three /ʊ/ sounds: should, put, foot."
+transfer:
+  - fr: "Parlez d'un livre ou d'un plat que vous aimez (book, good, cook, food, soup…)."
+    en: "Talk about a book or a dish you love (book, good, cook, food, soup…)."
+    hint_words: [book, good, cook, food, soup, look]
+fiches:
+  ou-tendu:
+    fr: "On a entendu « {heard} » : votre /ʊ/ était trop tendu. [Relâchez|Relâche] les lèvres et [raccourcissez|raccourcis] le son."
+    en: "I heard '{heard}': your /ʊ/ was too tense. Relax your lips and shorten the sound."
+  ou-relache:
+    fr: "On a entendu « {heard} » : pour /uː/, [arrondissez|arrondis] davantage et [avancez|avance] les lèvres."
+    en: "I heard '{heard}': for /uː/, round and push your lips forward more."

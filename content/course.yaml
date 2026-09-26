@@ -1,0 +1,108 @@
+# Schwa — parcours A2 → C1 (niveau 2 : « MVP en classe »)
+# Les paliers sont des orbites de la carte du ciel. Chaque palier rouvre les grands thèmes (spirale).
+
+levels:
+  - id: A2
+    name: {fr: "Orbite I — Décollage", en: "Orbit I — Lift-off"}
+    blurb:
+      fr: "Entendre et produire ce qui gêne le plus la compréhension : syllabes fortes, voyelles réduites, /h/, /ɪ/–/iː/."
+      en: "Hear and produce what gets in the way most: strong syllables, reduced vowels, /h/, /ɪ/–/iː/."
+    can_do:
+      fr: "Je place l'accent sur la bonne syllabe dans les mots courants de deux syllabes et je fais entendre le /h/."
+      en: "I stress the right syllable in common two-syllable words and I make my /h/ heard."
+    instructions: fr
+  - id: B1
+    name: {fr: "Orbite II — Croisière", en: "Orbit II — Cruising"}
+    blurb:
+      fr: "Les mots longs, les mots-outils réduits, les terminaisons -ed / -s, le mot fort de la phrase."
+      en: "Long words, reduced function words, -ed / -s endings, the strong word in the sentence."
+    can_do:
+      fr: "Je place l'accent sur la bonne syllabe dans les mots de trois et quatre syllabes, y compris quand je raconte quelque chose."
+      en: "I stress the right syllable in three- and four-syllable words, even when I'm telling a story."
+    instructions: fr
+  - id: B2
+    name: {fr: "Orbite III — Haute altitude", en: "Orbit III — High altitude"}
+    blurb:
+      fr: "Suffixes forts, paires nom/verbe, enchaînements, mélodie qui descend, groupes de sens, diphtongues."
+      en: "Strong suffixes, noun/verb pairs, linking, falling melody, thought groups, diphthongs."
+    can_do:
+      fr: "Je découpe mon discours en groupes de sens et ma voix descend à la fin des affirmations."
+      en: "I split my speech into thought groups and my voice falls at the end of statements."
+    instructions: mixed
+  - id: C1
+    name: {fr: "Orbite IV — Espace profond", en: "Orbit IV — Deep space"}
+    blurb:
+      fr: "Composés, accent contrastif, assimilations, tons et attitudes, lecture à voix haute préparée."
+      en: "Compounds, contrastive stress, assimilation, tones and attitudes, prepared reading aloud."
+    can_do:
+      fr: "Je mobilise tout l'éventail des traits de prononciation avec assez de contrôle pour rester toujours intelligible."
+      en: "I use the full range of pronunciation features with enough control to stay intelligible at all times."
+    instructions: en
+
+# Voix de synthèse (Kokoro, Apache-2.0). « model » = voix de production (modèle stable),
+# « hvpt » = voix variées pour l'entraînement perceptif (≥ 6 voix, deux variétés).
+voices:
+  GA:
+    model: [af_heart, am_michael]
+    slow: af_heart
+    hvpt: [af_heart, am_michael, af_bella, am_adam, af_nicole, am_eric, af_sarah, am_liam, af_aoede, am_onyx]
+  SBE:
+    model: [bf_emma, bm_george]
+    slow: bf_emma
+    hvpt: [bf_emma, bm_george, bf_isabella, bm_daniel, bf_alice, bm_fable, bf_lily, bm_lewis]
+  FR: ff_siwis   # pour les contrastes « à la française » dans les micro-leçons
+
+# Calibrage du micro et de la voix (30 s) : sert à normaliser l'espace vocalique (Lobanov) et la plage de F0.
+calibration:
+  - {text: "Please see the tea.", vowel: "iː"}
+  - {text: "Who knew the blue shoe?", vowel: "uː"}
+  - {text: "Father is calm.", vowel: "ɑː"}
+  - {text: "Sam has a black cat.", vowel: "æ"}
+  - {text: "The cup is up.", vowel: "ʌ"}
+
+# Diagnostic « brise-glace » : présenté comme un réglage, jamais comme un test.
+diagnostic:
+  perception:
+    - {target: a2-ih-iy, pair: [ship, sheep]}
+    - {target: a2-ih-iy, pair: [live, leave]}
+    - {target: a2-h, pair: [heat, eat]}
+    - {target: a2-h, pair: [hair, air]}
+    - {target: b1-ae-uh, pair: [cap, cup]}
+    - {target: b2-uh-uw, pair: [full, fool]}
+    - {target: b2-diphthongs, pair: [law, low]}
+    - {target: b1-th, pair: [think, sink]}
+  stress:
+    - {target: a2-stress2, word: "hotel", stress: 1, options: 2}
+    - {target: a2-stress2, word: "happy", stress: 0, options: 2}
+    - {target: b1-stress-long, word: "photograph", stress: 0, options: 3}
+    - {target: b2-suffix-strong, word: "photography", stress: 1, options: 4}
+    - {target: b1-stress-long, word: "banana", stress: 1, options: 3}
+    - {target: b2-suffix-strong, word: "economic", stress: 2, options: 4}
+  reading:
+    - text: "Harry has a horse in his house."
+      checks: [a2-h]
+    - text: "Please sit in this seat, it's free."
+      checks: [a2-ih-iy]
+    - text: "I thought about the photographs of the economy."
+      checks: [b1-th, b1-stress-long, a2-schwa]
+    - text: "We walked to the shop and looked at the cups."
+      checks: [b1-ed-s, b1-weak-forms, b1-ae-uh]
+    - text: "I'm coming home tomorrow."
+      checks: [b2-final-fall, b2-diphthongs]
+  free:
+    prompt:
+      fr: "Si vous le souhaitez, présentez-vous en quelques phrases : qui vous êtes, ce que vous aimez faire. (Facultatif — 30 secondes suffisent.)"
+      en: "If you like, introduce yourself in a few sentences: who you are, what you enjoy doing. (Optional — 30 seconds is plenty.)"
+
+# Messages clés (cadre didactique §9.5)
+messages:
+  - fr: "L'objectif est d'être compris facilement, pas de perdre votre accent."
+    en: "The goal is to be understood easily, not to lose your accent."
+  - fr: "Les francophones ont du mal à entendre l'accent des mots : ce n'est pas un manque d'oreille, c'est un effet du français, et ça s'entraîne."
+    en: "French speakers find word stress hard to hear: it's not a lack of ear, it's a side effect of French — and it can be trained."
+  - fr: "Une erreur est une information, pas une note."
+    en: "A mistake is information, not a grade."
+  - fr: "Si c'est plus difficile aujourd'hui, c'est normal : c'est ce qui fixe l'acquis."
+    en: "If it feels harder today, that's normal: it's what makes learning stick."
+  - fr: "Votre accent fait partie de vous. La clarté, elle, est une compétence."
+    en: "Your accent is part of who you are. Clarity is a skill."

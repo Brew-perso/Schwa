@@ -1,0 +1,99 @@
+# Surcharges du dictionnaire de prononciation (notation Kokoro/misaki).
+# Utiles quand la prononciation « de dictionnaire » n'est pas celle que l'on veut enseigner
+# (formes réduites courantes, noms propres, lettres de l'alphabet…).
+# Notation : ˈ = accent principal, ˌ = secondaire, A=eɪ I=aɪ O=oʊ (GA) Q=əʊ (SBE) W=aʊ Y=ɔɪ ɹ=r ᵊ=ə syllabique.
+
+words:
+  # Formes réduites visées par la cible « syllabes » (a2-syllables)
+  every: {GA: ˈɛvɹi, SBE: ˈɛvɹi}
+  family: {GA: fˈæmli, SBE: fˈamli}
+  different: {GA: dˈɪfɹənt, SBE: dˈɪfɹənt}
+  business: {GA: bˈɪznəs, SBE: bˈɪznəs}
+  wednesday: {GA: wˈɛnzdA, SBE: wˈɛnzdA}
+  vegetable: {GA: vˈɛʤtəbᵊl, SBE: vˈɛʤtəbᵊl}
+  vegetables: {GA: vˈɛʤtəbᵊlz, SBE: vˈɛʤtəbᵊlz}
+  comfortable: {GA: kˈʌmftəɹbᵊl, SBE: kˈʌmftəbᵊl}
+  interesting: {GA: ˈɪntɹəstɪŋ, SBE: ˈɪntɹəstɪŋ}
+  evening: {GA: ˈivnɪŋ, SBE: ˈiːvnɪŋ}
+  camera: {GA: kˈæmɹə, SBE: kˈamɹə}
+  favourite: {GA: fˈAvɹɪt, SBE: fˈAvɹɪt}
+  favorite: {GA: fˈAvɹɪt, SBE: fˈAvɹɪt}
+  chocolate: {GA: ʧˈɔklət, SBE: ʧˈɒklət}
+  temperature: {GA: tˈɛmpɹəʧəɹ, SBE: tˈɛmpɹəʧə}
+  restaurant: {GA: ɹˈɛstɹɑnt, SBE: ɹˈɛstɹɒnt}
+  # Mots savants dont on veut l'accent de référence
+  economics: {GA: ˌɛkənˈɑmɪks, SBE: ˌiːkənˈɒmɪks}
+  quiet: {GA: kwˈIət, SBE: kwˈIət}
+  gmail: {GA: ʤˈimAl, SBE: ʤˈiːmAl}
+  email: {GA: ˈimAl, SBE: ˈiːmAl}
+  claire: {GA: klˈɛɹ, SBE: klˈɛː}
+  luke: {GA: lˈuk, SBE: lˈuːk}
+  lyon: {GA: liˈOn, SBE: lˈiːɒn}
+  bookshop: {GA: bˈʊkʃˌɑp, SBE: bˈʊkʃˌɒp}
+
+# Prononciation verbale des paires nom/verbe quand le mot suit « to »
+verbs:
+  export: {GA: ɪkspˈɔɹt, SBE: ɪkspˈɔːt}
+  protest: {GA: pɹətˈɛst, SBE: pɹətˈɛst}
+
+# Noms des lettres (épellation)
+letters:
+  A: ˈA
+  B: bˈi
+  C: sˈi
+  D: dˈi
+  E: ˈi
+  F: ˈɛf
+  G: ʤˈi
+  H: ˈAʧ
+  I: ˈI
+  J: ʤˈA
+  K: kˈA
+  L: ˈɛl
+  M: ˈɛm
+  N: ˈɛn
+  O: {GA: ˈO, SBE: ˈQ}
+  P: pˈi
+  Q: kjˈu
+  R: {GA: ˈɑɹ, SBE: ˈɑː}
+  S: ˈɛs
+  T: tˈi
+  U: jˈu
+  V: vˈi
+  W: dˈʌbᵊljˌu
+  X: ˈɛks
+  Y: wˈI
+  Z: {GA: zˈi, SBE: zˈɛd}
+
+# Orthographe américaine affichée pour le modèle GA
+spelling_GA:
+  favourite: favorite
+  colour: color
+  neighbourhood: neighborhood
+  neighbour: neighbor
+  harbour: harbor
+  centre: center
+  theatre: theater
+  travelling: traveling
+  organise: organize
+  realise: realize
+  programme: program
+
+# Découpage orthographique des syllabes (bulles) quand la césure automatique ne correspond pas
+syllables:
+  every: ev-ery
+  family: fam-ily
+  different: dif-ferent
+  business: busi-ness
+  wednesday: wednes-day
+  vegetable: veg-eta-ble
+  vegetables: veg-eta-bles
+  comfortable: comf-orta-ble
+  interesting: in-terest-ing
+  evening: eve-ning
+  camera: cam-era
+  favourite: fa-vourite
+  favorite: fa-vorite
+  chocolate: choc-olate
+  temperature: tem-pera-ture
+  restaurant: rest-aurant

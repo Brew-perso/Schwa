@@ -1,0 +1,63 @@
+id: c1-connected
+level: C1
+order: 3
+domain: aisance
+kind: connected
+planet: {color: teal, motif: rings}
+title: {fr: "Assimilations et élisions", en: "Assimilation and elision"}
+tagline: {fr: "handbag → « hambag », next day → « nex day »", en: "handbag → 'hambag', next day → 'nex day'"}
+why:
+  fr: "En débit naturel, les sons s'influencent : /n/ devient /m/ devant /b/ (handbag), /t/ et /d/ tombent entre deux consonnes (next day), /t/ + /j/ fusionnent (don't you → « donchou »). Les reconnaître est indispensable pour comprendre l'anglais authentique ; les produire, pour un débit fluide."
+  en: "In natural speech, sounds influence each other: /n/ becomes /m/ before /b/ (handbag), /t/ and /d/ drop between consonants (next day), /t/ + /j/ merge (don't you → 'donchoo'). Recognising them is essential for understanding authentic English; producing them makes your speech flow."
+criterion:
+  fr: "Je reconnais les principales assimilations à l'oreille, et je les produis sans les forcer dans un débit naturel."
+  en: "I recognise the main assimilations by ear, and I produce them naturally at normal speed."
+phones: []
+errors:
+  - {target: connected, realized: over-articulated, fiche: sur-articule, weight: 0.3}
+lesson:
+  - type: text
+    fr: "Trois phénomènes clés. Assimilation : un son prend la couleur de son voisin (ten boys → « tem boys », good girl → « goog girl »). Élision : /t/ ou /d/ disparaît entre deux consonnes (last night → « las night », old man → « ol man »). Coalescence : /t/, /d/ + /j/ → /tʃ/, /dʒ/ (did you → « didjou »)."
+    en: "Three key phenomena. Assimilation: a sound takes on its neighbour's colour (ten boys → 'tem boys', good girl → 'goog girl'). Elision: /t/ or /d/ disappears between consonants (last night → 'las night', old man → 'ol man'). Coalescence: /t/, /d/ + /j/ → /tʃ/, /dʒ/ (did you → 'didjoo')."
+  - type: listen
+    fr: "Écoutez en débit naturel :"
+    en: "Listen at natural speed:"
+    items: ["ten boys", "last night", "did you", "don't you"]
+  - type: rule
+    fr: "Ce ne sont pas des « fautes » des natifs : ce sont des économies régulières. Mais [vous n'êtes pas obligé(e)|tu n'es pas obligé(e)] de les produire : une articulation plus complète reste parfaitement intelligible. L'enjeu principal est la compréhension."
+    en: "These aren't native speakers' 'mistakes': they're regular economies. But you don't have to produce them: fuller articulation is perfectly intelligible. The main goal is comprehension."
+  - type: quiz
+    q: {fr: "« Did you eat? » en débit rapide peut s'entendre…", en: "'Did you eat?' at speed can sound like…"}
+    options: ["« Jeet? »", "« Did you it? »"]
+    answer: 0
+    explain: {fr: "Did you → /dʒə/, puis enchaînement : « Jeet? ». Réponse possible : « No, joo? » (No, did you?).", en: "Did you → /dʒə/, then linking: 'Jeet?'. Possible reply: 'No, joo?' (No, did you?)."}
+perception:
+  task: dictation
+  items:
+    - {text: "I'll see you next week.", blanks: [next]}
+    - {text: "Did you see it last night?", blanks: [did you, last]}
+    - {text: "I bought a handbag.", blanks: [handbag]}
+    - {text: "Don't you want to come?", blanks: [don't you, want to]}
+    - {text: "She's got ten boys and a good girl.", blanks: [ten boys, good girl]}
+    - {text: "What do you want?", blanks: [what do you]}
+    - {text: "I'm going to call him.", blanks: [going to]}
+    - {text: "Could you help me?", blanks: [could you]}
+production:
+  - {text: "I'll see you next week."}
+  - {text: "Did you see it last night?"}
+  - {text: "Don't you want to come?"}
+  - {text: "Would you like some tea?"}
+  - {text: "What do you want to do?"}
+  - {text: "He's a good cook and a great friend."}
+guided:
+  - text: "Last night, I couldn't find my handbag."
+    fr: "Élision (las night), assimilation (hambag)."
+    en: "Elision (las' night), assimilation (hambag)."
+transfer:
+  - fr: "Racontez votre soirée d'hier comme à un ami, en débit naturel (last night, did you, want to, going to…)."
+    en: "Tell a friend about last night at natural speed (last night, did you, want to, going to…)."
+    hint_words: [last night, going to, want to, did you]
+fiches:
+  sur-articule:
+    fr: "Votre articulation était très complète : c'est parfaitement clair. Pour gagner en fluidité, [essayez|essaie] de laisser « {link} » se fondre."
+    en: "Your articulation was very full: perfectly clear. To sound more fluent, try letting '{link}' blend."

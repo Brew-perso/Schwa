@@ -1,0 +1,110 @@
+id: a2-stress2
+level: A2
+order: 2
+domain: prosodie
+kind: stress
+planet: {color: coral, motif: rings}
+title: {fr: "La syllabe forte", en: "The strong syllable"}
+tagline: {fr: "Mots de deux syllabes : DA-da ou da-DA ?", en: "Two-syllable words: DA-da or da-DA?"}
+why:
+  fr: "L'accent de mot est le premier facteur de compréhension de votre anglais : un mot mal accentué peut devenir méconnaissable. Le français accentue la fin des groupes ; l'anglais choisit une syllabe par mot, et elle ne bouge pas."
+  en: "Word stress is the number-one factor in being understood: a wrongly stressed word can become unrecognisable. French stresses the end of phrases; English picks one syllable per word, and it doesn't move."
+criterion:
+  fr: "Je repère la syllabe forte à l'oreille et je la rends plus longue, plus claire et plus mélodique que l'autre."
+  en: "I can hear the strong syllable and I make it longer, clearer and more melodic than the other."
+phones: []
+errors:
+  - {target: stress, realized: final, fiche: accent-final, weight: 1.0}
+  - {target: stress, realized: flat, fiche: accent-plat, weight: 0.8}
+lesson:
+  - type: text
+    fr: "Dans un mot anglais, une syllabe « gagne » : elle est plus longue, plus claire, et la voix y change de hauteur. Les autres rapetissent. C'est ce relief que l'oreille de votre interlocuteur utilise pour reconnaître le mot."
+    en: "In an English word, one syllable 'wins': it's longer, clearer, and the voice changes pitch on it. The others shrink. Your listener uses this shape to recognise the word."
+  - type: contrast
+    fr: "En français, l'accent tombe sur la fin : « un pro-blème ». En anglais : PRO-blem."
+    en: "In French, stress falls at the end: 'un pro-blème'. In English: PRO-blem."
+    french: "un problème"
+    english: "a problem"
+  - type: text
+    fr: "Bonne nouvelle : ce n'est pas un manque d'oreille. Le français n'utilise pas l'accent pour distinguer les mots, alors notre cerveau a appris à l'ignorer. Ça se rééduque, avec de l'entraînement régulier."
+    en: "Good news: it's not a lack of ear. French doesn't use stress to tell words apart, so our brains learned to ignore it. It can be retrained with regular practice."
+  - type: rule
+    fr: "Règle de base : la plupart des noms et adjectifs de deux syllabes sont accentués sur la 1re (TA-ble, HAP-py). Beaucoup de verbes, et les mots qui commencent par un préfixe comme be-, for-, de-, re-, a-, sont accentués sur la 2e (be-GIN, for-GET, de-CIDE)."
+    en: "Basic rule: most two-syllable nouns and adjectives are stressed on the 1st syllable (TA-ble, HAP-py). Many verbs, and words starting with a prefix like be-, for-, de-, re-, a-, are stressed on the 2nd (be-GIN, for-GET, de-CIDE)."
+  - type: gesture
+    art: bubbles
+    fr: "[Frappez|Frappe] dans vos mains sur la syllabe forte, [effleurez|effleure] sur la faible : CLAP-tap pour « happy », tap-CLAP pour « hotel »."
+    en: "Clap on the strong syllable, tap lightly on the weak one: CLAP-tap for 'happy', tap-CLAP for 'hotel'."
+  - type: quiz
+    q: {fr: "« career » (carrière) se prononce…", en: "'career' is pronounced…"}
+    options: ["CA-reer", "ca-REER"]
+    answer: 1
+    explain: {fr: "ca-REER. Attention : CA-reer ressemble à « Korea » !", en: "ca-REER. Careful: CA-reer sounds like 'Korea'!"}
+perception:
+  task: stress
+  items:
+    - {text: happy, stress: 0}
+    - {text: table, stress: 0}
+    - {text: water, stress: 0}
+    - {text: people, stress: 0}
+    - {text: picture, stress: 0}
+    - {text: problem, stress: 0}
+    - {text: window, stress: 0}
+    - {text: garden, stress: 0}
+    - {text: doctor, stress: 0}
+    - {text: money, stress: 0}
+    - {text: concept, stress: 0}
+    - {text: context, stress: 0}
+    - {text: impact, stress: 0, pos: noun}
+    - {text: nothing, stress: 0}
+    - {text: begin, stress: 1}
+    - {text: forget, stress: 1}
+    - {text: relax, stress: 1}
+    - {text: decide, stress: 1}
+    - {text: enjoy, stress: 1}
+    - {text: today, stress: 1}
+    - {text: hotel, stress: 1}
+    - {text: machine, stress: 1}
+    - {text: police, stress: 1}
+    - {text: career, stress: 1}
+    - {text: event, stress: 1}
+    - {text: advice, stress: 1}
+    - {text: balloon, stress: 1}
+    - {text: again, stress: 1}
+production:
+  - {text: happy, stress: 0}
+  - {text: problem, stress: 0}
+  - {text: people, stress: 0}
+  - {text: concept, stress: 0}
+  - {text: context, stress: 0}
+  - {text: nothing, stress: 0}
+  - {text: hotel, stress: 1}
+  - {text: career, stress: 1}
+  - {text: event, stress: 1}
+  - {text: begin, stress: 1}
+  - {text: decide, stress: 1}
+  - {text: machine, stress: 1}
+  - {text: "The hotel has a problem.", stress_words: {hotel: 1, problem: 0}}
+  - {text: "People forget their money.", stress_words: {people: 0, forget: 1, money: 0}}
+  - {text: "Relax, it's nothing.", stress_words: {relax: 1, nothing: 0}}
+guided:
+  - text: "I want a career in marketing."
+    fr: "ca-REER (pas « Korea ») et MAR-ke-ting."
+    en: "ca-REER (not 'Korea') and MAR-ke-ting."
+  - text: "The event begins today."
+    fr: "Trois mots accentués sur la 2e syllabe : e-VENT, be-GINS, to-DAY."
+    en: "Three words stressed on the 2nd syllable: e-VENT, be-GINS, to-DAY."
+  - text: "Don't forget the concept!"
+    fr: "for-GET, CON-cept."
+    en: "for-GET, CON-cept."
+transfer:
+  - fr: "Décrivez votre lieu de vacances idéal en quelques phrases. Essayez de placer : hotel, garden, water, relax, enjoy."
+    en: "Describe your ideal holiday spot in a few sentences. Try to use: hotel, garden, water, relax, enjoy."
+    hint_words: [hotel, garden, water, relax, enjoy]
+fiches:
+  accent-final:
+    fr: "La syllabe la plus forte était la dernière, comme en français. [Allongez|Allonge] et [faites|fais] monter la voix sur la syllabe {stressed}, puis [laissez|laisse] retomber la suivante."
+    en: "The strongest syllable was the last one, as in French. Lengthen the syllable {stressed} and raise your voice on it, then let the next one drop."
+  accent-plat:
+    fr: "Les deux syllabes ont presque le même poids. [Exagérez|Exagère] d'abord : une syllabe géante, une toute petite. On revient au naturel ensuite."
+    en: "Both syllables have almost the same weight. Exaggerate first: one giant syllable, one tiny one. Then go back to natural."

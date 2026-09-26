@@ -1,0 +1,80 @@
+id: b1-weak-forms
+level: B1
+order: 3
+domain: prosodie
+kind: weak
+planet: {color: indigo, motif: dots}
+title: {fr: "Les formes faibles", en: "Weak forms"}
+tagline: {fr: "to, for, of, can, and… les petits mots qui se font tout petits", en: "to, for, of, can, and… small words that stay small"}
+why:
+  fr: "Les mots-outils (to, of, and, can, was…) ont une forme « forte » et une forme « faible ». Dans la phrase, on utilise presque toujours la forme faible. Les reconnaître change tout pour comprendre l'anglais parlé ; les produire rend votre rythme naturel et authentique."
+  en: "Function words (to, of, and, can, was…) have a 'strong' and a 'weak' form. In a sentence, the weak form is used almost all the time. Recognising them transforms your listening; producing them makes your rhythm natural and authentic."
+criterion:
+  fr: "Dans « I want to go to the shop », mes « to » sont réduits à /tə/, et je reconnais les formes faibles à l'oreille."
+  en: "In 'I want to go to the shop', my 'to's are reduced to /tə/, and I can recognise weak forms by ear."
+phones: [ə]
+errors:
+  - {target: ə, realized: uː, word: to, fiche: forme-pleine, weight: 0.5}
+  - {target: ə, realized: ɔː, word: for, fiche: forme-pleine, weight: 0.5}
+  - {target: ə, realized: ɒ, word: of, fiche: forme-pleine, weight: 0.5}
+  - {target: ə, realized: æ, word: can, fiche: forme-pleine, weight: 0.5}
+  - {target: ə, realized: æ, word: and, fiche: forme-pleine, weight: 0.4}
+  - {target: ə, realized: æ, word: at, fiche: forme-pleine, weight: 0.4}
+  - {target: ə, realized: ɒ, word: was, fiche: forme-pleine, weight: 0.5}
+lesson:
+  - type: text
+    fr: "Dans une phrase, les mots qui portent le sens (noms, verbes, adjectifs) sont accentués. Les mots-outils, eux, se réduisent : « to » devient /tə/, « for » /fə/, « of » /əv/, « and » /ən/, « can » /kən/."
+    en: "In a sentence, the words that carry meaning (nouns, verbs, adjectives) are stressed. Function words shrink: 'to' becomes /tə/, 'for' /fə/, 'of' /əv/, 'and' /ən/, 'can' /kən/."
+  - type: listen
+    fr: "Écoutez les petits mots :"
+    en: "Listen to the small words:"
+    items: ["I want to go to the shop.", "A cup of tea.", "Fish and chips."]
+  - type: rule
+    fr: "Quand garde-t-on la forme forte ? Quand le mot est accentué pour insister (« I CAN do it! »), en fin de phrase (« What are you looking at? »), ou seul. « of » ne se prononce jamais /ɒf/ : c'est /əv/, ou /ɒv/ en forme forte."
+    en: "When do we keep the strong form? When the word is stressed for emphasis ('I CAN do it!'), at the end of a sentence ('What are you looking at?'), or on its own. 'of' is never /ɒf/: it's /əv/, or /ɒv/ when strong."
+  - type: gesture
+    art: bubbles
+    fr: "[Pensez|Pense] aux mots-outils comme à des petites perles glissées entre les grosses : on les dit vite, sans lever la voix."
+    en: "Think of function words as small beads slipped between big ones: say them quickly, without raising your voice."
+  - type: quiz
+    q: {fr: "Dans « I can swim », « can » se dit…", en: "In 'I can swim', 'can' is said…"}
+    options: ["/kæn/", "/kən/"]
+    answer: 1
+    explain: {fr: "/kən/ : forme faible. La forme forte /kæn/ sert pour insister ou en fin de phrase (« Yes, I can. »). Et « can't » garde toujours sa voyelle pleine.", en: "/kən/: weak form. The strong form /kæn/ is for emphasis or at the end ('Yes, I can.'). And 'can't' always keeps its full vowel."}
+perception:
+  task: identify
+  items:
+    - {texts: ["I can swim.", "I can't swim."], note: "can /kən/ vs can't /kɑːnt/ ~ /kænt/"}
+    - {texts: ["He's going.", "He was going."]}
+    - {texts: ["We'll go.", "We go."]}
+    - {texts: ["I'd like tea.", "I like tea."]}
+    - {texts: ["She's got a car.", "She got a car."]}
+    - {texts: ["We've finished.", "We finished."]}
+    - {texts: ["He'd gone.", "He's gone."]}
+    - {texts: ["I'll call you.", "I call you."]}
+production:
+  - {text: "I want to go to the shop.", weak: [to, to, the]}
+  - {text: "A cup of tea.", weak: [a, of]}
+  - {text: "Fish and chips.", weak: [and]}
+  - {text: "I can swim.", weak: [can]}
+  - {text: "It was for my mother.", weak: [was, for]}
+  - {text: "He's at the station.", weak: [at, the]}
+  - {text: "What are you looking at?", strong: [at]}
+  - {text: "Some of them were late.", weak: [of, were]}
+  - {text: "Come and see us.", weak: [and, us]}
+  - {text: "Yes, I can.", strong: [can]}
+guided:
+  - text: "I'd like a cup of tea and a piece of cake."
+    fr: "Toutes les formes faibles : /ə/, /əv/, /ən/."
+    en: "All weak forms: /ə/, /əv/, /ən/."
+  - text: "Where are you going to?"
+    fr: "Le « to » final garde sa forme forte /tuː/ ; le « are » est faible."
+    en: "The final 'to' keeps its strong form /tuː/; 'are' is weak."
+transfer:
+  - fr: "Commandez un repas au restaurant (a cup of…, a glass of…, and…, for…). Deux ou trois phrases suffisent."
+    en: "Order a meal at a restaurant (a cup of…, a glass of…, and…, for…). Two or three sentences are enough."
+    hint_words: [cup, glass, and, for, some]
+fiches:
+  forme-pleine:
+    fr: "« {word} » a été prononcé avec sa forme forte (« {heard} »). Ici, il n'est pas accentué : [dites|dis] simplement /{weak}/, très vite, collé au mot suivant."
+    en: "'{word}' was said in its strong form ('{heard}'). Here it isn't stressed: just say /{weak}/, very quickly, attached to the next word."

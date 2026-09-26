@@ -1,0 +1,77 @@
+id: b1-nucleus
+level: B1
+order: 7
+domain: prosodie
+kind: nucleus
+planet: {color: coral, motif: stars}
+title: {fr: "Le mot fort de la phrase", en: "The key word in the sentence"}
+tagline: {fr: "Une phrase, un sommet mélodique", en: "One sentence, one melodic peak"}
+why:
+  fr: "Dans chaque groupe de mots, l'anglais met en relief un mot principal : le « noyau ». Par défaut, c'est le dernier mot porteur de sens. Le placer au bon endroit aide votre interlocuteur à suivre ce qui est nouveau et important."
+  en: "In every group of words, English highlights one main word: the 'nucleus'. By default, it's the last content word. Putting it in the right place helps your listener follow what's new and important."
+criterion:
+  fr: "Dans une phrase simple, je fais ressortir le dernier mot porteur de sens, et ma voix descend après lui."
+  en: "In a simple sentence, I make the last content word stand out, and my voice falls after it."
+phones: []
+errors:
+  - {target: nucleus, realized: other, fiche: noyau-deplace, weight: 0.8}
+  - {target: nucleus, realized: flat, fiche: noyau-plat, weight: 0.6}
+lesson:
+  - type: text
+    fr: "Dans « I'd like a cup of TEA », tous les mots ne se valent pas. Les mots de sens (like, cup, tea) sont accentués ; le dernier d'entre eux, TEA, est le sommet : la voix y fait son plus grand mouvement, puis retombe."
+    en: "In 'I'd like a cup of TEA', not all words are equal. Content words (like, cup, tea) are stressed; the last of them, TEA, is the peak: the voice makes its biggest move there, then falls."
+  - type: listen
+    fr: "Écoutez où la voix « culmine » :"
+    en: "Listen for where the voice peaks:"
+    items: ["I'd like a cup of tea.", "She lives in London.", "We're going to the beach."]
+  - type: rule
+    fr: "Règle par défaut : le noyau tombe sur le dernier mot lexical (nom, verbe, adjectif, adverbe) du groupe. Les mots-outils et les pronoms en fin de phrase ne le portent pas : « I LIKE it », pas « I like IT »."
+    en: "Default rule: the nucleus falls on the last lexical word (noun, verb, adjective, adverb) of the group. Function words and pronouns at the end don't carry it: 'I LIKE it', not 'I like IT'."
+  - type: gesture
+    art: melody
+    fr: "[Tracez|Trace] la mélodie avec la main : on monte doucement, un grand saut sur le mot fort, puis on redescend."
+    en: "Trace the melody with your hand: rise gently, a big jump on the key word, then come back down."
+  - type: quiz
+    q: {fr: "Quel mot porte le noyau dans « I've lost my keys » ?", en: "Which word carries the nucleus in 'I've lost my keys'?"}
+    options: ["lost", "my", "keys"]
+    answer: 2
+    explain: {fr: "KEYS : le dernier mot porteur de sens.", en: "KEYS: the last content word."}
+perception:
+  task: nucleus
+  items:
+    - {text: "I'd like a cup of tea.", nucleus: tea}
+    - {text: "She lives in London.", nucleus: London}
+    - {text: "I've lost my keys.", nucleus: keys}
+    - {text: "I really like it.", nucleus: like}
+    - {text: "We're going to the beach.", nucleus: beach}
+    - {text: "Can you help me?", nucleus: help}
+    - {text: "The train was late.", nucleus: late}
+    - {text: "He bought a new car.", nucleus: car}
+    - {text: "Let's talk about it.", nucleus: talk}
+    - {text: "My sister's a doctor.", nucleus: doctor}
+production:
+  - {text: "I'd like a cup of tea.", nucleus: tea}
+  - {text: "She lives in London.", nucleus: London}
+  - {text: "I've lost my keys.", nucleus: keys}
+  - {text: "I really like it.", nucleus: like}
+  - {text: "Can you help me?", nucleus: help}
+  - {text: "The train was late.", nucleus: late}
+  - {text: "He bought a new car.", nucleus: car}
+guided:
+  - text: "I don't know him."
+    fr: "Le pronom final ne porte pas le noyau : I don't KNOW him."
+    en: "The final pronoun doesn't carry the nucleus: I don't KNOW him."
+  - text: "We met in Paris last summer."
+    fr: "Deux groupes possibles : We met in PARIS | last SUMMER."
+    en: "Two possible groups: We met in PARIS | last SUMMER."
+transfer:
+  - fr: "Présentez trois membres de votre famille ou trois amis en une phrase chacun (« My brother is a teacher. »)."
+    en: "Introduce three family members or friends in one sentence each ('My brother is a teacher.')."
+    hint_words: [brother, sister, friend, teacher, lives]
+fiches:
+  noyau-deplace:
+    fr: "Le relief principal est tombé sur « {heard} » au lieu de « {nucleus} ». [Faites|Fais] le grand mouvement de voix sur « {nucleus} », puis [laissez|laisse] retomber."
+    en: "The main emphasis landed on '{heard}' instead of '{nucleus}'. Make the big pitch movement on '{nucleus}', then let it fall."
+  noyau-plat:
+    fr: "La mélodie est restée assez plate : aucun mot ne ressort vraiment. [Osez|Ose] un vrai saut de voix sur « {nucleus} »."
+    en: "The melody stayed fairly flat: no word really stands out. Dare a real pitch jump on '{nucleus}'."

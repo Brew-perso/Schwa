@@ -1,0 +1,83 @@
+id: b2-final-fall
+level: B2
+order: 4
+domain: prosodie
+kind: intonation
+planet: {color: indigo, motif: swirl}
+title: {fr: "Finir en descendant", en: "Ending on a fall"}
+tagline: {fr: "La montée finale qui trahit l'hésitation", en: "The final rise that sounds unsure"}
+why:
+  fr: "En français, la voix monte à la fin de chaque groupe de mots. Transposée en anglais, cette montée systématique sonne comme une question ou une hésitation : les jurys la décrivent comme « un marqueur d'incertitude ». Une affirmation anglaise se termine en descendant."
+  en: "In French, the voice rises at the end of each word group. Carried over into English, this constant rise sounds like a question or hesitation: examiners call it 'a marker of uncertainty'. An English statement ends on a fall."
+criterion:
+  fr: "Mes affirmations se terminent par une descente nette de la voix ; je réserve la montée aux questions fermées et aux listes non terminées."
+  en: "My statements end with a clear fall in pitch; I keep rises for yes/no questions and unfinished lists."
+phones: []
+errors:
+  - {target: fall, realized: rise, fiche: montee-finale, weight: 0.8}
+  - {target: fall, realized: flat, fiche: melodie-plate, weight: 0.5}
+  - {target: rise, realized: fall, fiche: question-descendante, weight: 0.4}
+lesson:
+  - type: text
+    fr: "Affirmation, question ouverte (wh-), ordre : la voix descend sur le dernier mot fort. Question fermée (yes/no) : elle monte. C'est ce contraste qui dit à votre interlocuteur si vous affirmez ou si vous demandez."
+    en: "Statement, wh- question, command: the voice falls on the last key word. Yes/no question: it rises. This contrast tells your listener whether you're stating or asking."
+  - type: contrast
+    fr: "Écoutez la mélodie française, qui monte en fin de groupe, puis la mélodie anglaise, qui descend."
+    en: "Listen to the French melody, rising at the end of the group, then the English one, falling."
+    french: "Je travaille à Lyon, dans une banque."
+    english: "I work in Lyon, in a bank."
+  - type: gesture
+    art: melody
+    fr: "[Dessinez|Dessine] la courbe avec la main pendant que [vous parlez|tu parles] : la main plonge sur le dernier mot fort. [Imaginez|Imagine] que [vous posez|tu poses] un objet sur une table."
+    en: "Draw the curve with your hand while you speak: your hand dives on the last key word. Imagine putting an object down on a table."
+  - type: rule
+    fr: "Pas de valeurs en hertz ici : seule la forme compte. Votre courbe est comparée à celle du modèle, après normalisation sur votre propre voix."
+    en: "No hertz values here: only the shape matters. Your curve is compared with the model's, normalised to your own voice."
+  - type: quiz
+    q: {fr: "« Where do you live? » se termine…", en: "'Where do you live?' ends…"}
+    options: ["en montant", "en descendant"]
+    answer: 1
+    explain: {fr: "Question ouverte (wh-) : la voix descend, comme une affirmation.", en: "Wh- question: the voice falls, like a statement."}
+perception:
+  task: tone
+  items:
+    - {text: "You're coming.", tone: fall}
+    - {text: "You're coming?", tone: rise}
+    - {text: "It's finished.", tone: fall}
+    - {text: "It's finished?", tone: rise}
+    - {text: "She's a doctor.", tone: fall}
+    - {text: "Is she a doctor?", tone: rise}
+    - {text: "Where do you live?", tone: fall}
+    - {text: "Do you live here?", tone: rise}
+    - {text: "I'm from Paris.", tone: fall}
+    - {text: "Are you from Paris?", tone: rise}
+production:
+  - {text: "I work in a bank.", tone: fall}
+  - {text: "My name is Claire.", tone: fall}
+  - {text: "I'm coming home tomorrow.", tone: fall}
+  - {text: "Where do you live?", tone: fall}
+  - {text: "Close the door, please.", tone: fall}
+  - {text: "Do you like it?", tone: rise}
+  - {text: "Are you ready?", tone: rise}
+  - {text: "I study law at the university.", tone: fall}
+guided:
+  - text: "I'm a student. I study history. I live in Lyon."
+    fr: "Trois affirmations, trois descentes : pas de montée entre les phrases."
+    en: "Three statements, three falls: no rise between sentences."
+  - text: "Do you want tea or coffee?"
+    fr: "Choix fermé : montée sur « tea », descente sur « coffee »."
+    en: "Closed choice: rise on 'tea', fall on 'coffee'."
+transfer:
+  - fr: "Présentez-vous en quatre affirmations (nom, ville, études ou travail, loisir). Veillez à descendre à la fin de chacune."
+    en: "Introduce yourself in four statements (name, city, studies or job, hobby). Make sure you fall at the end of each one."
+    hint_words: [name, live, work, study, like]
+fiches:
+  montee-finale:
+    fr: "Votre voix est montée à la fin, ce qui peut sonner comme une question ou une hésitation. Sur « {nucleus} », [faites|fais] plonger la voix, comme pour poser un objet."
+    en: "Your voice rose at the end, which can sound like a question or hesitation. On '{nucleus}', let your voice dive, as if putting something down."
+  melodie-plate:
+    fr: "La mélodie est restée plate à la fin. [Osez|Ose] un vrai mouvement descendant sur le dernier mot fort."
+    en: "The melody stayed flat at the end. Dare a real downward movement on the last key word."
+  question-descendante:
+    fr: "Pour une question fermée (oui/non), la voix monte sur la fin. Ici, elle est descendue : [vous risquez|tu risques] de sonner comme une affirmation."
+    en: "For a yes/no question, the voice rises at the end. Here it fell: you may sound like you're making a statement."

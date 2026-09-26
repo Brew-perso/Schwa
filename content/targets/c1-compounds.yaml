@@ -1,0 +1,69 @@
+id: c1-compounds
+level: C1
+order: 1
+domain: prosodie
+kind: stress
+planet: {color: coral, motif: bands}
+title: {fr: "Composés et accent secondaire", en: "Compounds and secondary stress"}
+tagline: {fr: "a GREENhouse · a green HOUSE", en: "a GREENhouse · a green HOUSE"}
+why:
+  fr: "Les noms composés portent généralement l'accent sur leur premier élément (a BLACKboard, a DARKroom), alors qu'un adjectif + nom l'accentue à droite (a black BOARD, a dark ROOM). Le sens en dépend. Les mots longs portent aussi un accent secondaire, et deux accents voisins s'évitent (« clash »)."
+  en: "Compound nouns usually take stress on their first element (a BLACKboard, a DARKroom), while adjective + noun takes it on the right (a black BOARD, a dark ROOM). The meaning depends on it. Long words also carry secondary stress, and neighbouring stresses avoid each other ('clash')."
+criterion:
+  fr: "J'accentue correctement les composés courants et je distingue « GREENhouse » (serre) de « green HOUSE » (maison verte)."
+  en: "I stress common compounds correctly and I distinguish 'GREENhouse' (glass house for plants) from 'green HOUSE' (house painted green)."
+phones: []
+errors:
+  - {target: stress, realized: other, fiche: compose, weight: 0.9}
+lesson:
+  - type: text
+    fr: "Règle générale : nom composé → accent sur le premier élément (BUS stop, SWIMming pool, BOOKshop). Groupe adjectif + nom → accent sur le nom (a big BUS, a cold POOL)."
+    en: "General rule: compound noun → stress on the first element (BUS stop, SWIMming pool, BOOKshop). Adjective + noun phrase → stress on the noun (a big BUS, a cold POOL)."
+  - type: listen
+    fr: "Composé, puis groupe nominal :"
+    en: "Compound, then noun phrase:"
+    items: ["a greenhouse", "a green house", "a blackbird", "a black bird"]
+  - type: rule
+    fr: "Accent secondaire : dans « ˌpho-to-ˈGRA-phic » ou « ˌu-ni-ˈVER-si-ty », une syllabe avant l'accent principal garde une voyelle pleine. Clash : quand deux accents se suivent, le premier recule — « thirTEEN » mais « THIRteen PEOple », « JaPANese » mais « JApanese FOOD »."
+    en: "Secondary stress: in 'ˌpho-to-ˈGRA-phic' or 'ˌu-ni-ˈVER-si-ty', a syllable before the main stress keeps a full vowel. Clash: when two stresses meet, the first moves back — 'thirTEEN' but 'THIRteen PEOple', 'JapaNESE' but 'JApanese FOOD'."
+  - type: quiz
+    q: {fr: "« a dark room » (pièce sombre) vs « a darkroom » (labo photo) : lequel est accentué à gauche ?", en: "'a dark room' vs 'a darkroom' (photo lab): which one is stressed on the left?"}
+    options: ["a dark room", "a darkroom"]
+    answer: 1
+    explain: {fr: "Le composé : a DARKroom. Le groupe adjectif + nom : a dark ROOM.", en: "The compound: a DARKroom. The adjective + noun: a dark ROOM."}
+perception:
+  task: stress-phrase
+  items:
+    - {text: "a greenhouse", focus_word: 0, words: [green, house]}
+    - {text: "a green house", focus_word: 1, words: [green, house]}
+    - {text: "a blackbird", focus_word: 0, words: [black, bird]}
+    - {text: "a black bird", focus_word: 1, words: [black, bird]}
+    - {text: "a darkroom", focus_word: 0, words: [dark, room]}
+    - {text: "a dark room", focus_word: 1, words: [dark, room]}
+    - {text: "a bus stop", focus_word: 0, words: [bus, stop]}
+    - {text: "a swimming pool", focus_word: 0, words: [swimming, pool]}
+    - {text: "a white house", focus_word: 1, words: [white, house]}
+    - {text: "the White House", focus_word: 0, words: [White, House]}
+production:
+  - {text: "a greenhouse", focus_word: 0}
+  - {text: "a green house", focus_word: 1}
+  - {text: "a bus stop", focus_word: 0}
+  - {text: "a swimming pool", focus_word: 0}
+  - {text: "a bookshop", focus_word: 0}
+  - {text: "a big bus", focus_word: 1}
+  - {text: "thirteen people", focus_word: 0}
+  - {text: "Japanese food", focus_word: 0}
+  - {text: "We grow tomatoes in the greenhouse."}
+  - {text: "They live in a green house near the bus stop."}
+guided:
+  - text: "I saw a blackbird, not just a black bird."
+    fr: "BLACKbird (merle) puis black BIRD (n'importe quel oiseau noir)."
+    en: "BLACKbird (the species) then black BIRD (any black bird)."
+transfer:
+  - fr: "Décrivez votre quartier : commerces, lieux, équipements (bus stop, bookshop, car park, swimming pool, playground…)."
+    en: "Describe your neighbourhood: shops, places, facilities (bus stop, bookshop, car park, swimming pool, playground…)."
+    hint_words: [bus stop, bookshop, car park, swimming pool, playground]
+fiches:
+  compose:
+    fr: "« {phrase} » : l'accent principal est attendu sur « {stressed} » ({why})."
+    en: "'{phrase}': main stress is expected on '{stressed}' ({why})."

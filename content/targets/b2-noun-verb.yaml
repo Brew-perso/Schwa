@@ -1,0 +1,79 @@
+id: b2-noun-verb
+level: B2
+order: 2
+domain: prosodie
+kind: stress
+planet: {color: coral, motif: bands}
+title: {fr: "Paires nom / verbe", en: "Noun / verb pairs"}
+tagline: {fr: "a RE-cord · to re-CORD", en: "a RE-cord · to re-CORD"}
+why:
+  fr: "Une soixantaine de mots de deux syllabes changent d'accent selon leur nature : nom (ou adjectif) accentué sur la 1re syllabe, verbe sur la 2e. Se tromper change le mot — et souvent sa voyelle."
+  en: "Around sixty two-syllable words change stress depending on their part of speech: the noun (or adjective) is stressed on the 1st syllable, the verb on the 2nd. Getting it wrong changes the word — and often its vowel."
+criterion:
+  fr: "Je distingue à l'oral « a PRE-sent » et « to pre-SENT », « an OB-ject » et « to ob-JECT »."
+  en: "I distinguish 'a PRE-sent' and 'to pre-SENT', 'an OB-ject' and 'to ob-JECT' in speech."
+phones: []
+errors:
+  - {target: stress, realized: other, fiche: nom-verbe, weight: 1.0}
+lesson:
+  - type: text
+    fr: "NOM : accent à gauche. VERBE : accent à droite. a RE-cord / to re-CORD, a PRO-test / to pro-TEST, an IN-crease / to in-CREASE, a CON-duct / to con-DUCT."
+    en: "NOUN: stress on the left. VERB: stress on the right. a RE-cord / to re-CORD, a PRO-test / to pro-TEST, an IN-crease / to in-CREASE, a CON-duct / to con-DUCT."
+  - type: listen
+    fr: "Nom, puis verbe :"
+    en: "Noun, then verb:"
+    items: ["a record", "to record", "a present", "to present"]
+  - type: rule
+    fr: "La voyelle suit l'accent : dans le verbe re-CORD, le « re » se réduit en /rɪ/ ; dans le nom RE-cord, c'est « -cord » qui se réduit : /ˈrekɔːd/ vs /rɪˈkɔːd/. Attention aux exceptions : « comment », « promise », « answer » gardent l'accent à gauche dans les deux cas."
+    en: "The vowel follows the stress: in the verb re-CORD, 're' reduces to /rɪ/; in the noun RE-cord, '-cord' reduces: /ˈrekɔːd/ vs /rɪˈkɔːd/. Watch out for exceptions: 'comment', 'promise', 'answer' keep left stress in both cases."
+  - type: quiz
+    q: {fr: "« They want to protest. » Protest se dit…", en: "'They want to protest.' Protest is said…"}
+    options: ["PRO-test", "pro-TEST"]
+    answer: 1
+    explain: {fr: "Verbe → accent à droite : pro-TEST.", en: "Verb → stress on the right: pro-TEST."}
+perception:
+  task: stress
+  items:
+    - {text: "a record", stress: 0, word: record}
+    - {text: "to record", stress: 1, word: record}
+    - {text: "a present", stress: 0, word: present}
+    - {text: "to present", stress: 1, word: present}
+    - {text: "an object", stress: 0, word: object}
+    - {text: "to object", stress: 1, word: object}
+    - {text: "a protest", stress: 0, word: protest}
+    - {text: "to protest", stress: 1, word: protest}
+    - {text: "an increase", stress: 0, word: increase}
+    - {text: "to increase", stress: 1, word: increase}
+    - {text: "a conflict", stress: 0, word: conflict}
+    - {text: "to conflict", stress: 1, word: conflict}
+    - {text: "a contrast", stress: 0, word: contrast}
+    - {text: "to contrast", stress: 1, word: contrast}
+    - {text: "a produce stall", stress: 0, word: produce}
+    - {text: "to produce", stress: 1, word: produce}
+    - {text: "an export", stress: 0, word: export}
+    - {text: "to export", stress: 1, word: export}
+production:
+  - {text: "a record", stress: 0, word: record}
+  - {text: "to record", stress: 1, word: record}
+  - {text: "a present", stress: 0, word: present}
+  - {text: "to present", stress: 1, word: present}
+  - {text: "an object", stress: 0, word: object}
+  - {text: "to object", stress: 1, word: object}
+  - {text: "They record a new record.", stress_words: {record: [1, 0]}}
+  - {text: "I'd like to present you with a present.", stress_words: {present: [1, 0]}}
+  - {text: "Prices increase, but the increase is small.", stress_words: {increase: [1, 0]}}
+guided:
+  - text: "The students protest against the protest ban."
+    fr: "pro-TEST (verbe), PRO-test (nom)."
+    en: "pro-TEST (verb), PRO-test (noun)."
+  - text: "We export more than our main export."
+    fr: "ex-PORT puis EX-port."
+    en: "ex-PORT then EX-port."
+transfer:
+  - fr: "Décrivez un cadeau que vous avez offert ou reçu, et comment vous l'avez présenté (present, record, object, increase…)."
+    en: "Describe a present you gave or received, and how you presented it (present, record, object, increase…)."
+    hint_words: [present, record, object, increase]
+fiches:
+  nom-verbe:
+    fr: "Ici, « {word} » est un {pos} : l'accent va sur « {stressed} ». Nom à gauche, verbe à droite."
+    en: "Here, '{word}' is a {pos}: stress goes on '{stressed}'. Noun on the left, verb on the right."

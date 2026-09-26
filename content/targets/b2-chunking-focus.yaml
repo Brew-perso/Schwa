@@ -1,0 +1,63 @@
+id: b2-chunking-focus
+level: B2
+order: 5
+domain: aisance
+kind: chunking
+planet: {color: mustard, motif: rings}
+title: {fr: "Groupes de sens", en: "Thought groups"}
+tagline: {fr: "Découper le discours pour guider l'écoute", en: "Chunk your speech to guide the listener"}
+why:
+  fr: "Un discours découpé mot à mot, ou sans aucune pause, oblige l'auditeur à reconstruire lui-même la structure. Les groupes de sens (3 à 7 mots, chacun avec son mot fort) sont les « paragraphes » de l'oral."
+  en: "Speech chopped word by word, or with no pauses at all, forces the listener to rebuild the structure. Thought groups (3–7 words, each with its key word) are the 'paragraphs' of speech."
+criterion:
+  fr: "Je fais de courtes pauses aux frontières de sens, et chaque groupe a un mot fort."
+  en: "I pause briefly at meaning boundaries, and each group has one key word."
+phones: []
+errors:
+  - {target: chunk, realized: too-short, fiche: groupes-courts, weight: 0.6}
+  - {target: chunk, realized: none, fiche: sans-pause, weight: 0.5}
+lesson:
+  - type: text
+    fr: "Un groupe de sens correspond souvent à un élément de la phrase : le sujet un peu long, la proposition, le complément. On marque sa fin par une micro-pause ou un allongement, et on y place un mot fort."
+    en: "A thought group often matches one part of the sentence: a longish subject, a clause, a complement. We mark its end with a micro-pause or lengthening, and place one key word in it."
+  - type: listen
+    fr: "Écoutez le découpage (/ = pause) :"
+    en: "Listen to the chunking (/ = pause):"
+    items: ["When I was a child, / I lived in a small village / near the sea."]
+  - type: rule
+    fr: "Le découpage peut changer le sens : « The teacher said / the student is lazy » ≠ « The teacher, / said the student, / is lazy »."
+    en: "Chunking can change meaning: 'The teacher said / the student is lazy' ≠ 'The teacher, / said the student, / is lazy'."
+  - type: quiz
+    q: {fr: "Quel découpage est le plus naturel ?", en: "Which chunking is most natural?"}
+    options: ["My brother / who lives / in Canada / is / a / doctor", "My brother, / who lives in Canada, / is a doctor"]
+    answer: 1
+    explain: {fr: "Trois groupes de sens, chacun avec un mot fort : BROther, CAnada, DOCtor.", en: "Three thought groups, each with a key word: BROther, CAnada, DOCtor."}
+perception:
+  task: chunks
+  items:
+    - {text: "The teacher said the student is lazy.", chunks: ["The teacher said", "the student is lazy"]}
+    - {text: "The teacher, said the student, is lazy.", chunks: ["The teacher", "said the student", "is lazy"]}
+    - {text: "When I was a child, I lived in a small village near the sea.", chunks: ["When I was a child", "I lived in a small village", "near the sea"]}
+    - {text: "My brother, who lives in Canada, is a doctor.", chunks: ["My brother", "who lives in Canada", "is a doctor"]}
+    - {text: "If you have any questions, please ask me after the meeting.", chunks: ["If you have any questions", "please ask me", "after the meeting"]}
+production:
+  - {text: "When I was a child, I lived in a small village near the sea.", chunks: ["When I was a child", "I lived in a small village", "near the sea"]}
+  - {text: "My brother, who lives in Canada, is a doctor.", chunks: ["My brother", "who lives in Canada", "is a doctor"]}
+  - {text: "If you have any questions, please ask me after the meeting.", chunks: ["If you have any questions", "please ask me", "after the meeting"]}
+  - {text: "The results of the survey were published last week.", chunks: ["The results of the survey", "were published last week"]}
+  - {text: "In my opinion, the main problem is the lack of time.", chunks: ["In my opinion", "the main problem", "is the lack of time"]}
+guided:
+  - text: "First, I'll present the context. Then, I'll explain our method. Finally, I'll show the results."
+    fr: "Trois annonces, trois groupes après chaque connecteur."
+    en: "Three signposts, a group after each connector."
+transfer:
+  - fr: "Présentez un projet (réel ou imaginaire) en une minute : contexte, objectif, étapes. Utilisez des connecteurs (first, then, finally)."
+    en: "Present a project (real or imaginary) in one minute: context, goal, steps. Use connectors (first, then, finally)."
+    hint_words: [first, then, finally, project, goal]
+fiches:
+  groupes-courts:
+    fr: "Votre discours était découpé en très petits morceaux. [Regroupez|Regroupe] les mots qui vont ensemble : « {chunk} » se dit d'un seul souffle."
+    en: "Your speech was cut into very small pieces. Group the words that belong together: '{chunk}' is said in one breath."
+  sans-pause:
+    fr: "Tout s'est enchaîné sans respiration. [Marquez|Marque] une micro-pause après « {chunk} »."
+    en: "Everything ran together without a breath. Mark a micro-pause after '{chunk}'."

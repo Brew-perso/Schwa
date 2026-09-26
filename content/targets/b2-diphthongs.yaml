@@ -1,0 +1,86 @@
+id: b2-diphthongs
+level: B2
+order: 6
+domain: articuler
+kind: segment
+planet: {color: mint, motif: crescent}
+title: {fr: "Diphtongues : law / low", en: "Diphthongs: law / low"}
+tagline: {fr: "Des voyelles qui glissent — ou pas", en: "Vowels that glide — or don't"}
+why:
+  fr: "Les francophones aplatissent souvent les diphtongues (« focus » prononcé avec un « o » français) ou, à l'inverse, en ajoutent là où il n'y en a pas (« cause » dit « cose »). Law/low, bought/boat, walk/woke : la différence porte le sens."
+  en: "French speakers often flatten diphthongs ('focus' with a French 'o') or, the other way round, add them where there are none ('cause' said as 'cose'). Law/low, bought/boat, walk/woke: the difference carries meaning."
+criterion:
+  fr: "Mon /əʊ/ (GA /oʊ/) glisse vers /ʊ/ ; mon /ɔː/ reste stable et ne glisse pas."
+  en: "My /əʊ/ (GA /oʊ/) glides towards /ʊ/; my /ɔː/ stays steady and doesn't glide."
+phones: [əʊ, ɔː, eɪ]
+errors:
+  - {target: əʊ, realized: o, fiche: diphtongue-aplatie, weight: 0.7}
+  - {target: əʊ, realized: ɔː, fiche: diphtongue-aplatie, weight: 0.8}
+  - {target: ɔː, realized: əʊ, fiche: diphtongue-hypercorrecte, weight: 0.8}
+  - {target: eɪ, realized: e, fiche: diphtongue-aplatie-ei, weight: 0.5}
+lesson:
+  - type: text
+    fr: "Une diphtongue part d'une voyelle et glisse vers une autre dans la même syllabe. /əʊ/ (go, home, focus ; en GA /oʊ/) glisse vers un /ʊ/. /eɪ/ (day, make) glisse vers /ɪ/. À l'inverse, /ɔː/ (law, cause, talk) est une voyelle stable, longue, lèvres arrondies."
+    en: "A diphthong starts on one vowel and glides to another within the same syllable. /əʊ/ (go, home, focus; GA /oʊ/) glides towards /ʊ/. /eɪ/ (day, make) glides towards /ɪ/. By contrast, /ɔː/ (law, cause, talk) is a steady, long vowel with rounded lips."
+  - type: listen
+    fr: "Écoutez les paires :"
+    en: "Listen to the pairs:"
+    items: [law, low, bought, boat, walk, woke]
+  - type: gesture
+    art: sagittal:diphthong
+    fr: "Pour « go » : [commencez|commence] bouche mi-ouverte et [terminez|termine] lèvres arrondies, comme pour un petit baiser. Pour « law » : [arrondissez|arrondis] dès le début et ne [bougez|bouge] plus."
+    en: "For 'go': start with your mouth half-open and finish with rounded lips, like a small kiss. For 'law': round your lips from the start and don't move."
+  - type: quiz
+    q: {fr: "Quel mot ne contient PAS de diphtongue ?", en: "Which word does NOT contain a diphthong?"}
+    options: ["only", "because", "ghost"]
+    answer: 1
+    explain: {fr: "because /bɪˈkɒz/ (GA /bɪˈkʌz/ ~ /bɪˈkɔz/) : pas de glissement. only et ghost ont /əʊ/.", en: "because /bɪˈkɒz/ (GA /bɪˈkʌz/ ~ /bɪˈkɔz/): no glide. only and ghost have /əʊ/."}
+perception:
+  task: identify
+  items:
+    - [law, low]
+    - [bought, boat]
+    - [walk, woke]
+    - [called, cold]
+    - [caught, coat]
+    - [hall, hole]
+    - [ball, bowl]
+    - [saw, so]
+    - [flaw, flow]
+    - [raw, row]
+    - [let, late]
+    - [pepper, paper]
+production:
+  - {pair: [law, low]}
+  - {pair: [bought, boat]}
+  - {pair: [walk, woke]}
+  - {pair: [called, cold]}
+  - {text: focus}
+  - {text: only}
+  - {text: ghost}
+  - {text: because}
+  - {text: audience}
+  - {text: "I only focus on the goal."}
+  - {text: "We walked home because it was cold."}
+  - {text: "The audience applauded the show."}
+guided:
+  - text: "He called me because I was cold."
+    fr: "called /ɔː/ (stable), cold /əʊ/ (qui glisse)."
+    en: "called /ɔː/ (steady), cold /əʊ/ (gliding)."
+  - text: "I bought a boat."
+    fr: "Deux voyelles différentes, deux mots différents."
+    en: "Two different vowels, two different words."
+transfer:
+  - fr: "Parlez d'un voyage en bateau, d'une balade ou d'un spectacle (boat, road, show, walk, audience…)."
+    en: "Talk about a boat trip, a walk or a show (boat, road, show, walk, audience…)."
+    hint_words: [boat, road, show, walk, audience, home]
+fiches:
+  diphtongue-aplatie:
+    fr: "Dans « {word} », la voyelle est restée figée, comme un « o » français. [Terminez|Termine] le son en arrondissant les lèvres vers /ʊ/ : o-ou, très léger."
+    en: "In '{word}', the vowel stayed frozen, like a French 'o'. Finish the sound by rounding your lips towards /ʊ/: o-oo, very lightly."
+  diphtongue-hypercorrecte:
+    fr: "Dans « {word} », la voyelle a glissé comme une diphtongue. /ɔː/ est stable : lèvres arrondies du début à la fin, sans bouger."
+    en: "In '{word}', the vowel glided like a diphthong. /ɔː/ is steady: lips rounded from start to finish, without moving."
+  diphtongue-aplatie-ei:
+    fr: "Votre /eɪ/ sonnait comme un « é » français. [Ajoutez|Ajoute] un petit glissement vers « i » : é-i."
+    en: "Your /eɪ/ sounded like a French 'é'. Add a small glide towards 'i': é-i."

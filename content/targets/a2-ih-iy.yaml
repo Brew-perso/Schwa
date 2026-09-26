@@ -1,0 +1,93 @@
+id: a2-ih-iy
+level: A2
+order: 5
+domain: articuler
+kind: segment
+planet: {color: mint, motif: bands}
+title: {fr: "Ship ou sheep ? /ɪ/–/iː/", en: "Ship or sheep? /ɪ/–/iː/"}
+tagline: {fr: "Deux « i » anglais pour un seul français", en: "Two English 'i' sounds for one French one"}
+why:
+  fr: "Le français n'a qu'un « i ». L'anglais en a deux, et des centaines de mots ne se distinguent que par eux : live/leave, fill/feel, sit/seat. Ce n'est pas une question de longueur, mais de qualité."
+  en: "French has only one 'i'. English has two, and hundreds of words differ only by them: live/leave, fill/feel, sit/seat. It's not about length, it's about quality."
+criterion:
+  fr: "Je fais entendre la différence entre « live » et « leave » : mon /ɪ/ est relâché, mon /iː/ est tendu et souriant."
+  en: "I make 'live' and 'leave' sound different: my /ɪ/ is relaxed, my /iː/ is tense and smiling."
+phones: [ɪ, iː]
+errors:
+  - {target: ɪ, realized: iː, fiche: i-tendu, weight: 0.9}
+  - {target: iː, realized: ɪ, fiche: i-relache, weight: 0.7}
+lesson:
+  - type: text
+    fr: "/iː/ (sheep, see, leave) ressemble au « i » français : lèvres étirées comme pour sourire, langue haute et tendue. /ɪ/ (ship, sit, live) est un « i » paresseux : bouche un peu plus ouverte, langue détendue, à mi-chemin vers le « é »."
+    en: "/iː/ (sheep, see, leave) is close to the French 'i': lips spread as if smiling, tongue high and tense. /ɪ/ (ship, sit, live) is a lazy 'i': mouth a bit more open, tongue relaxed, halfway towards 'é'."
+  - type: listen
+    fr: "Écoutez les paires — la différence est surtout dans la couleur du son :"
+    en: "Listen to the pairs — the difference is mostly in the colour of the sound:"
+    items: [ship, sheep, live, leave, fill, feel]
+  - type: gesture
+    art: vowels:ɪ-iː
+    fr: "Pour /iː/, [souriez|souris] et [tendez|tends] la langue. Pour /ɪ/, [relâchez|relâche] tout, comme si [vous étiez|tu étais] un peu fatigué(e). [Posez|Pose] un doigt sous le menton : il descend légèrement pour /ɪ/."
+    en: "For /iː/, smile and tense your tongue. For /ɪ/, relax everything, as if you were a little tired. Put a finger under your chin: it drops slightly for /ɪ/."
+  - type: rule
+    fr: "Repère orthographique : « ee », « ea », « ie » donnent souvent /iː/ (see, eat, piece). Un « i » suivi d'une consonne finale donne souvent /ɪ/ (sit, big, live)."
+    en: "Spelling hint: 'ee', 'ea', 'ie' often give /iː/ (see, eat, piece). An 'i' followed by a final consonant often gives /ɪ/ (sit, big, live)."
+  - type: quiz
+    q: {fr: "Quel mot contient /ɪ/ ?", en: "Which word has /ɪ/?"}
+    options: ["cheap", "chip", "sea"]
+    answer: 1
+    explain: {fr: "chip /tʃɪp/ — relâché. cheap et sea ont /iː/.", en: "chip /tʃɪp/ — relaxed. cheap and sea have /iː/."}
+perception:
+  task: identify
+  items:
+    - [ship, sheep]
+    - [sit, seat]
+    - [live, leave]
+    - [fill, feel]
+    - [hill, heel]
+    - [bit, beat]
+    - [chip, cheap]
+    - [slip, sleep]
+    - [still, steal]
+    - [fit, feet]
+    - [it, eat]
+    - [rich, reach]
+    - [lip, leap]
+    - [mill, meal]
+    - [filling, feeling]
+    - [sick, seek]
+production:
+  - {pair: [ship, sheep]}
+  - {pair: [live, leave]}
+  - {pair: [sit, seat]}
+  - {pair: [fill, feel]}
+  - {pair: [chip, cheap]}
+  - {text: big}
+  - {text: beach}
+  - {text: city}
+  - {text: "Please sit in this seat."}
+  - {text: "I live in a big city."}
+  - {text: "Keep it in the fridge."}
+  - {text: "We leave at six."}
+guided:
+  - text: "Do you live here?"
+    alt: "Do you leave here?"
+    fr: "Habiter ou partir ? Le sens dépend de votre voyelle."
+    en: "Live or leave? The meaning depends on your vowel."
+  - text: "Look at that ship!"
+    alt: "Look at that sheep!"
+    fr: "Un bateau ou un mouton ?"
+    en: "A boat or an animal?"
+  - text: "These chips are cheap."
+    fr: "Les deux sons dans la même phrase : /iː/, /ɪ/, /iː/."
+    en: "Both sounds in one sentence: /iː/, /ɪ/, /iː/."
+transfer:
+  - fr: "Où habitez-vous et qu'aimez-vous y faire ? Employez « live », « city », « keep », « see », « visit »."
+    en: "Where do you live and what do you like doing there? Use 'live', 'city', 'keep', 'see', 'visit'."
+    hint_words: [live, city, keep, see, visit, beach]
+fiches:
+  i-tendu:
+    fr: "On a entendu « {heard} » : votre /ɪ/ était trop tendu, comme un « i » français. [Relâchez|Relâche] la langue et [ouvrez|ouvre] très légèrement la bouche, vers le « é »."
+    en: "I heard '{heard}': your /ɪ/ was too tense, like a French 'i'. Relax your tongue and open your mouth very slightly, towards 'é'."
+  i-relache:
+    fr: "On a entendu « {heard} » : [étirez|étire] les lèvres comme pour sourire et [tendez|tends] la langue vers le haut pour /iː/."
+    en: "I heard '{heard}': spread your lips as if smiling and push your tongue up for /iː/."

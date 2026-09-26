@@ -1,0 +1,82 @@
+id: b1-free-checked
+level: B1
+order: 5
+domain: articuler
+kind: spelling
+planet: {color: mustard, motif: bands}
+title: {fr: "Voyelles libres, voyelles entravées", en: "Free and checked vowels"}
+tagline: {fr: "made / mad, hope / hop, cute / cut", en: "made / mad, hope / hop, cute / cut"}
+why:
+  fr: "L'orthographe anglaise n'est pas aussi chaotique qu'elle en a l'air. Une même lettre voyelle a deux prononciations principales : son « nom » (A = /eɪ/) quand elle est libre, un son bref quand elle est « entravée » par des consonnes. C'est la clé pour lire à voix haute un mot nouveau."
+  en: "English spelling isn't as chaotic as it looks. Each vowel letter has two main pronunciations: its 'name' (A = /eɪ/) when it's free, a short sound when it's 'checked' by consonants. It's the key to reading a new word aloud."
+criterion:
+  fr: "Face à un mot comme « hope » ou « hop », je choisis la bonne voyelle grâce à l'orthographe."
+  en: "Faced with a word like 'hope' or 'hop', I pick the right vowel from the spelling."
+phones: [eɪ, æ, aɪ, ɪ, əʊ, ɒ, juː, ʌ, iː, e]
+errors:
+  - {target: eɪ, realized: æ, fiche: libre-lu-entrave, weight: 0.8}
+  - {target: æ, realized: eɪ, fiche: entrave-lu-libre, weight: 0.8}
+  - {target: aɪ, realized: ɪ, fiche: libre-lu-entrave, weight: 0.8}
+  - {target: ɪ, realized: aɪ, fiche: entrave-lu-libre, weight: 0.8}
+  - {target: əʊ, realized: ɒ, fiche: libre-lu-entrave, weight: 0.8}
+  - {target: ɒ, realized: əʊ, fiche: entrave-lu-libre, weight: 0.8}
+lesson:
+  - type: text
+    fr: "Une voyelle est « libre » quand elle est suivie d'une seule consonne puis d'une autre voyelle (souvent un « e » muet) : m-a-d-e. On la prononce alors comme son nom : /eɪ/. Elle est « entravée » quand une consonne la bloque en fin de mot ou quand deux consonnes suivent : m-a-d, h-a-p-p-y. Elle est alors brève : /æ/."
+    en: "A vowel is 'free' when it's followed by one consonant and then another vowel (often a silent 'e'): m-a-d-e. It's then pronounced like its name: /eɪ/. It's 'checked' when a consonant blocks it at the end of the word, or when two consonants follow: m-a-d, h-a-p-p-y. It's then short: /æ/."
+  - type: listen
+    fr: "Libre, puis entravée :"
+    en: "Free, then checked:"
+    items: [made, mad, pine, pin, hope, hop, cute, cut]
+  - type: rule
+    fr: "Les cinq paires : A /eɪ/–/æ/ (plane/plan), I /aɪ/–/ɪ/ (bite/bit), O /əʊ/–/ɒ/ (note/not), U /juː/–/ʌ/ (tube/tub), E /iː/–/e/ (Pete/pet). Le « e » muet final est un signal : il « libère » la voyelle qui précède."
+    en: "The five pairs: A /eɪ/–/æ/ (plane/plan), I /aɪ/–/ɪ/ (bite/bit), O /əʊ/–/ɒ/ (note/not), U /juː/–/ʌ/ (tube/tub), E /iː/–/e/ (Pete/pet). The final silent 'e' is a signal: it 'frees' the vowel before it."
+  - type: quiz
+    q: {fr: "Comment se prononce le « a » de « late » ?", en: "How is the 'a' in 'late' pronounced?"}
+    options: ["/eɪ/ comme « day »", "/æ/ comme « cat »"]
+    answer: 0
+    explain: {fr: "l-a-t-e : une consonne puis un « e » muet → voyelle libre /eɪ/.", en: "l-a-t-e: one consonant then a silent 'e' → free vowel /eɪ/."}
+perception:
+  task: identify
+  items:
+    - [made, mad]
+    - [plane, plan]
+    - [hate, hat]
+    - [pine, pin]
+    - [bite, bit]
+    - [ride, rid]
+    - [hope, hop]
+    - [note, not]
+    - [code, cod]
+    - [cute, cut]
+    - [tube, tub]
+    - [Pete, pet]
+    - [fate, fat]
+    - [site, sit]
+production:
+  - {pair: [made, mad]}
+  - {pair: [hope, hop]}
+  - {pair: [bite, bit]}
+  - {pair: [cute, cut]}
+  - {pair: [plane, plan]}
+  - {text: "I hope you don't hop."}
+  - {text: "The cute cat has a cut."}
+  - {text: "Write a note, not a letter."}
+guided:
+  - text: "We made a plan for the plane."
+    fr: "/eɪ/, /æ/, /eɪ/ : l'orthographe vous guide."
+    en: "/eɪ/, /æ/, /eɪ/: the spelling guides you."
+  - text: "Did the kite bite the kit?"
+    fr: "Une phrase absurde pour alterner /aɪ/ et /ɪ/."
+    en: "A silly sentence to alternate /aɪ/ and /ɪ/."
+transfer:
+  - fr: "Lisez à voix haute ces mots que vous n'avez peut-être jamais vus, en appliquant la règle : « gibe, glib, slate, slat, mope, mop ». Puis faites une phrase avec l'un d'eux."
+    en: "Read aloud these words you may never have seen, applying the rule: 'gibe, glib, slate, slat, mope, mop'. Then make a sentence with one of them."
+    hint_words: [slate, slat, mope, mop]
+fiches:
+  libre-lu-entrave:
+    fr: "Dans « {word} », la voyelle est libre (une consonne + « e » muet) : elle se dit comme son nom, /{target}/."
+    en: "In '{word}', the vowel is free (one consonant + silent 'e'): say it like its name, /{target}/."
+  entrave-lu-libre:
+    fr: "Dans « {word} », la voyelle est entravée par la consonne finale : son bref /{target}/."
+    en: "In '{word}', the vowel is checked by the final consonant: short sound /{target}/."

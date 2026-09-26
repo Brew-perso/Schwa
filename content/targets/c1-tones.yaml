@@ -1,0 +1,65 @@
+id: c1-tones
+level: C1
+order: 5
+domain: prosodie
+kind: intonation
+planet: {color: indigo, motif: bands}
+title: {fr: "Tons et attitudes", en: "Tones and attitudes"}
+tagline: {fr: "Descendant, montant, descendant-montant", en: "Fall, rise, fall-rise"}
+why:
+  fr: "Le ton du noyau exprime votre attitude : certitude, ouverture, réserve, politesse. Un « Yes » descendant clôt la discussion ; un « Yes » descendant-montant laisse entendre « oui, mais… ». Ces nuances évitent les malentendus… et les maladresses."
+  en: "The tone on the nucleus expresses your attitude: certainty, openness, reservation, politeness. A falling 'Yes' closes the topic; a fall-rise 'Yes' implies 'yes, but…'. These nuances prevent misunderstandings… and awkwardness."
+criterion:
+  fr: "Je choisis le ton selon mon intention : descendant pour affirmer, montant pour ouvrir, descendant-montant pour nuancer."
+  en: "I choose the tone to match my intention: fall to assert, rise to open, fall-rise to qualify."
+phones: []
+errors:
+  - {target: fall, realized: rise, fiche: ton-inattendu, weight: 0.6}
+  - {target: rise, realized: fall, fiche: ton-inattendu, weight: 0.6}
+  - {target: fall-rise, realized: fall, fiche: ton-inattendu, weight: 0.5}
+lesson:
+  - type: text
+    fr: "Descendant ↘ : fin, certitude, information nouvelle (« It's raining. »). Montant ↗ : question fermée, ouverture, liste inachevée (« Coffee? »). Descendant-montant ↘↗ : réserve, contraste implicite, politesse (« Well… it's possible. » = mais j'en doute)."
+    en: "Fall ↘: finality, certainty, new information ('It's raining.'). Rise ↗: yes/no question, openness, unfinished list ('Coffee?'). Fall-rise ↘↗: reservation, implied contrast, politeness ('Well… it's possible.' = but I doubt it)."
+  - type: listen
+    fr: "Un même mot, trois attitudes :"
+    en: "One word, three attitudes:"
+    items: ["Yes.", "Yes?", "Yes…"]
+  - type: rule
+    fr: "Les « question tags » : descendant = je vérifie quelque chose dont je suis presque sûr (« It's cold, ↘isn't it. ») ; montant = vraie question (« You're coming, ↗aren't you? »)."
+    en: "Question tags: falling = checking something I'm almost sure of ('It's cold, ↘isn't it.'); rising = a real question ('You're coming, ↗aren't you?')."
+  - type: quiz
+    q: {fr: "« I like the colour… » avec un ton descendant-montant signifie :", en: "'I like the colour…' with a fall-rise means:"}
+    options: ["J'aime tout.", "J'aime la couleur, mais pas le reste."]
+    answer: 1
+    explain: {fr: "Le descendant-montant suggère un « mais » implicite.", en: "The fall-rise implies an unspoken 'but'."}
+perception:
+  task: tone
+  items:
+    - {text: "Yes.", tone: fall}
+    - {text: "Yes?", tone: rise}
+    - {text: "It's cold, isn't it.", tone: fall}
+    - {text: "You're coming, aren't you?", tone: rise}
+    - {text: "Coffee?", tone: rise}
+    - {text: "It's raining.", tone: fall}
+    - {text: "Really?", tone: rise}
+    - {text: "Thank you.", tone: fall}
+production:
+  - {text: "It's raining.", tone: fall}
+  - {text: "Coffee?", tone: rise}
+  - {text: "It's cold, isn't it.", tone: fall}
+  - {text: "You're coming, aren't you?", tone: rise}
+  - {text: "Thank you very much.", tone: fall}
+  - {text: "Really?", tone: rise}
+guided:
+  - text: "Would you like tea, coffee, or juice?"
+    fr: "Liste : montées sur « tea » et « coffee », descente finale sur « juice »."
+    en: "List: rises on 'tea' and 'coffee', final fall on 'juice'."
+transfer:
+  - fr: "Répondez à trois invitations : acceptez l'une avec enthousiasme, déclinez poliment la deuxième, et acceptez la troisième avec une réserve."
+    en: "Reply to three invitations: accept one enthusiastically, politely decline the second, and accept the third with a reservation."
+    hint_words: [love to, sorry, well, maybe, actually]
+fiches:
+  ton-inattendu:
+    fr: "Votre ton était {heard}, alors que l'intention appelle un ton {expected}. [Réécoutez|Réécoute] le modèle en suivant la courbe avec la main."
+    en: "Your tone was {heard}, while the intention calls for a {expected} tone. Listen to the model again, tracing the curve with your hand."

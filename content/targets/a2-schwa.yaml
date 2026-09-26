@@ -1,0 +1,96 @@
+id: a2-schwa
+level: A2
+order: 3
+domain: prosodie
+kind: reduction
+planet: {color: indigo, motif: crescent}
+title: {fr: "Le schwa /ə/", en: "Schwa /ə/"}
+tagline: {fr: "La voyelle la plus fréquente de l'anglais — et la plus discrète", en: "English's most common vowel — and its quietest"}
+why:
+  fr: "Le schwa est la voyelle des syllabes faibles. Prononcer ces syllabes avec une voyelle « pleine » (ba-na-na à la française) efface le relief du mot : c'est ce qui gêne le plus l'oreille anglophone, plus qu'un accent mal placé."
+  en: "Schwa is the vowel of weak syllables. Saying these syllables with a 'full' vowel (ba-na-na, French-style) flattens the word's shape: native ears find this more disruptive than misplaced stress."
+criterion:
+  fr: "Dans « banana », « about » ou « problem », mes syllabes faibles sont courtes et relâchées."
+  en: "In 'banana', 'about' or 'problem', my weak syllables are short and relaxed."
+phones: [ə]
+errors:
+  - {target: ə, realized: æ, fiche: voyelle-pleine, weight: 0.9}
+  - {target: ə, realized: ɒ, fiche: voyelle-pleine, weight: 0.9}
+  - {target: ə, realized: ɔː, fiche: voyelle-pleine, weight: 0.9}
+  - {target: ə, realized: ɛ, fiche: voyelle-pleine, weight: 0.8}
+  - {target: ə, realized: e, fiche: voyelle-pleine, weight: 0.8}
+  - {target: ə, realized: o, fiche: voyelle-pleine, weight: 0.9}
+  - {target: ə, realized: œ, fiche: voyelle-pleine, weight: 0.6}
+lesson:
+  - type: text
+    fr: "Le schwa (/ə/, du mot hébreu « shva ») est un son neutre : bouche détendue, langue au repos, très court. C'est le « euh » d'hésitation… en beaucoup plus bref. Il peut s'écrire avec n'importe quelle lettre : a-bout, prob-lem, lem-on, sup-port."
+    en: "Schwa (/ə/, from the Hebrew 'shva') is a neutral sound: relaxed mouth, tongue at rest, very short. It's the 'uh' of hesitation… only much briefer. Any letter can spell it: a-bout, prob-lem, lem-on, sup-port."
+  - type: contrast
+    fr: "Le rythme français donne à chaque syllabe la même durée. Le rythme anglais écrase les syllabes faibles entre les fortes."
+    en: "French rhythm gives every syllable the same length. English rhythm squashes weak syllables between strong ones."
+    french: "Tony finit quarante sorbets."
+    english: "Tony finished forty ice creams."
+  - type: listen
+    fr: "Repérez le petit /ə/ dans chaque mot :"
+    en: "Spot the tiny /ə/ in each word:"
+    items: [banana, about, problem, London]
+  - type: gesture
+    art: sagittal:schwa
+    fr: "[Relâchez|Relâche] tout : mâchoire entrouverte, lèvres neutres, langue posée. Le schwa ne demande aucun effort — c'est justement le but."
+    en: "Relax everything: jaw slightly open, lips neutral, tongue resting. Schwa takes no effort — that's the whole point."
+  - type: quiz
+    q: {fr: "Dans « banana », combien de voyelles sont réduites en /ə/ ?", en: "In 'banana', how many vowels are reduced to /ə/?"}
+    options: ["0", "1", "2", "3"]
+    answer: 2
+    explain: {fr: "b/ə/-NA-n/ə/ : seule la syllabe forte garde sa voyelle pleine.", en: "b/ə/-NA-n/ə/: only the strong syllable keeps its full vowel."}
+perception:
+  task: schwa
+  items:
+    - {text: about, weak: [0]}
+    - {text: banana, weak: [0, 2]}
+    - {text: sofa, weak: [1]}
+    - {text: problem, weak: [1]}
+    - {text: London, weak: [1]}
+    - {text: lemon, weak: [1]}
+    - {text: support, weak: [0]}
+    - {text: police, weak: [0]}
+    - {text: correct, weak: [0]}
+    - {text: famous, weak: [1]}
+    - {text: doctor, weak: [1]}
+    - {text: today, weak: [0]}
+    - {text: again, weak: [0]}
+    - {text: Canada, weak: [1, 2]}
+    - {text: potato, weak: [0]}
+    - {text: common, weak: [1]}
+production:
+  - {text: about}
+  - {text: banana}
+  - {text: problem}
+  - {text: London}
+  - {text: support}
+  - {text: police}
+  - {text: famous}
+  - {text: Canada}
+  - {text: quiet}
+  - {text: idea}
+  - {text: "A banana and a lemon."}
+  - {text: "Support the police."}
+  - {text: "It's a famous problem."}
+guided:
+  - text: "It's quiet, isn't it? — Quite."
+    fr: "« quiet » a deux syllabes (QUI-/ə/t), « quite » une seule. Le schwa fait la différence."
+    en: "'quiet' has two syllables (QUI-/ə/t), 'quite' only one. Schwa makes the difference."
+  - text: "Canada is famous for its lakes."
+    fr: "CA-n/ə/-d/ə/, FA-m/ə/s."
+    en: "CA-n/ə/-d/ə/, FA-m/ə/s."
+  - text: "Tony finished forty ice creams."
+    fr: "Quatre syllabes fortes, et des syllabes faibles écrasées entre elles : TO-ny FI-nished FOR-ty ICE-creams."
+    en: "Four strong syllables, with weak ones squashed between them: TO-ny FI-nished FOR-ty ICE-creams."
+transfer:
+  - fr: "Qu'avez-vous mangé aujourd'hui ? Répondez en quelques phrases (banana, potato, tomato, lemon…)."
+    en: "What have you eaten today? Answer in a few sentences (banana, potato, tomato, lemon…)."
+    hint_words: [banana, potato, tomato, lemon, chocolate]
+fiches:
+  voyelle-pleine:
+    fr: "La syllabe faible de « {word} » sonnait comme une voyelle pleine (« {heard} »). [Relâchez|Relâche] la bouche et [raccourcissez|raccourcis] : un simple /ə/, presque avalé."
+    en: "The weak syllable in '{word}' sounded like a full vowel ('{heard}'). Relax your mouth and shorten it: just a quick /ə/, almost swallowed."

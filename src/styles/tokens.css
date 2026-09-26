@@ -1,0 +1,123 @@
+/* Schwa — design tokens
+   Mid-century (1950–60s) cut-paper collage × vintage celestial atlas.
+   Semantic feedback palette (charte §3.1): clear = teal/mint, refine = mustard/amber, rework = indigo/plum.
+   Never colour alone: every state is doubled with a line style (solid / dotted / wavy) and an icon. */
+
+:root {
+  color-scheme: light;
+  /* paper & ink */
+  --paper: #f4ecdc;
+  --paper-2: #ebdfc6;
+  --paper-3: #dfcfae;          /* kraft */
+  --paper-card: #fbf6ea;
+  --ink: #1d2334;
+  --ink-2: #394057;
+  --ink-soft: #5f6477;
+  --ink-faint: #8b8d97;
+  --rule: rgba(29, 35, 52, 0.14);
+
+  /* night sky */
+  --night: #17203b;
+  --night-2: #212b4d;
+  --night-3: #2d3862;
+  --star: #f1d488;
+
+  /* mid-century accents */
+  --teal: #2b7a76;
+  --teal-2: #3f9791;
+  --mint: #8fcfb8;
+  --mustard: #d6a03c;
+  --amber: #b87a14;
+  --coral: #e07a5f;
+  --rust: #b3532e;
+  --indigo: #3e3a8c;
+  --plum: #6d2f63;
+  --sky: #8db6d6;
+  --blush: #efc2b0;
+
+  /* semantic states */
+  --clear: #1f6f6a;            /* text-safe teal (AA on paper) */
+  --clear-bg: #d5eee4;
+  --refine: #8a5a00;           /* text-safe amber */
+  --refine-bg: #f6e3b8;
+  --rework: #4b3a93;           /* text-safe indigo */
+  --rework-bg: #e0dcf3;
+  --unsure: #5f6477;
+  --unsure-bg: #e9e5da;
+
+  /* type */
+  --font-display: 'Fraunces Variable', 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-ipa: 'Charis SIL', 'Doulos SIL', 'Gentium Plus', 'Noto Serif', 'Lucida Sans Unicode', serif;
+  --fs-base: 1.0625rem;
+  --lh: 1.55;
+
+  /* shape & depth */
+  --radius: 14px;
+  --radius-s: 9px;
+  --shadow-paper: 0 1px 0 rgba(255,255,255,.6) inset, 0 2px 2px rgba(29,35,52,.08), 0 8px 18px -6px rgba(29,35,52,.22);
+  --shadow-lift: 0 2px 3px rgba(29,35,52,.1), 0 16px 32px -10px rgba(29,35,52,.35);
+  --focus: 0 0 0 3px var(--paper), 0 0 0 6px var(--indigo);
+
+  --gutter: 16px;
+  --maxw: 760px;
+  --nav-h: 68px;
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+
+  --bg: var(--paper);
+  --surface: var(--paper-card);
+  --text: var(--ink);
+  --text-2: var(--ink-2);
+  --text-soft: var(--ink-soft);
+}
+
+/* "Poste de pilotage" dark theme — night sky and moonlit paper */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #17203b;
+    --paper-2: #1d2747;
+    --paper-3: #26315a;
+    --paper-card: #222c4f;
+    --ink: #f3ead7;
+    --ink-2: #e2d8c2;
+    --ink-soft: #b9b3a6;
+    --ink-faint: #8f8c88;
+    --rule: rgba(243, 234, 215, 0.14);
+    --clear: #8fd8c2; --clear-bg: #1d4a4a;
+    --refine: #f0c56c; --refine-bg: #4a3a17;
+    --rework: #bdb4ff; --rework-bg: #34306a;
+    --unsure: #b9b3a6; --unsure-bg: #2c3456;
+    --shadow-paper: 0 1px 0 rgba(255,255,255,.05) inset, 0 2px 2px rgba(0,0,0,.25), 0 10px 22px -8px rgba(0,0,0,.6);
+    --shadow-lift: 0 2px 3px rgba(0,0,0,.3), 0 18px 36px -10px rgba(0,0,0,.7);
+    --focus: 0 0 0 3px var(--paper), 0 0 0 6px var(--star);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #17203b;
+  --paper-2: #1d2747;
+  --paper-3: #26315a;
+  --paper-card: #222c4f;
+  --ink: #f3ead7;
+  --ink-2: #e2d8c2;
+  --ink-soft: #b9b3a6;
+  --ink-faint: #8f8c88;
+  --rule: rgba(243, 234, 215, 0.14);
+  --clear: #8fd8c2; --clear-bg: #1d4a4a;
+  --refine: #f0c56c; --refine-bg: #4a3a17;
+  --rework: #bdb4ff; --rework-bg: #34306a;
+  --unsure: #b9b3a6; --unsure-bg: #2c3456;
+  --shadow-paper: 0 1px 0 rgba(255,255,255,.05) inset, 0 2px 2px rgba(0,0,0,.25), 0 10px 22px -8px rgba(0,0,0,.6);
+  --shadow-lift: 0 2px 3px rgba(0,0,0,.3), 0 18px 36px -10px rgba(0,0,0,.7);
+  --focus: 0 0 0 3px var(--paper), 0 0 0 6px var(--star);
+}
+
+:root[data-contrast="high"] {
+  --ink-soft: var(--ink-2);
+  --ink-faint: var(--ink-2);
+  --rule: rgba(29, 35, 52, 0.35);
+}
+:root[data-font="large"] { --fs-base: 1.1875rem; }
+:root[data-font="xlarge"] { --fs-base: 1.3125rem; }

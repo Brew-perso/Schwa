@@ -1,0 +1,81 @@
+id: b1-suffix-neutral
+level: B1
+order: 2
+domain: prosodie
+kind: stress
+planet: {color: coral, motif: dots}
+title: {fr: "Les suffixes neutres", en: "Neutral suffixes"}
+tagline: {fr: "-ness, -ful, -ment, -er, -ly : l'accent ne bouge pas", en: "-ness, -ful, -ment, -er, -ly: stress stays put"}
+why:
+  fr: "Beaucoup de mots se construisent en ajoutant un suffixe. Certains suffixes sont « neutres » : ils ne déplacent pas l'accent. Connaître cette règle permet d'accentuer correctement des centaines de mots jamais entendus."
+  en: "Many words are built by adding a suffix. Some suffixes are 'neutral': they don't move the stress. Knowing this rule lets you stress hundreds of words you've never heard."
+criterion:
+  fr: "Quand j'ajoute -ness, -ful, -ment, -er, -less ou -ly à un mot, je garde l'accent du mot de base."
+  en: "When I add -ness, -ful, -ment, -er, -less or -ly to a word, I keep the stress of the base word."
+phones: []
+errors:
+  - {target: stress, realized: final, fiche: suffixe-neutre, weight: 1.0}
+  - {target: stress, realized: other, fiche: suffixe-neutre, weight: 1.0}
+lesson:
+  - type: text
+    fr: "Un suffixe neutre s'accroche au mot sans rien changer à son accent : HAP-py → HAP-pi-ness, em-PLOY → em-PLOY-ment, CARE → CARE-ful-ly."
+    en: "A neutral suffix attaches to the word without changing its stress: HAP-py → HAP-pi-ness, em-PLOY → em-PLOY-ment, CARE → CARE-ful-ly."
+  - type: listen
+    fr: "Le mot de base, puis le mot dérivé : l'accent reste à sa place."
+    en: "The base word, then the derived word: stress stays in place."
+    items: [happy, happiness, employ, employment, comfort, comfortable]
+  - type: rule
+    fr: "Suffixes neutres les plus fréquents : -ness, -less, -ful, -ment, -er / -or, -ly, -able, -ing, -ed, -s, -hood, -ship. Ils sont eux-mêmes inaccentués, avec une voyelle réduite : -n/ə/s, -m/ə/nt, -f/ə/l."
+    en: "Most frequent neutral suffixes: -ness, -less, -ful, -ment, -er / -or, -ly, -able, -ing, -ed, -s, -hood, -ship. They are unstressed themselves, with a reduced vowel: -n/ə/s, -m/ə/nt, -f/ə/l."
+  - type: quiz
+    q: {fr: "« government » vient de « GO-vern ». Où est l'accent ?", en: "'government' comes from 'GO-vern'. Where is the stress?"}
+    options: ["GO-vern-ment", "go-VERN-ment", "go-vern-MENT"]
+    answer: 0
+    explain: {fr: "GO-vern-ment : -ment est neutre (et souvent réduit à « GUV-ment »).", en: "GO-vern-ment: -ment is neutral (and often reduced to 'GUV-ment')."}
+perception:
+  task: stress
+  items:
+    - {text: happiness, stress: 0}
+    - {text: employment, stress: 1}
+    - {text: carefully, stress: 0}
+    - {text: government, stress: 0}
+    - {text: comfortable, stress: 0}
+    - {text: development, stress: 1}
+    - {text: forgetful, stress: 1}
+    - {text: agreement, stress: 1}
+    - {text: advertisement, stress: 1, variant: SBE}
+    - {text: beautiful, stress: 0}
+    - {text: usually, stress: 0}
+    - {text: remarkable, stress: 1}
+    - {text: childhood, stress: 0}
+    - {text: relationship, stress: 1}
+    - {text: helpless, stress: 0}
+    - {text: photographer, stress: 1}
+    - {text: manager, stress: 0}
+    - {text: equipment, stress: 1}
+production:
+  - {text: happiness, stress: 0}
+  - {text: employment, stress: 1}
+  - {text: government, stress: 0}
+  - {text: comfortable, stress: 0}
+  - {text: agreement, stress: 1}
+  - {text: remarkable, stress: 1}
+  - {text: relationship, stress: 1}
+  - {text: equipment, stress: 1}
+  - {text: "The government signed an agreement.", stress_words: {government: 0, agreement: 1}}
+  - {text: "Happiness is a comfortable chair.", stress_words: {happiness: 0, comfortable: 0}}
+guided:
+  - text: "The manager explained the equipment carefully."
+    fr: "MA-na-ger, e-QUIP-ment, CARE-ful-ly : trois suffixes neutres."
+    en: "MA-na-ger, e-QUIP-ment, CARE-ful-ly: three neutral suffixes."
+  - text: "Our relationship is remarkable."
+    fr: "re-LA-tion-ship, re-MARK-a-ble."
+    en: "re-LA-tion-ship, re-MARK-a-ble."
+transfer:
+  - fr: "Parlez d'un emploi, d'un stage ou d'une expérience de travail. Utilisez : employment, manager, equipment, agreement, carefully."
+    en: "Talk about a job, an internship or a work experience. Use: employment, manager, equipment, agreement, carefully."
+    hint_words: [employment, manager, equipment, agreement, carefully]
+fiches:
+  suffixe-neutre:
+    fr: "« {word} » garde l'accent de son mot de base : c'est « {stressed} » qui est fort. Le suffixe reste petit et réduit."
+    en: "'{word}' keeps the stress of its base word: '{stressed}' is the strong one. The suffix stays small and reduced."

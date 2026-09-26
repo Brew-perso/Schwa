@@ -1,0 +1,96 @@
+id: b1-ed-s
+level: B1
+order: 4
+domain: articuler
+kind: endings
+planet: {color: teal, motif: stars}
+title: {fr: "Les terminaisons -ed et -s", en: "-ed and -s endings"}
+tagline: {fr: "walked, played, wanted · cats, dogs, horses", en: "walked, played, wanted · cats, dogs, horses"}
+why:
+  fr: "Ces terminaisons portent la grammaire : le passé, le pluriel, la 3e personne, le possessif. Quand elles disparaissent (« it seem_ », « Hamlet_ father »), l'auditeur entend… une faute de grammaire. Et prononcer « walk-ED » en deux syllabes brouille le rythme."
+  en: "These endings carry grammar: past tense, plural, third person, possessive. When they vanish ('it seem_', 'Hamlet_ father'), the listener hears… a grammar mistake. And saying 'walk-ED' as two syllables throws off the rhythm."
+criterion:
+  fr: "Je fais entendre -ed et -s, avec le bon son : /t/, /d/ ou /ɪd/ ; /s/, /z/ ou /ɪz/."
+  en: "I make -ed and -s heard, with the right sound: /t/, /d/ or /ɪd/; /s/, /z/ or /ɪz/."
+phones: [t, d, s, z]
+errors:
+  - {target: t, realized: '∅', where: word-final, fiche: finale-absente, weight: 0.8}
+  - {target: d, realized: '∅', where: word-final, fiche: finale-absente, weight: 0.8}
+  - {target: s, realized: '∅', where: word-final, fiche: finale-absente, weight: 0.7}
+  - {target: z, realized: '∅', where: word-final, fiche: finale-absente, weight: 0.7}
+  - {target: '∅', realized: ɪ, where: before-ed, fiche: ed-en-trop, weight: 0.7}
+lesson:
+  - type: text
+    fr: "Trois prononciations de -ed, décidées par le son qui précède : après /t/ ou /d/ → /ɪd/, une syllabe en plus (wanted, needed). Après un son sourd (/p k f s ʃ tʃ θ/) → /t/ (walked, stopped). Après un son voisé → /d/ (played, lived)."
+    en: "Three ways to say -ed, decided by the sound before it: after /t/ or /d/ → /ɪd/, one extra syllable (wanted, needed). After a voiceless sound (/p k f s ʃ tʃ θ/) → /t/ (walked, stopped). After a voiced sound → /d/ (played, lived)."
+  - type: listen
+    fr: "/t/, /d/, /ɪd/ :"
+    en: "/t/, /d/, /ɪd/:"
+    items: [walked, played, wanted]
+  - type: rule
+    fr: "Même logique pour -s (pluriel, 3e personne, possessif) : après /s z ʃ ʒ tʃ dʒ/ → /ɪz/ (horses, watches). Après un son sourd → /s/ (cats, stops). Après un son voisé → /z/ (dogs, plays)."
+    en: "Same logic for -s (plural, third person, possessive): after /s z ʃ ʒ tʃ dʒ/ → /ɪz/ (horses, watches). After a voiceless sound → /s/ (cats, stops). After a voiced sound → /z/ (dogs, plays)."
+  - type: gesture
+    art: sagittal:voicing
+    fr: "[Posez|Pose] les doigts sur la gorge : pour /z/ ou /d/, ça vibre ; pour /s/ ou /t/, non. La terminaison suit la vibration du son qui précède."
+    en: "Put your fingers on your throat: /z/ or /d/ buzz; /s/ or /t/ don't. The ending follows the buzz of the sound before it."
+  - type: quiz
+    q: {fr: "Combien de syllabes dans « stopped » ?", en: "How many syllables in 'stopped'?"}
+    options: ["1", "2"]
+    answer: 0
+    explain: {fr: "Une seule : /stɒpt/. Seuls -ted et -ded ajoutent une syllabe.", en: "Just one: /stɒpt/. Only -ted and -ded add a syllable."}
+perception:
+  task: endings
+  items:
+    - {text: walked, ending: t}
+    - {text: stopped, ending: t}
+    - {text: laughed, ending: t}
+    - {text: watched, ending: t}
+    - {text: played, ending: d}
+    - {text: lived, ending: d}
+    - {text: called, ending: d}
+    - {text: opened, ending: d}
+    - {text: wanted, ending: ɪd}
+    - {text: needed, ending: ɪd}
+    - {text: decided, ending: ɪd}
+    - {text: started, ending: ɪd}
+    - {text: cats, ending: s}
+    - {text: books, ending: s}
+    - {text: dogs, ending: z}
+    - {text: plays, ending: z}
+    - {text: horses, ending: ɪz}
+    - {text: watches, ending: ɪz}
+    - {text: pages, ending: ɪz}
+    - {text: roses, ending: ɪz}
+production:
+  - {text: walked}
+  - {text: played}
+  - {text: wanted}
+  - {text: stopped}
+  - {text: decided}
+  - {text: cats}
+  - {text: dogs}
+  - {text: horses}
+  - {text: "She walked to work."}
+  - {text: "It seems strange."}
+  - {text: "Hamlet's father is dead."}
+  - {text: "He watched the horses."}
+  - {text: "We played and laughed."}
+guided:
+  - text: "Yesterday I walked, I talked and I waited."
+    fr: "/t/, /t/, /ɪd/ — trois passés bien audibles."
+    en: "/t/, /t/, /ɪd/ — three clearly audible past tenses."
+  - text: "She likes cats, dogs and horses."
+    fr: "/s/, /s/, /z/, /ɪz/."
+    en: "/s/, /s/, /z/, /ɪz/."
+transfer:
+  - fr: "Racontez votre dernier week-end au passé (visited, watched, played, cooked, stayed…)."
+    en: "Tell us about your last weekend in the past tense (visited, watched, played, cooked, stayed…)."
+    hint_words: [visited, watched, played, cooked, stayed, walked]
+fiches:
+  finale-absente:
+    fr: "La terminaison de « {word} » ne s'entend pas : on risque de comprendre une autre forme grammaticale. [Terminez|Termine] nettement sur /{ending}/."
+    en: "The ending of '{word}' can't be heard: the listener may hear a different grammatical form. Finish clearly on /{ending}/."
+  ed-en-trop:
+    fr: "« {word} » a été prononcé avec une syllabe de trop (-ED). Après ce son, -ed se dit simplement /{ending}/, collé au verbe."
+    en: "'{word}' was said with an extra syllable (-ED). After this sound, -ed is simply /{ending}/, attached to the verb."

@@ -1,0 +1,94 @@
+id: a2-h
+level: A2
+order: 4
+domain: articuler
+kind: segment
+planet: {color: teal, motif: swirl}
+title: {fr: "Le /h/ qui souffle", en: "The breathy /h/"}
+tagline: {fr: "Heat ou eat ? Un souffle fait la différence", en: "Heat or eat? A breath makes the difference"}
+why:
+  fr: "Le français n'a pas de /h/ prononcé, alors on l'oublie (« I 'ate it ») ou, par excès de zèle, on l'ajoute là où il n'existe pas (« I hate my eggs » pour « eat »). Les deux changent le sens des mots et sont très remarqués."
+  en: "French has no spoken /h/, so learners drop it ('I 'ate it') or, trying hard, add it where it doesn't belong ('I hate my eggs' for 'eat'). Both change meaning and are very noticeable."
+criterion:
+  fr: "Mon interlocuteur entend clairement « heat » ou « eat », « hair » ou « air » — selon ce que je veux dire."
+  en: "My listener clearly hears 'heat' or 'eat', 'hair' or 'air' — whichever I mean."
+phones: [h]
+errors:
+  - {target: h, realized: '∅', fiche: h-omis, weight: 0.8}
+  - {target: '∅', realized: h, where: before-vowel, fiche: h-intrus, weight: 0.6}
+lesson:
+  - type: text
+    fr: "Le /h/ anglais n'est qu'un souffle : de l'air qui sort, gorge ouverte, juste avant la voyelle. Aucun raclement (ce n'est pas la « jota » espagnole)."
+    en: "The English /h/ is just a breath: air flowing out through an open throat, right before the vowel. No scraping (it isn't the Spanish 'jota')."
+  - type: listen
+    fr: "Écoutez les paires :"
+    en: "Listen to the pairs:"
+    items: [heat, eat, hair, air, hold, old]
+  - type: gesture
+    art: sagittal:h
+    fr: "[Placez|Place] la main devant la bouche et [dites|dis] « heat » : [vous devez|tu dois] sentir l'air chaud, comme pour faire de la buée sur une vitre. Pour « eat », la main ne sent rien."
+    en: "Put your hand in front of your mouth and say 'heat': you should feel warm air, like fogging up a window. For 'eat', your hand feels nothing."
+  - type: rule
+    fr: "Deux pièges : oublier le /h/ (hair → air), ou en ajouter un devant un mot qui commence par une voyelle (old → hold). Les mots-outils non accentués (he, his, her, have) perdent souvent leur /h/ chez les anglophones eux-mêmes : ce n'est pas une faute."
+    en: "Two traps: dropping /h/ (hair → air), or adding one before a vowel-initial word (old → hold). Unstressed function words (he, his, her, have) often lose their /h/ even in native speech: that's fine."
+  - type: quiz
+    q: {fr: "Dans « an old house », combien de /h/ prononce-t-on ?", en: "In 'an old house', how many /h/ sounds do we pronounce?"}
+    options: ["0", "1", "2"]
+    answer: 1
+    explain: {fr: "Un seul : house. « old » commence par une voyelle et s'enchaîne : an‿old.", en: "Just one: house. 'old' starts with a vowel and links: an‿old."}
+perception:
+  task: identify
+  items:
+    - [heat, eat]
+    - [hair, air]
+    - [hold, old]
+    - [hill, ill]
+    - [high, eye]
+    - [hand, and]
+    - [hate, eight]
+    - [heart, art]
+    - [hear, ear]
+    - [harm, arm]
+    - [hedge, edge]
+    - [heel, eel]
+    - [hat, at]
+    - [hit, it]
+    - [his, is]
+production:
+  - {pair: [heat, eat]}
+  - {pair: [hair, air]}
+  - {pair: [hold, old]}
+  - {pair: [hate, eight]}
+  - {pair: [hand, and]}
+  - {text: happy}
+  - {text: house}
+  - {text: behind}
+  - {text: "Harry has a horse in his house."}
+  - {text: "How are you?"}
+  - {text: "I eat apples every evening."}
+  - {text: "It's an old hotel."}
+  - {text: "He hurt his hand."}
+guided:
+  - text: "Can you heat the soup?"
+    alt: "Can you eat the soup?"
+    fr: "Réchauffer ou manger ? Seul le /h/ le dit."
+    en: "Warm it up or eat it? Only the /h/ tells."
+  - text: "The hair is very dry."
+    alt: "The air is very dry."
+    fr: "Cheveux ou air ? Faites-vous comprendre."
+    en: "Hair or air? Make yourself understood."
+  - text: "Can you hold it?"
+    alt: "Is it old?"
+    fr: "« hold » souffle, « old » s'enchaîne."
+    en: "'hold' breathes, 'old' links."
+transfer:
+  - fr: "Décrivez votre maison ou votre appartement idéal (house, home, hall, high ceilings…) en quelques phrases."
+    en: "Describe your ideal house or flat in a few sentences (house, home, hall, high ceilings…)."
+    hint_words: [house, home, hall, high, huge, heating]
+fiches:
+  h-omis:
+    fr: "On a entendu « {heard} » au lieu de « {word} ». [Soufflez|Souffle] comme pour faire de la buée sur une vitre, juste avant la voyelle : hhh-{word}."
+    en: "I heard '{heard}' instead of '{word}'. Breathe out as if fogging a window, right before the vowel: hhh-{word}."
+  h-intrus:
+    fr: "Un /h/ s'est glissé devant « {word} ». Ce mot commence par une voyelle : [enchaînez-le|enchaîne-le] directement au mot précédent, sans souffle."
+    en: "An /h/ slipped in before '{word}'. This word starts with a vowel: link it straight to the previous word, with no breath."

@@ -1,0 +1,99 @@
+id: b1-stress-long
+level: B1
+order: 1
+domain: prosodie
+kind: stress
+planet: {color: coral, motif: rings}
+title: {fr: "L'accent des mots longs", en: "Stress in longer words"}
+tagline: {fr: "PHO-to-graph, ba-NA-na, e-CO-no-my", en: "PHO-to-graph, ba-NA-na, e-CO-no-my"}
+why:
+  fr: "Les jurys et les enseignants le répètent : un accent déplacé sur un mot long (eCOnomics, cirCUMstances) le rend « à la limite du compréhensible », et entraîne presque toujours des erreurs de voyelles."
+  en: "Examiners and teachers say it again and again: misplaced stress on a long word (eCOnomics, cirCUMstances) makes it 'barely understandable', and almost always drags vowel errors with it."
+criterion:
+  fr: "Dans les mots de trois et quatre syllabes, je place la syllabe forte au bon endroit, et je réduis les autres."
+  en: "In three- and four-syllable words, I put the strong syllable in the right place, and I reduce the others."
+phones: []
+errors:
+  - {target: stress, realized: final, fiche: accent-final-long, weight: 1.0}
+  - {target: stress, realized: other, fiche: accent-deplace, weight: 1.0}
+lesson:
+  - type: text
+    fr: "Pour les mots longs, la tradition des phonéticiens français propose une règle de base simple : sans suffixe particulier, l'accent remonte vers le début du mot. Pour les mots de trois syllabes ou plus, on part souvent de la fin et on compte trois syllabes : c'est le schéma « -100 » (PHO-to-graph, CI-ne-ma, CHA-rac-ter)."
+    en: "For longer words, the French phonetics tradition offers a simple basic rule: with no special suffix, stress moves towards the start of the word. For words of three or more syllables, we often count three syllables back from the end: the '-100' pattern (PHO-to-graph, CI-ne-ma, CHA-rac-ter)."
+  - type: listen
+    fr: "Écoutez le relief :"
+    en: "Listen to the shape:"
+    items: [photograph, character, cinema, democracy]
+  - type: rule
+    fr: "Ce n'est qu'une règle de base, avec des exceptions fréquentes (ba-NA-na, to-MOR-row). La vraie habitude à prendre : toujours vérifier où tombe l'accent quand on apprend un mot, comme on vérifie son orthographe."
+    en: "This is only a baseline, with frequent exceptions (ba-NA-na, to-MOR-row). The real habit to build: always check where the stress falls when you learn a word, just as you check its spelling."
+  - type: gesture
+    art: bubbles
+    fr: "[Imaginez|Imagine] une grosse bulle pour la syllabe forte et de petits points gris pour les autres. [Exagérez|Exagère] d'abord la grosse bulle, puis [revenez|reviens] au naturel."
+    en: "Picture one big bubble for the strong syllable and tiny grey dots for the others. Exaggerate the big bubble first, then go back to natural."
+  - type: quiz
+    q: {fr: "Où est l'accent dans « development » ?", en: "Where is the stress in 'development'?"}
+    options: ["DE-ve-lop-ment", "de-VE-lop-ment", "de-ve-LOP-ment"]
+    answer: 1
+    explain: {fr: "de-VE-lop-ment : « -ment » est un suffixe neutre, l'accent reste celui de « de-VE-lop ».", en: "de-VE-lop-ment: '-ment' is a neutral suffix, so stress stays where it is in 'de-VE-lop'."}
+perception:
+  task: stress
+  items:
+    - {text: photograph, stress: 0}
+    - {text: character, stress: 0}
+    - {text: cinema, stress: 0}
+    - {text: comparison, stress: 1}
+    - {text: democracy, stress: 1}
+    - {text: interesting, stress: 0}
+    - {text: beginning, stress: 1}
+    - {text: banana, stress: 1}
+    - {text: tomorrow, stress: 1}
+    - {text: development, stress: 1}
+    - {text: develop, stress: 1}
+    - {text: consider, stress: 1}
+    - {text: imagery, stress: 0}
+    - {text: rhetoric, stress: 0}
+    - {text: narrative, stress: 0}
+    - {text: Catholic, stress: 0}
+    - {text: Protestant, stress: 0}
+    - {text: adjective, stress: 0}
+    - {text: relative, stress: 0}
+    - {text: museum, stress: 1}
+    - {text: opportunity, stress: 2}
+    - {text: environment, stress: 1}
+    - {text: occurrence, stress: 1}
+    - {text: specific, stress: 1}
+    - {text: vegetable, stress: 0}
+    - {text: hospital, stress: 0}
+production:
+  - {text: photograph, stress: 0}
+  - {text: character, stress: 0}
+  - {text: democracy, stress: 1}
+  - {text: development, stress: 1}
+  - {text: comparison, stress: 1}
+  - {text: environment, stress: 1}
+  - {text: museum, stress: 1}
+  - {text: interesting, stress: 0}
+  - {text: specific, stress: 1}
+  - {text: opportunity, stress: 2}
+  - {text: "The museum has an interesting character.", stress_words: {museum: 1, interesting: 0, character: 0}}
+  - {text: "Democracy needs development.", stress_words: {democracy: 1, development: 1}}
+  - {text: "Consider the environment.", stress_words: {consider: 1, environment: 1}}
+guided:
+  - text: "It's a great opportunity to develop the museum."
+    fr: "op-por-TU-ni-ty, de-VE-lop, mu-SE-um."
+    en: "op-por-TU-ni-ty, de-VE-lop, mu-SE-um."
+  - text: "Can you be more specific about the character?"
+    fr: "spe-CI-fic, CHA-rac-ter : deux mots souvent mal accentués."
+    en: "spe-CI-fic, CHA-rac-ter: two words often mis-stressed."
+transfer:
+  - fr: "Décrivez un musée, un film ou un livre qui vous a marqué. Essayez d'utiliser : museum, character, interesting, photograph, development."
+    en: "Describe a museum, film or book that made an impression on you. Try to use: museum, character, interesting, photograph, development."
+    hint_words: [museum, character, interesting, photograph, development]
+fiches:
+  accent-final-long:
+    fr: "La syllabe forte est partie vers la fin du mot, comme en français. Dans « {word} », c'est « {stressed} » qui porte l'accent. [Commencez|Commence] par taper le rythme, puis [dites|dis] le mot sur ce rythme."
+    en: "The strong syllable drifted to the end of the word, as in French. In '{word}', '{stressed}' carries the stress. Start by tapping the rhythm, then say the word to that rhythm."
+  accent-deplace:
+    fr: "L'outil perçoit l'accent sur « {heard} » plutôt que sur « {stressed} ». [Écoutez|Écoute] le modèle ralenti en regardant les bulles, puis [réessayez|réessaie]."
+    en: "The tool hears the stress on '{heard}' rather than '{stressed}'. Listen to the slowed-down model while watching the bubbles, then try again."

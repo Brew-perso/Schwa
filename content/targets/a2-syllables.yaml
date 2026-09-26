@@ -1,0 +1,84 @@
+id: a2-syllables
+level: A2
+order: 1
+domain: prosodie
+kind: count
+planet: {color: mustard, motif: dots}
+title: {fr: "Les syllabes qu'on entend", en: "The syllables you hear"}
+tagline: {fr: "Compter à l'oreille, pas avec les yeux", en: "Count with your ears, not your eyes"}
+why:
+  fr: "En français, chaque syllabe écrite se prononce, et toutes ont le même poids. En anglais, des syllabes écrites disparaissent à l'oral : « family » se dit souvent en deux temps. Ajouter des syllabes ralentit le débit et brouille l'accent du mot."
+  en: "In French, every written syllable is pronounced and they all weigh the same. In English, written syllables often vanish in speech: 'family' is often said in two beats. Adding syllables slows you down and blurs the word's stress."
+criterion:
+  fr: "Je dis « every », « family » ou « walked » avec le bon nombre de temps, sans ajouter de « e » final."
+  en: "I say 'every', 'family' or 'walked' with the right number of beats, without adding a final 'e'."
+phones: [ə]
+errors:
+  - {target: '∅', realized: ə, where: word-final, fiche: e-final, weight: 0.6}
+  - {target: '∅', realized: ɪ, where: before-ed, fiche: ed-syllabe, weight: 0.7}
+  - {target: '∅', realized: ə, where: inside, fiche: syllabe-ajoutee, weight: 0.5}
+lesson:
+  - type: text
+    fr: "En français, on prononce toutes les syllabes écrites, avec la même énergie : cho-co-lat. L'anglais, lui, « avale » souvent des syllabes non accentuées."
+    en: "In French, every written syllable is pronounced with the same energy: cho-co-lat. English often 'swallows' unstressed syllables."
+  - type: contrast
+    fr: "Écoutez le mot français, puis le mot anglais. Combien de temps entendez-vous dans chacun ?"
+    en: "Listen to the French word, then the English one. How many beats do you hear in each?"
+    french: "chocolat"
+    english: "chocolate"
+  - type: listen
+    fr: "Deux temps seulement pour ces mots de trois syllabes écrites :"
+    en: "Only two beats for these three-syllable spellings:"
+    items: [every, family, different]
+  - type: gesture
+    art: tap
+    fr: "[Tapotez|Tapote] la table à chaque syllabe que vous [entendez|entends] — pas à chaque voyelle que vous [voyez|vois]. Et [terminez|termine] les mots sur la consonne : « walked », sans « e » à la fin."
+    en: "Tap the table for each syllable you hear — not for each vowel you see. And end words on the consonant: 'walked', with no 'e' at the end."
+  - type: quiz
+    q: {fr: "Combien de syllabes dans « Wednesday » ?", en: "How many syllables in 'Wednesday'?"}
+    options: ["2", "3", "4"]
+    answer: 0
+    explain: {fr: "WENZ-day : le « d » et le deuxième « e » sont muets.", en: "WENZ-day: the 'd' and the second 'e' are silent."}
+perception:
+  task: count
+  items: [every, family, different, business, Wednesday, vegetable, comfortable, interesting, evening, camera, favourite, chocolate, walked, liked, played, asked, wanted, needed, clothes, months, sport, street, school, strange, spring, special, temperature, restaurant]
+production:
+  - {text: every}
+  - {text: family}
+  - {text: business}
+  - {text: Wednesday}
+  - {text: vegetable}
+  - {text: comfortable}
+  - {text: interesting}
+  - {text: walked}
+  - {text: asked}
+  - {text: played}
+  - {text: street}
+  - {text: school}
+  - {text: "Every evening."}
+  - {text: "My family is different."}
+  - {text: "We walked to school."}
+guided:
+  - text: "I asked my family about it."
+    fr: "Quatre mots-pièges : « asked » (1 temps), « family » (2 ou 3), « about » (2)."
+    en: "Four traps: 'asked' (1 beat), 'family' (2 or 3), 'about' (2)."
+  - text: "The vegetables are comfortable in the fridge."
+    fr: "Une phrase absurde pour s'entraîner : VEDGE-ta-bles, COMF-ta-ble."
+    en: "A silly sentence for practice: VEDGE-ta-bles, COMF-ta-ble."
+  - text: "It's an interesting business."
+    fr: "IN-tres-ting, BIZ-ness."
+    en: "IN-tres-ting, BIZ-ness."
+transfer:
+  - fr: "Racontez en deux ou trois phrases ce que vous avez fait mercredi dernier (Wednesday). Utilisez des verbes au passé : walked, played, watched…"
+    en: "Tell in two or three sentences what you did last Wednesday. Use past-tense verbs: walked, played, watched…"
+    hint_words: [Wednesday, walked, played, watched, evening]
+fiches:
+  e-final:
+    fr: "On a entendu un petit « e » après la dernière consonne. En anglais, le mot s'arrête net sur la consonne : [coupez|coupe] le souffle tout de suite après."
+    en: "I heard a little 'e' after the last consonant. In English, the word stops dead on the consonant: cut the air right after it."
+  ed-syllabe:
+    fr: "« -ed » n'ajoute une syllabe qu'après /t/ ou /d/ (wanted, needed). Ici, on attend un seul temps : walked = « wokt »."
+    en: "'-ed' only adds a syllable after /t/ or /d/ (wanted, needed). Here, we expect a single beat: walked = 'wokt'."
+  syllabe-ajoutee:
+    fr: "L'outil perçoit une syllabe de trop. [Écoutez|Écoute] le modèle en tapotant les temps, puis [réessayez|réessaie] en « avalant » la voyelle faible."
+    en: "The tool hears one syllable too many. Listen to the model while tapping the beats, then try again, 'swallowing' the weak vowel."

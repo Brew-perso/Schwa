@@ -1,0 +1,93 @@
+id: a2-spelling
+level: A2
+order: 6
+domain: articuler
+kind: letters
+planet: {color: mustard, motif: stars}
+title: {fr: "Épeler sans se tromper", en: "Spelling out loud"}
+tagline: {fr: "A, E, I, G, J, R… les lettres qui piègent", en: "A, E, I, G, J, R… the tricky letters"}
+why:
+  fr: "Au téléphone, à l'accueil d'un hôtel, pour une adresse mail : épeler est une situation où l'on ne peut pas compter sur le contexte. Les noms anglais de A, E, I, G et J sont presque les inverses des noms français."
+  en: "On the phone, at a hotel desk, for an email address: spelling is one situation where context can't help. The English names of A, E, I, G and J are almost the reverse of the French ones."
+criterion:
+  fr: "J'épelle mon nom et mon adresse e-mail sans que mon interlocuteur ait à me faire répéter."
+  en: "I spell my name and email address without my listener asking me to repeat."
+phones: [eɪ, iː, aɪ, dʒ]
+errors:
+  - {target: eɪ, realized: æ, fiche: lettre-a, weight: 0.8}
+  - {target: iː, realized: ə, fiche: lettre-e, weight: 0.8}
+  - {target: aɪ, realized: iː, fiche: lettre-i, weight: 0.9}
+lesson:
+  - type: text
+    fr: "Les voyelles anglaises portent le nom de leur son « long » : A = /eɪ/ (comme « day »), E = /iː/ (comme « see »), I = /aɪ/ (comme « my »), O = /əʊ/, U = /juː/ (comme « you »)."
+    en: "English vowel letters are named after their 'long' sound: A = /eɪ/ (as in 'day'), E = /iː/ (as in 'see'), I = /aɪ/ (as in 'my'), O = /əʊ/, U = /juː/ (as in 'you')."
+  - type: listen
+    fr: "Écoutez A, E, I :"
+    en: "Listen to A, E, I:"
+    items: ["A", "E", "I"]
+  - type: rule
+    fr: "Les pièges classiques : G = /dʒiː/ et J = /dʒeɪ/ (l'inverse du français !) ; H = /eɪtʃ/ ; R = /ɑː/ ; W = « double-u » ; Y = /waɪ/. Z se dit « zed » en anglais britannique et « zee » en américain."
+    en: "The classic traps: G = /dʒiː/ and J = /dʒeɪ/ (the reverse of French!); H = /eɪtʃ/; R = /ɑː/; W = 'double-u'; Y = /waɪ/. Z is 'zed' in British English and 'zee' in American English."
+  - type: listen
+    fr: "Écoutez G, J, H, R :"
+    en: "Listen to G, J, H, R:"
+    items: ["G", "J", "H", "R"]
+  - type: rule
+    fr: "Pour une adresse mail : @ = « at », . = « dot », - = « dash » ou « hyphen », _ = « underscore ». Deux lettres identiques : « double » (« double L »)."
+    en: "For an email address: @ = 'at', . = 'dot', - = 'dash' or 'hyphen', _ = 'underscore'. Two identical letters: 'double' ('double L')."
+  - type: quiz
+    q: {fr: "Quelle lettre se prononce /dʒiː/ ?", en: "Which letter is pronounced /dʒiː/?"}
+    options: ["G", "J"]
+    answer: 0
+    explain: {fr: "G = /dʒiː/, J = /dʒeɪ/. Astuce : G comme « Gee! ».", en: "G = /dʒiː/, J = /dʒeɪ/. Tip: G as in 'Gee!'."}
+perception:
+  task: letters
+  items:
+    - {say: "A", options: ["A", "E", "I"]}
+    - {say: "E", options: ["A", "E", "I"]}
+    - {say: "I", options: ["A", "E", "I"]}
+    - {say: "G", options: ["G", "J"]}
+    - {say: "J", options: ["G", "J"]}
+    - {say: "H", options: ["H", "A", "R"]}
+    - {say: "R", options: ["R", "A", "I"]}
+    - {say: "Y", options: ["Y", "I", "W"]}
+    - {say: "U", options: ["U", "Q", "W"]}
+    - {say: "K", options: ["K", "Q", "C"]}
+    - {say: "C", options: ["C", "S", "Z"]}
+    - {say: "X", options: ["X", "S", "H"]}
+    - {say: "B", options: ["B", "V", "P"]}
+    - {say: "V", options: ["B", "V", "W"]}
+    - {say: "O", options: ["O", "A", "U"]}
+production:
+  - {letters: "A E I"}
+  - {letters: "G J"}
+  - {letters: "H R"}
+  - {letters: "Y W"}
+  - {letters: "U Q"}
+  - {letters: "B B C"}
+  - {letters: "F B I"}
+  - {letters: "U S A"}
+  - {letters: "G P S"}
+  - {letters: "B M W"}
+  - {text: "My email is jane dot smith at gmail dot com."}
+guided:
+  - text: "J-A-M-E-S. That's James."
+    fr: "Épelez le prénom : J /dʒeɪ/, A /eɪ/, E /iː/."
+    en: "Spell the name: J /dʒeɪ/, A /eɪ/, E /iː/."
+  - text: "G-R-E-E-N. Green, with a double E."
+    fr: "« double E » pour deux lettres identiques."
+    en: "'double E' for two identical letters."
+transfer:
+  - fr: "Au téléphone, un hôtel vous demande votre nom de famille et votre adresse e-mail. Épelez-les (vous pouvez utiliser des informations fictives)."
+    en: "On the phone, a hotel asks for your surname and email address. Spell them out (you can use made-up details)."
+    hint_words: []
+fiches:
+  lettre-a:
+    fr: "La lettre A se dit /eɪ/, comme dans « day » : [glissez|glisse] du « é » vers un petit « i »."
+    en: "The letter A is /eɪ/, as in 'day': glide from 'é' to a little 'i'."
+  lettre-e:
+    fr: "La lettre E se dit /iː/, comme « see » : un « i » souriant."
+    en: "The letter E is /iː/, like 'see': a smiling 'i'."
+  lettre-i:
+    fr: "La lettre I se dit /aɪ/, comme « my » : [partez|pars] d'un « a » ouvert et [glissez|glisse] vers « i »."
+    en: "The letter I is /aɪ/, like 'my': start from an open 'a' and glide to 'i'."

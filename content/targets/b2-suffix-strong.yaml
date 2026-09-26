@@ -1,0 +1,87 @@
+id: b2-suffix-strong
+level: B2
+order: 1
+domain: prosodie
+kind: stress
+planet: {color: coral, motif: rings}
+title: {fr: "Les suffixes forts", en: "Strong suffixes"}
+tagline: {fr: "PHO-to-graph → pho-TO-gra-phy → pho-to-GRA-phic", en: "PHO-to-graph → pho-TO-gra-phy → pho-to-GRA-phic"}
+why:
+  fr: "Certains suffixes « tirent » l'accent vers eux : il tombe alors sur la syllabe qui les précède, ou une syllabe avant. Maîtriser ces suffixes, c'est accentuer correctement des milliers de mots savants — ceux-là mêmes que les jurys épinglent (e-CO-no-mics au lieu de e-co-NO-mics)."
+  en: "Some suffixes 'pull' stress towards them: it then falls on the syllable before them, or one syllable earlier. Mastering these suffixes means correctly stressing thousands of academic words — the very ones examiners pick up on (e-CO-no-mics instead of e-co-NO-mics)."
+criterion:
+  fr: "Je sais où tombe l'accent dans les mots en -ic, -ion, -ity, -ial, -ian, -ical, -graphy, et je le déplace quand je dérive un mot."
+  en: "I know where stress falls in words ending in -ic, -ion, -ity, -ial, -ian, -ical, -graphy, and I shift it when I derive a word."
+phones: []
+errors:
+  - {target: stress, realized: other, fiche: suffixe-fort, weight: 1.0}
+  - {target: stress, realized: final, fiche: suffixe-fort, weight: 1.0}
+lesson:
+  - type: text
+    fr: "Suffixes qui placent l'accent juste avant eux (schéma « -10 ») : -ic (e-co-NO-mic), -ion (e-du-CA-tion), -ial (es-SEN-tial), -ian (mu-SI-cian), -ious (de-LI-cious), -ient (ef-FI-cient). L'accent tombe sur la syllabe qui précède le suffixe."
+    en: "Suffixes that put stress right before them ('-10' pattern): -ic (e-co-NO-mic), -ion (e-du-CA-tion), -ial (es-SEN-tial), -ian (mu-SI-cian), -ious (de-LI-cious), -ient (ef-FI-cient). Stress falls on the syllable before the suffix."
+  - type: listen
+    fr: "Une même famille, trois accents différents :"
+    en: "One word family, three different stress patterns:"
+    items: [photograph, photography, photographic]
+  - type: rule
+    fr: "Suffixes qui placent l'accent deux syllabes avant la fin (schéma « -100 ») : -ity (e-lec-TRI-ci-ty), -ical (po-LI-ti-cal), -graphy, -logy (bi-O-lo-gy), -ate dans les mots de 3 syllabes et plus (com-MU-ni-cate)."
+    en: "Suffixes that put stress two syllables before the end ('-100' pattern): -ity (e-lec-TRI-ci-ty), -ical (po-LI-ti-cal), -graphy, -logy (bi-O-lo-gy), -ate in words of 3+ syllables (com-MU-ni-cate)."
+  - type: text
+    fr: "Quand l'accent se déplace, les voyelles changent avec lui : PHO-to-graph /ˈfəʊtəɡrɑːf/ mais pho-TO-gra-phy /fəˈtɒɡrəfi/. La voyelle accentuée devient pleine, les autres se réduisent."
+    en: "When stress moves, vowels change with it: PHO-to-graph /ˈfəʊtəɡrɑːf/ but pho-TO-gra-phy /fəˈtɒɡrəfi/. The stressed vowel becomes full, the others reduce."
+  - type: quiz
+    q: {fr: "Où est l'accent dans « economic » ?", en: "Where is the stress in 'economic'?"}
+    options: ["E-co-no-mic", "e-CO-no-mic", "e-co-NO-mic"]
+    answer: 2
+    explain: {fr: "-ic place l'accent juste avant : e-co-NO-mic. Comparez : e-CO-no-my.", en: "-ic puts stress right before it: e-co-NO-mic. Compare: e-CO-no-my."}
+perception:
+  task: stress
+  items:
+    - {text: economy, stress: 1}
+    - {text: economic, stress: 2}
+    - {text: economics, stress: 2}
+    - {text: photography, stress: 1}
+    - {text: photographic, stress: 2}
+    - {text: education, stress: 2}
+    - {text: musician, stress: 1}
+    - {text: essential, stress: 1}
+    - {text: electricity, stress: 2}
+    - {text: biology, stress: 1}
+    - {text: political, stress: 1}
+    - {text: politics, stress: 0}
+    - {text: communicate, stress: 1}
+    - {text: democratic, stress: 2}
+    - {text: nationality, stress: 2}
+    - {text: efficient, stress: 1}
+    - {text: delicious, stress: 1}
+    - {text: technician, stress: 1}
+    - {text: scientific, stress: 2}
+    - {text: possibility, stress: 2}
+production:
+  - {text: economy, stress: 1}
+  - {text: economic, stress: 2}
+  - {text: photography, stress: 1}
+  - {text: photographic, stress: 2}
+  - {text: education, stress: 2}
+  - {text: electricity, stress: 2}
+  - {text: political, stress: 1}
+  - {text: democratic, stress: 2}
+  - {text: "The economy needs an economic plan.", stress_words: {economy: 1, economic: 2}}
+  - {text: "Photography is a photographic art.", stress_words: {photography: 1, photographic: 2}}
+  - {text: "Education is essential.", stress_words: {education: 2, essential: 1}}
+guided:
+  - text: "Democracy is a democratic system."
+    fr: "de-MO-cra-cy puis de-mo-CRA-tic : l'accent saute d'une syllabe."
+    en: "de-MO-cra-cy then de-mo-CRA-tic: the stress jumps one syllable."
+  - text: "The politician talked about politics."
+    fr: "po-li-TI-cian (-ian) mais PO-li-tics."
+    en: "po-li-TI-cian (-ian) but PO-li-tics."
+transfer:
+  - fr: "Présentez brièvement votre domaine d'études ou votre métier en utilisant au moins trois mots à suffixe fort (-ic, -ion, -ity, -ical, -ian)."
+    en: "Briefly present your field of study or your job using at least three words with strong suffixes (-ic, -ion, -ity, -ical, -ian)."
+    hint_words: [education, economic, university, scientific, technician]
+fiches:
+  suffixe-fort:
+    fr: "Dans « {word} », le suffixe impose sa règle : l'accent tombe sur « {stressed} ». [Dérivez|Dérive] à voix haute depuis le mot de base pour sentir le déplacement."
+    en: "In '{word}', the suffix sets the rule: stress falls on '{stressed}'. Derive it aloud from the base word to feel the shift."

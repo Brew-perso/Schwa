@@ -1,0 +1,99 @@
+id: b1-ae-uh
+level: B1
+order: 8
+domain: articuler
+kind: segment
+planet: {color: mint, motif: swirl}
+title: {fr: "Cat, cut, cart : /æ/–/ʌ/–/ɑː/", en: "Cat, cut, cart: /æ/–/ʌ/–/ɑː/"}
+tagline: {fr: "Trois « a » anglais que le français confond", en: "Three English 'a' sounds French blends together"}
+why:
+  fr: "Le français n'a qu'un « a ». L'anglais distingue /æ/ (cat), /ʌ/ (cut) et /ɑː/ (cart). Les francophones les fondent souvent en un seul son, ce qui rend « hat, hut, heart » ou « cap, cup, carp » impossibles à distinguer."
+  en: "French has one 'a'. English distinguishes /æ/ (cat), /ʌ/ (cut) and /ɑː/ (cart). French speakers often merge them into one sound, making 'hat, hut, heart' or 'cap, cup, carp' impossible to tell apart."
+criterion:
+  fr: "Mon interlocuteur distingue « cap » et « cup », « hat » et « hut »."
+  en: "My listener can tell 'cap' from 'cup', 'hat' from 'hut'."
+phones: [æ, ʌ, ɑː]
+errors:
+  - {target: ʌ, realized: æ, fiche: uh-vers-a, weight: 0.8}
+  - {target: ʌ, realized: ɒ, fiche: uh-vers-o, weight: 0.7}
+  - {target: ʌ, realized: œ, fiche: uh-vers-eu, weight: 0.6}
+  - {target: æ, realized: ʌ, fiche: ae-ferme, weight: 0.7}
+  - {target: æ, realized: ɛ, fiche: ae-vers-e, weight: 0.7}
+lesson:
+  - type: text
+    fr: "/æ/ (cat, bad, happy) : bouche très ouverte, mâchoire basse, lèvres étirées — un « a » qui tire vers le « è ». /ʌ/ (cup, love, money) : son bref et central, bouche mi-ouverte, détendue, comme un « a » avalé. /ɑː/ (car, father) : long, grave, au fond de la bouche."
+    en: "/æ/ (cat, bad, happy): mouth wide open, jaw low, lips spread — an 'a' leaning towards 'è'. /ʌ/ (cup, love, money): short and central, mouth half-open and relaxed, like a swallowed 'a'. /ɑː/ (car, father): long, deep, at the back of the mouth."
+  - type: listen
+    fr: "Écoutez les trois voyelles :"
+    en: "Listen to the three vowels:"
+    items: [hat, hut, heart, cap, cup, carp]
+  - type: gesture
+    art: vowels:æ-ʌ
+    fr: "Pour /æ/ : [laissez|laisse] tomber la mâchoire et [souriez|souris] un peu. Pour /ʌ/ : mâchoire à mi-hauteur, tout relâché, un son court et « surpris » (« uh! »)."
+    en: "For /æ/: drop your jaw and smile slightly. For /ʌ/: jaw half-way, everything relaxed, a short 'surprised' sound ('uh!')."
+  - type: rule
+    fr: "Orthographe : « u » entravé donne /ʌ/ (cut, bus, sun) ; « o » donne aussi /ʌ/ dans une série de mots très fréquents : love, come, some, money, mother, one, country, wonder."
+    en: "Spelling: a checked 'u' gives /ʌ/ (cut, bus, sun); 'o' also gives /ʌ/ in a set of very frequent words: love, come, some, money, mother, one, country, wonder."
+  - type: quiz
+    q: {fr: "Quel mot contient /ʌ/ ?", en: "Which word has /ʌ/?"}
+    options: ["money", "many", "manner"]
+    answer: 0
+    explain: {fr: "money /ˈmʌni/. many a /e/, manner a /æ/.", en: "money /ˈmʌni/. many has /e/, manner has /æ/."}
+perception:
+  task: identify
+  items:
+    - [cap, cup]
+    - [cat, cut]
+    - [hat, hut]
+    - [bag, bug]
+    - [ran, run]
+    - [match, much]
+    - [fan, fun]
+    - [bat, but]
+    - [lack, luck]
+    - [track, truck]
+    - [hut, heart]
+    - [cut, cart]
+    - [come, calm]
+    - [much, march]
+    - [bun, barn]
+production:
+  - {pair: [cap, cup]}
+  - {pair: [cat, cut]}
+  - {pair: [hat, hut]}
+  - {pair: [ran, run]}
+  - {text: money}
+  - {text: country}
+  - {text: wonder}
+  - {text: happy}
+  - {text: "A cup of coffee and a cap."}
+  - {text: "My brother loves his country."}
+  - {text: "That's much better, thanks."}
+guided:
+  - text: "The cat was cut."
+    fr: "/æ/ puis /ʌ/ : deux mots, deux bouches."
+    en: "/æ/ then /ʌ/: two words, two mouth shapes."
+  - text: "Did you bring the cap?"
+    alt: "Did you bring the cup?"
+    fr: "Casquette ou tasse ? Faites-vous comprendre."
+    en: "Cap or cup? Make yourself understood."
+transfer:
+  - fr: "Racontez un moment amusant (fun, funny, lucky, much, love…) en quelques phrases."
+    en: "Tell us about a fun moment (fun, funny, lucky, much, love…) in a few sentences."
+    hint_words: [fun, funny, lucky, much, love, cousin]
+fiches:
+  uh-vers-a:
+    fr: "On a entendu « {heard} » : la bouche était trop ouverte. Pour /ʌ/, [refermez|referme] un peu la mâchoire et [relâchez|relâche] les lèvres : un son bref, central."
+    en: "I heard '{heard}': your mouth was too open. For /ʌ/, close your jaw a little and relax your lips: a short, central sound."
+  uh-vers-o:
+    fr: "On a entendu un son proche du « o » : les lèvres se sont arrondies. Pour /ʌ/, les lèvres restent neutres, pas arrondies."
+    en: "I heard something close to 'o': your lips rounded. For /ʌ/, keep your lips neutral, not rounded."
+  uh-vers-eu:
+    fr: "On a entendu un son proche du « eu » français. [Gardez|Garde] les lèvres neutres et [ouvrez|ouvre] un peu plus la bouche pour /ʌ/."
+    en: "I heard something close to French 'eu'. Keep your lips neutral and open your mouth a bit more for /ʌ/."
+  ae-ferme:
+    fr: "On a entendu « {heard} ». Pour /æ/, [laissez|laisse] vraiment tomber la mâchoire, lèvres étirées."
+    en: "I heard '{heard}'. For /æ/, really drop your jaw, with lips spread."
+  ae-vers-e:
+    fr: "Votre /æ/ ressemblait à un « è ». [Ouvrez|Ouvre] davantage : la mâchoire descend nettement."
+    en: "Your /æ/ sounded like 'è'. Open wider: your jaw clearly drops."
