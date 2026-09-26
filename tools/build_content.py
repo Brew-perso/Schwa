@@ -539,6 +539,12 @@ def build(args):
         attach_timings(t, timings)
         with open(OUT / 'targets' / f"{t['id']}.json", 'w', encoding='utf-8') as f:
             json.dump(t, f, ensure_ascii=False, separators=(',', ':'))
+    if only and (OUT / 'course.json').exists():
+        # partial build: keep the other targets of the existing index
+        with open(OUT / 'course.json', encoding='utf-8') as f:
+            prev = json.load(f)
+        kept = [t for t in prev.get('targets', []) if t['id'] not in only]
+        course_out['targets'] = sorted(kept + course_out['targets'], key=lambda t: (['A2', 'B1', 'B2', 'C1'].index(t['level']), t['order']))
     with open(OUT / 'course.json', 'w', encoding='utf-8') as f:
         json.dump(course_out, f, ensure_ascii=False, separators=(',', ':'))
     with open(CONTENT / 'BUILD_REPORT.md', 'w', encoding='utf-8') as f:

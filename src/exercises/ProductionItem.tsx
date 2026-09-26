@@ -191,7 +191,7 @@ function Feedback({ result, item, target, prep, lang, register, units, variety, 
   else if (item.type === 'pair' && result.pair) {
     const heardWord = result.pair.heard === 'target' ? pairWords![pairIdx] : result.pair.heard === 'competitor' ? pairWords![1 - pairIdx] : null
     consigne = heardWord
-      ? `${t('understood_pair')} « ${heardWord} ».` + (result.pair.heard === 'target' ? '' : ' ' + fichePairHint(target, lang, register))
+      ? `${t('understood_pair')} « ${heardWord} ».` + (result.pair.heard === 'target' ? '' : ' ' + fichePairHint(target, lang, register, prep.ref, prep.competitor, units))
       : t('unsure_msg')
     if (result.pair.heard === 'competitor') cards = { aim: pairWords![pairIdx], aimIpa: ref.words[0]?.ipa ?? '', heard: pairWords![1 - pairIdx] }
   } else if (p) {
@@ -301,7 +301,22 @@ function Feedback({ result, item, target, prep, lang, register, units, variety, 
   )
 }
 
-function fichePairHint(target: Target, lang: 'fr' | 'en', register: 'vous' | 'tu') {
+/** Remediation for a minimal pair heard as its competitor: find the error rule matching the actual difference
+ * (e.g. /h/ dropped vs /h/ added), use its fiche; fall back to the target's articulatory gesture. */
+function fichePairHint(target: Target, lang: 'fr' | 'en', register: 'vous' | 'tu', aim?: import('../content/types').Ref, heard?: import('../content/types').Ref, units: string[] = []) {
+  if (aim && heard && units.length) {
+    const a = aim.words.flatMap((w) => w.u).map((i) => units[i])
+    const b = heard.words.flatMap((w) => w.u).map((i) => units[i])
+    let k = 0
+    while (k < a.length && k < b.length && a[k] === b[k]) k++
+    const want = a.length > b.length ? a[k] : a.length < b.length ? '∅' : a[k]
+    const got = a.length > b.length ? '∅' : b[k]
+    const rule = target.errors.find((e) => e.target === want && e.realized === got && target.fiches[e.fiche])
+    if (rule) {
+      const vars = { word: aim.words.map((w) => w.w).join(' '), heard: heard.words.map((w) => w.w).join(' ') }
+      return pickBi(target.fiches[rule.fiche], lang, register, vars)
+    }
+  }
   const g = target.lesson.find((b) => b.type === 'gesture')
   return g ? pickBi({ fr: g.fr ?? '', en: g.en ?? '' }, lang, register) : ''
 }

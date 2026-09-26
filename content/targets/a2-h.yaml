@@ -90,5 +90,5 @@ fiches:
     fr: "On a entendu « {heard} » au lieu de « {word} ». [Soufflez|Souffle] comme pour faire de la buée sur une vitre, juste avant la voyelle : hhh-{word}."
     en: "I heard '{heard}' instead of '{word}'. Breathe out as if fogging a window, right before the vowel: hhh-{word}."
   h-intrus:
-    fr: "Un /h/ s'est glissé devant « {word} ». Ce mot commence par une voyelle : [enchaînez-le|enchaîne-le] directement au mot précédent, sans souffle."
-    en: "An /h/ slipped in before '{word}'. This word starts with a vowel: link it straight to the previous word, with no breath."
+    fr: "Un /h/ s'est glissé devant « {word} ». Ce mot commence par une voyelle : [attaquez|attaque] directement la voyelle, sans souffle — et en phrase, [enchaînez-le|enchaîne-le] au mot précédent."
+    en: "An /h/ slipped in before '{word}'. This word starts with a vowel: go straight into the vowel with no breath — and in a sentence, link it to the previous word."
