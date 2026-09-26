@@ -73,6 +73,39 @@ Elles sont légères et ne dépendent d'aucun service. Pour des collages plus ri
 - en attendant, une alternative sans dépendance : des **gravures du domaine public** (Wikimedia Commons, Gallica, BHL : oiseaux, planches astronomiques
   du XIXᵉ), détourées. C'est gratuit, cohérent avec le style collage et juridiquement sûr.
 
+## 0. Moteur 1.0.1 : formes faibles corrigées
+
+La session précédente avait identifié un vrai problème de précision (voir aussi 4bis pour le reste de cette session) :
+le moteur entendait « and », « can », etc. dans leur forme pleine même bien prononcés en forme faible, si bien qu'une
+phrase correcte comme « Come and see us » recevait un « à affiner ». Cause : les transcriptions d'entraînement
+utilisaient la forme pleine de ces mots (le G2P misaki donne la forme de citation, pas la forme réduite du discours
+continu). Les données avaient été réétiquetées mais pas ré-entraînées.
+
+**Fait dans cette session** : ré-entraînement complet (`tools/engine/weak_forms.py` corrige les étiquettes avant
+l'entraînement, aussi bien pour la parole réelle que synthétique ; le même bug existait côté fabrication du contenu,
+voir 4bis). Vérifié directement : sur le même enregistrement de « come and see us », le moteur actuellement en ligne
+décode « ænd » et « ʌs » (forme pleine, à tort) ; le nouveau moteur décode « ənd » et « əs » (forme faible, correct).
+
+Les jeux d'entraînement et de calibration (LibriSpeech, Speech Accent Archive) de la session précédente n'étaient pas
+dans le dépôt et n'ont pas survécu au changement de session ; il a fallu retélécharger les modèles et données
+(encodeur NeMo, Kokoro, ~5 900 énoncés LibriSpeech, 400 énoncés synthétiques accentués, 228 locuteurs SAA) et
+reconstruire le jeu depuis zéro, à une échelle réduite par le temps disponible en session interactive :
+
+| Mesure | 1.0.0 (production) | 1.0.1 (cette session) |
+|---|---|---|
+| Erreur phonétique, locuteurs français (SAA) | 0,184 | 0,211 |
+| Erreur phonétique, locuteurs natifs (SAA) | 0,128 | **0,124** (meilleur) |
+| Calibration (`tests/calibrate.test.ts`) | 70/76 | 68/76 |
+| Fausses alertes sur prononciations correctes | 0/40 | **0/40** (inchangé) |
+
+La régression sur l'erreur phonétique française (~15 % relatif) vient très probablement du volume réduit de parole
+synthétique accentuée générée (400 contre un volume plus grand à l'origine, faute de temps — la synthèse Kokoro en
+pleine précision sur CPU est le goulot d'étranglement, environ 20 à 30 énoncés/minute). La propriété la plus critique
+pour l'usage pédagogique — ne jamais signaler à tort une bonne prononciation comme fausse — est intacte (0/40 les deux
+fois). Recommandation : si cette version convient à l'usage, un ré-entraînement ultérieur avec plus de données
+synthétiques (quelques heures de génération) devrait retrouver, voire dépasser, la précision de la 1.0.0 tout en
+gardant la correction des formes faibles.
+
 ## 4bis. Déploiement Vercel (équipe `la-balme`)
 
 L'équipe Vercel `la-balme` est bien connectée à votre compte GitHub. Le projet **`schwa`** a été créé dans cette équipe
