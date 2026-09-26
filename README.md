@@ -43,7 +43,7 @@ Le micro exige HTTPS ou `localhost`. Le moteur utilise WebAssembly multithread, 
 
 1. Éditer `content/targets/<id>.yaml` : consignes, items, erreurs attendues, fiches de remédiation.
 2. `python tools/build_content.py --workers 2`, ou `--only b1-th` pour une seule cible. Seuls les audios nouveaux sont synthétisés.
-3. Relire `content/BUILD_REPORT.md` (mots inconnus, formes faibles douteuses…).
+3. Relire `content/BUILD_REPORT.md` (mots inconnus, formes faibles douteuses…), puis `python tools/prune_audio.py` pour supprimer les audios devenus inutiles.
 
 Dépendances Python : `kokoro-onnx`, `misaki[en]`, `onnxruntime`, `praat-parselmouth`, `lameenc`, `soundfile`, `pyyaml`.
 Les modèles Kokoro (`kokoro-v1.0.onnx`, `voices-v1.0.bin`, variante horodatée) se placent dans `tools/models/`.
