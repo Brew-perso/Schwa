@@ -32,13 +32,13 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,woff2,png,json}'],
-        globIgnores: ['**/audio/**', '**/models/**', '**/ort/**', 'content/targets/**'],
+        globIgnores: ['**/audio/**', '**/models/**', 'content/targets/**'],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         navigateFallbackDenylist: [/^\/audio\//, /^\/models\//],
         runtimeCaching: [
           { urlPattern: ({ url }) => url.pathname.startsWith('/audio/'), handler: 'CacheFirst', options: { cacheName: 'schwa-audio', expiration: { maxEntries: 8000 } } },
           { urlPattern: ({ url }) => url.pathname.startsWith('/content/'), handler: 'StaleWhileRevalidate', options: { cacheName: 'schwa-content' } },
-          { urlPattern: ({ url }) => url.pathname.startsWith('/ort/') || url.pathname.startsWith('/models/'), handler: 'CacheFirst', options: { cacheName: 'schwa-runtime' } },
+          { urlPattern: ({ url }) => url.pathname.endsWith('.wasm') || url.pathname.startsWith('/models/'), handler: 'CacheFirst', options: { cacheName: 'schwa-runtime' } },
         ],
       },
     }),

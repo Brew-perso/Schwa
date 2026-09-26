@@ -5,6 +5,7 @@
  * The encoder's own BPE output gives an intelligibility transcript ("what the machine understood").
  */
 import * as ort from 'onnxruntime-web/wasm'
+import { ortWasmPaths } from './ortPaths'
 import { fbank, toChannelsFirst } from './fbank'
 import { evaluate, type EvalInput, type SylRaw } from './evaluate'
 import type { Check, Level, Ref } from '../content/types'
@@ -12,7 +13,7 @@ import type { Check, Level, Ref } from '../content/types'
 declare const self: DedicatedWorkerGlobalScope
 
 const BASE = (self as unknown as { SCHWA_BASE?: string }).SCHWA_BASE ?? '/'
-ort.env.wasm.wasmPaths = BASE + 'ort/'
+ort.env.wasm.wasmPaths = ortWasmPaths
 ort.env.wasm.numThreads = self.crossOriginIsolated ? Math.max(1, Math.min(4, (navigator.hardwareConcurrency || 2) - 1)) : 1
 ort.env.logLevel = 'error'
 

@@ -121,7 +121,11 @@ export function evaluate(inp: EvalInput, units: string[]): EvalResult {
   res.unitSpans = spans.map((s) => [s.s * FRAME, (s.e + 1) * FRAME])
   // confidence: how well the expected text explains the audio (1 = perfectly)
   res.confidence = Math.max(0, Math.min(1, 1 - gapPerFrame / 1.2))
-  if (!res.qc && gapPerFrame > 1.15) res.qc = 'mismatch'
+  // per speech frame too (20 ms head frames): leading/trailing silence must not dilute the gap on single words.
+  // For a minimal pair, either member of the pair is an acceptable text here (the pair decision comes later).
+  const llAlt = inp.competitor ? forward(lp, T, V, flatUnits(inp.competitor).seq) : -Infinity
+  const gapSpeech = (best - Math.max(llRef, llAlt)) / Math.max(speechFrames / 2, seq.length * 1.5)
+  if (!res.qc && (gapPerFrame > 1.15 || gapSpeech > 1.6)) res.qc = 'mismatch'
 
   // ---------------- segmental checks (graph of expected errors)
   for (const c of checks) {

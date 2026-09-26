@@ -145,3 +145,10 @@ details.more[open] > summary::before { content: '–'; }
 
 .celebrate { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; background: color-mix(in srgb, var(--night) 70%, transparent); animation: fadeIn .3s both; padding: 20px; }
 .celebrate .card { max-width: 420px; width: 100%; text-align: center; }
+
+/* 1–5 scale (onboarding): chips spread across, end labels underneath */
+.scale { display: grid; gap: 4px; max-width: 420px; }
+.scale-chips { display: flex; justify-content: space-between; gap: 6px; }
+.scale-chips .chip { flex: 1; justify-content: center; min-width: 0; min-height: 44px; }
+.scale-ends { display: flex; justify-content: space-between; gap: 16px; line-height: 1.25; }
+.scale-ends span:last-child { text-align: right; }

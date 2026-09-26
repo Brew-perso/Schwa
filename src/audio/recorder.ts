@@ -101,6 +101,9 @@ export interface ActiveRecording {
 }
 
 export async function record(opts: RecordOptions): Promise<ActiveRecording> {
+  // dev-only end-to-end test hook: "speak" a given audio file instead of the microphone
+  const testUrl = import.meta.env.DEV ? (window as unknown as { __schwaNextAudio?: string }).__schwaNextAudio : undefined
+  if (testUrl) return testRecording(testUrl)
   const src = await openMic()
   const c = getAudioContext()
   const sr = c.sampleRate
@@ -198,4 +201,16 @@ export async function record(opts: RecordOptions): Promise<ActiveRecording> {
     stop: () => finish(speaking || opts.mode === 'hold' ? 'manual' : 'timeout'),
     cancel: () => { if (!finished) { finished = true; node.port.postMessage('stop'); try { src.disconnect(node) } catch { /* noop */ } rejectDone(new Error('cancelled')) } },
   }
+}
+
+async function testRecording(url: string): Promise<ActiveRecording> {
+  const c = getAudioContext()
+  const buf = await c.decodeAudioData(await (await fetch(url)).arrayBuffer())
+  const pad = new Float32Array(Math.round(buf.sampleRate * 0.3))
+  const x = buf.getChannelData(0)
+  const native = new Float32Array(pad.length * 2 + x.length)
+  native.set(x, pad.length)
+  for (let i = 0; i < native.length; i++) native[i] += (Math.random() - 0.5) * 2e-3
+  const rec: Recording = { native, sampleRate: buf.sampleRate, audio16k: resampleTo16k(native, buf.sampleRate), durationMs: (native.length / buf.sampleRate) * 1000, endedBy: 'vad' }
+  return { done: new Promise((r) => setTimeout(() => r(rec), 300)), stop: () => {}, cancel: () => {} }
 }

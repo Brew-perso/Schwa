@@ -100,12 +100,13 @@ export default function Onboarding() {
             {AFFECT.map((a) => (
               <div key={a.k} className="stack" style={{ ['--stack' as string]: '6px' }}>
                 <div style={{ fontWeight: 700 }}>{s.instr === 'en' ? a.en : a.fr}</div>
-                <div className="row" style={{ gap: 6 }}>
-                  <span className="small muted" style={{ width: 90, textAlign: 'right' }}>{s.instr === 'en' ? a.lo.en : a.lo.fr}</span>
-                  {[1, 2, 3, 4, 5].map((n) => (
-                    <button key={n} className={`chip ${s.affect[a.k] === n ? 'on' : ''}`} style={{ minWidth: 36, justifyContent: 'center' }} onClick={() => set({ affect: { ...s.affect, [a.k]: n } })} aria-label={`${n}/5`}>{n}</button>
-                  ))}
-                  <span className="small muted" style={{ width: 90 }}>{s.instr === 'en' ? a.hi.en : a.hi.fr}</span>
+                <div className="scale" role="group" aria-label={s.instr === 'en' ? a.en : a.fr}>
+                  <div className="scale-chips">
+                    {[1, 2, 3, 4, 5].map((n) => (
+                      <button key={n} className={`chip ${s.affect[a.k] === n ? 'on' : ''}`} aria-pressed={s.affect[a.k] === n} onClick={() => { set({ affect: { ...s.affect, [a.k]: n } }); sfx('tick') }} aria-label={`${n}/5`}>{n}</button>
+                    ))}
+                  </div>
+                  <div className="scale-ends small muted"><span>{s.instr === 'en' ? a.lo.en : a.lo.fr}</span><span>{s.instr === 'en' ? a.hi.en : a.hi.fr}</span></div>
                 </div>
               </div>
             ))}

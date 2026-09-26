@@ -115,9 +115,9 @@ export function ProductionItemView({ item, target, step, onDone, onNext, showCri
       {item.type === 'guided' && (item.fr || item.en) && (
         <p className="muted" style={{ margin: 0 }}>{pickBi({ fr: item.fr ?? '', en: item.en ?? '' }, lang, s.register)}</p>
       )}
-      <div className="center">
+      <div className="center" data-item-text={displayRef.text}>
         <AnnotatedText refd={displayRef} variety={v} ipaLevel={ipaLevel} focusWords={focusWords}
-          states={result && !result.qc ? result.words.map((w) => w.state) : undefined}
+          states={result && !result.qc ? (item.type === 'pair' ? result.words.map(() => overallState(result)) : result.words.map((w) => w.state)) : undefined}
           model={model} learner={lbuf} learnerWords={result?.words}
           stressMarks={target.kind === 'stress' && ipaLevel >= 2 && !!result} />
       </div>

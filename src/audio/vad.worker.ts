@@ -1,9 +1,10 @@
 /// <reference lib="webworker" />
 /** Silero VAD (MIT) in its own worker: ~1 ms per 32 ms frame, so it never waits behind the engine. */
 import * as ort from 'onnxruntime-web/wasm'
+import { ortWasmPaths } from '../engine/ortPaths'
 declare const self: DedicatedWorkerGlobalScope
 
-ort.env.wasm.wasmPaths = '/ort/'
+ort.env.wasm.wasmPaths = ortWasmPaths
 ort.env.wasm.numThreads = 1
 ort.env.logLevel = 'error'
 

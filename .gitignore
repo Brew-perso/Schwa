@@ -30,4 +30,3 @@ __pycache__/
 test-results/
 playwright-report/
 .env*
-public/ort/
