@@ -4,5 +4,4 @@
 
 ## Points à vérifier
 
-- weak form of 'us' identical to strong in GA
-- weak form of 'us' identical to strong in SBE
+Aucun.
