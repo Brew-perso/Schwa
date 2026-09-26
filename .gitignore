@@ -29,6 +29,7 @@ tools/engine/work/
 tools/engine/data/
 tools/engine/enc_feat.onnx
 tools/engine/head.pt
+tools/engine/saa_fr_en.pkl
 __pycache__/
 *.pyc
 test-results/
