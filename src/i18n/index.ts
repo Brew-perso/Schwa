@@ -4,7 +4,12 @@ import { STRINGS, type StringKey } from './strings'
 
 /** Resolve the [vous|tu] register syntax used in French texts. */
 export function reg(text: string, register: 'vous' | 'tu'): string {
-  return text.replace(/\[([^|\]]*)\|([^\]]*)\]/g, (_, v: string, t: string) => (register === 'tu' ? t : v))
+  return frTypo(text.replace(/\[([^|\]]*)\|([^\]]*)\]/g, (_, v: string, t: string) => (register === 'tu' ? t : v)))
+}
+
+/** French typography: no line break inside « guillemets » nor before : ; ! ? (non-breaking spaces). */
+export function frTypo(text: string): string {
+  return text.replace(/« /g, '«\u00a0').replace(/ »/g, '\u00a0»').replace(/ ([:;!?])(?=\s|$)/g, '\u00a0$1')
 }
 
 export function fill(text: string, vars?: Record<string, string | number | undefined>) {

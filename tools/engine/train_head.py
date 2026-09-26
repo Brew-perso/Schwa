@@ -41,10 +41,14 @@ if __name__=='__main__':
     va=load(sys.argv[5].split(',')) if len(sys.argv)>5 else None
     print('train utts',len(tr[0]))
     idx=list(range(len(tr[0])))
-    model=Head(); opt=torch.optim.AdamW(model.parameters(),lr=2e-3,weight_decay=1e-2)
+    model=Head()
+    import os
+    if os.environ.get('INIT'): model.load_state_dict(torch.load(os.environ['INIT']))  # fine-tune from a checkpoint
+    LR=float(os.environ.get('LR','2e-3'))
+    opt=torch.optim.AdamW(model.parameters(),lr=LR,weight_decay=1e-2)
     ctc=nn.CTCLoss(blank=0,zero_infinity=True)
     EP=int(sys.argv[3]) if len(sys.argv)>3 else 12
-    steps=EP*math.ceil(len(idx)/32); sched=torch.optim.lr_scheduler.OneCycleLR(opt,2e-3,total_steps=steps,pct_start=0.1)
+    steps=EP*math.ceil(len(idx)/32); sched=torch.optim.lr_scheduler.OneCycleLR(opt,LR,total_steps=steps,pct_start=0.1)
     t0=time.time()
     for ep in range(EP):
         random.shuffle(idx); model.train(); tot=0;n=0
