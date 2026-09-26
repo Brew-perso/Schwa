@@ -2,7 +2,7 @@ import { useSettings } from '../data/settings'
 import { TopBar } from '../components/Nav'
 import { Paper } from '../components/Paper'
 import { Logo } from '../art/Logo'
-import { Swallow } from '../art/Swallow'
+import { Bird } from '../art/Bird'
 import { reg } from '../i18n'
 
 export default function About() {
@@ -12,7 +12,7 @@ export default function About() {
   return (
     <div className="main stack" style={{ ['--stack' as string]: '18px' }}>
       <TopBar back="/settings" />
-      <div className="row" style={{ justifyContent: 'space-between' }}><Logo size={46} /><Swallow pose="perch" size={100} /></div>
+      <div className="row" style={{ justifyContent: 'space-between' }}><Logo size={46} /><Bird pose="perch" size={100} /></div>
       <p className="italic-display" style={{ fontSize: '1.3rem' }}>{L('Viser la clarté, pas l’accent natif.', 'Aim for clarity, not a native accent.')}</p>
 
       <Paper seed="a1" tape={L('La méthode', 'The method')}>

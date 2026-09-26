@@ -59,6 +59,9 @@
 .fb-card.rework { border-left-color: var(--rework); border-left-style: double; border-left-width: 7px; }
 .fb-card.unsure { border-left: 5px dashed var(--unsure); }
 .fb-consigne { font-size: 1.08rem; font-weight: 600; }
+/* the bird sits by the gesture instruction, like the "Action / Geste" note of the art direction */
+.fb-coach { display: flex; align-items: flex-end; gap: 10px; }
+.fb-coach > svg { flex: none; margin-bottom: -4px; }
 .cmp-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .cmp-card { border: 2px solid var(--rule); border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
 .cmp-card .big { font-family: var(--font-display); font-size: 1.6rem; font-weight: 620; line-height: 1.1; }
@@ -142,7 +145,7 @@ details.more[open] > summary::before { content: '–'; }
 .heat td.lvl1 { background: color-mix(in srgb, var(--mint) 25%, transparent); }
 .heat td.lvl2 { background: color-mix(in srgb, var(--mint) 45%, transparent); }
 .heat td.lvl3 { background: color-mix(in srgb, var(--mint) 70%, transparent); }
-.heat td.lvl4, .heat td.lvl5 { background: var(--teal-2); color: #fff; }
+.heat td.lvl4, .heat td.lvl5 { background: var(--teal); color: #fff; }
 
 .celebrate { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; background: color-mix(in srgb, var(--night) 70%, transparent); animation: fadeIn .3s both; padding: 20px; }
 .celebrate .card { max-width: 420px; width: 100%; text-align: center; }

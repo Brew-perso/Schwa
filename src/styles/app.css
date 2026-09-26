@@ -13,6 +13,8 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 html, body { margin: 0; }
 body {
   background: var(--bg);
+  /* cork pinboard granules (light theme only; the dark theme keeps the night sky) */
+  background-image: var(--cork-grain, none);
   color: var(--text);
   font-family: var(--font-body);
   font-size: var(--fs-base);
@@ -54,6 +56,7 @@ small, .small { font-size: .875em; }
 .muted { color: var(--text-soft); }
 .italic-display { font-family: var(--font-display); font-style: italic; font-variation-settings: 'SOFT' 100, 'WONK' 1; }
 .ipa { font-family: var(--font-ipa); font-feature-settings: 'ss05'; letter-spacing: .01em; }
+.ipa-keep { text-transform: none; font-family: var(--font-ipa); letter-spacing: .02em; font-size: 1.15em; }
 .en { font-style: normal; }
 .sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
@@ -235,10 +238,10 @@ small, .small { font-size: .875em; }
 .badge-state.unsure { background: var(--unsure-bg); color: var(--unsure); }
 
 /* ---------- progress ---------- */
-.bar { height: 10px; border-radius: 999px; background: var(--paper-3); overflow: hidden; }
+.bar { height: 10px; border-radius: 999px; background: color-mix(in srgb, var(--ink) 16%, transparent); overflow: hidden; }
 .bar > span { display: block; height: 100%; background: repeating-linear-gradient(-45deg, var(--teal) 0 8px, var(--teal-2) 8px 16px); border-radius: inherit; transition: width .6s var(--ease); }
 .steps-dots { display: flex; gap: 6px; }
-.steps-dots i { width: 22px; height: 6px; border-radius: 3px; background: var(--paper-3); }
+.steps-dots i { width: 22px; height: 6px; border-radius: 3px; background: color-mix(in srgb, var(--ink) 18%, transparent); }
 .steps-dots i.done { background: var(--teal); }
 .steps-dots i.now { background: var(--coral); }
 

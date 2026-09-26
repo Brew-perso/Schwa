@@ -14,7 +14,7 @@ import { analyseDiagnostic, type DiagEvidence, type DiagResult } from '../learni
 import { db } from '../data/db'
 import { toWav } from '../audio/dsp'
 import { Planet } from '../art/Planet'
-import { Swallow } from '../art/Swallow'
+import { Bird } from '../art/Bird'
 
 type Phase = 'intro' | 'perception' | 'stress' | 'reading' | 'free' | 'result'
 
@@ -60,7 +60,7 @@ export function DiagnosticFlow({ onDone }: { onDone: () => void }) {
           <Paper seed={'dp' + k} tape={`${L('Écouter', 'Listen')} · ${k + 1}/${d.perception.length}`}>
             <div className="stack center" style={{ ['--stack' as string]: '14px' }}>
               <p className="label" style={{ margin: 0 }}>{L('Quel mot [entendez-vous|entends-tu] ?', 'Which word do you hear?')}</p>
-              <button className="audio-btn" style={{ width: 76, height: 76, margin: '0 auto' }} onClick={() => void playKey(au.f)} aria-label="Écouter"><IconPlay /></button>
+              <button className="audio-btn" style={{ width: 76, height: 76, margin: '0 auto' }} onClick={() => void playKey(au.f)} aria-label={L('Écouter', 'Listen')}><IconPlay /></button>
               <div className="tiles">
                 {it.options.map((o, i) => (
                   <button key={i} className={`tile ${picked !== null ? (i === answer ? 'is-right' : i === picked ? 'is-wrong' : '') : ''}`} disabled={picked !== null}
@@ -80,7 +80,7 @@ export function DiagnosticFlow({ onDone }: { onDone: () => void }) {
           <Paper seed={'ds' + k} tape={`${L('Syllabe forte', 'Strong syllable')} · ${k + 1}/${d.stress.length}`}>
             <div className="stack center" style={{ ['--stack' as string]: '14px' }}>
               <p className="label" style={{ margin: 0 }}>{L('Où est la syllabe la plus forte ?', 'Where is the strongest syllable?')}</p>
-              <button className="audio-btn" style={{ width: 76, height: 76, margin: '0 auto' }} onClick={() => au && void playKey(au.f)} aria-label="Écouter"><IconPlay /></button>
+              <button className="audio-btn" style={{ width: 76, height: 76, margin: '0 auto' }} onClick={() => au && void playKey(au.f)} aria-label={L('Écouter', 'Listen')}><IconPlay /></button>
               <div className="row" style={{ justifyContent: 'center', gap: 10, flexWrap: 'wrap' }}>
                 {w.syl.map((sy, i) => (
                   <button key={i} className={`tile ${picked !== null ? (i === it.stress ? 'is-right' : i === picked ? 'is-wrong' : '') : ''}`} disabled={picked !== null}
@@ -137,7 +137,7 @@ export function DiagnosticFlow({ onDone }: { onDone: () => void }) {
       {phase === 'result' && result && (
         <Paper seed="dres" tone="card" tape={L('[Votre|Ton] plan de vol', 'Your flight plan')} tapeTone="teal">
           <div className="stack" style={{ ['--stack' as string]: '14px' }}>
-            <div className="row"><Swallow pose="fly" size={140} /><p style={{ margin: 0, fontWeight: 600 }}>{L('Merci ! Voici par où nous allons commencer — les cibles qui comptent le plus pour être compris facilement.', 'Thank you! Here is where we’ll start — the targets that matter most for being understood easily.')}</p></div>
+            <div className="row"><Bird pose="fly" size={96} /><p style={{ margin: 0, fontWeight: 600 }}>{L('Merci ! Voici par où nous allons commencer — les cibles qui comptent le plus pour être compris facilement.', 'Thank you! Here is where we’ll start — the targets that matter most for being understood easily.')}</p></div>
             <div className="stack" style={{ ['--stack' as string]: '10px' }}>
               {result.priorities.map((id, i) => {
                 const t = course.targets.find((x) => x.id === id)!

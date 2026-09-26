@@ -12,7 +12,7 @@ import { Paper } from '../components/Paper'
 import { IconArrowLeft, IconArrowRight, IconHand, IconInfo, IconBook, IconEar, IconQuestion } from '../art/Icons'
 import { playKey, playSequence } from '../audio/player'
 import { sfx } from '../audio/sfx'
-import { Swallow } from '../art/Swallow'
+import { Bird } from '../art/Bird'
 
 /** Micro-lesson (60–90 s): one target, why it matters, the gesture, a French↔English contrast, one check question. */
 export function LessonPlayer({ target, onDone }: { target: Target; onDone: () => void }) {
@@ -42,7 +42,7 @@ export function LessonPlayer({ target, onDone }: { target: Target; onDone: () =>
                 <h2 style={{ marginTop: 8 }}>{pickBi(target.title, lang, s.register)}</h2>
                 <p className="italic-display" style={{ fontSize: '1.15rem', color: 'var(--text-2)' }}>{pickBi(target.tagline, lang, s.register)}</p>
               </div>
-              <Swallow pose="listen" size={92} />
+              <Bird pose="listen" size={92} />
             </div>
           )}
           <BlockBody b={b} target={target} lang={lang} register={s.register} quizPick={quizPick} setQuizPick={setQuizPick} />

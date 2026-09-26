@@ -5,7 +5,7 @@ import { useCourse } from './content/store'
 import { ArtDefs } from './art/Defs'
 import { BottomNav } from './components/Nav'
 import Today from './screens/Today'
-import { Swallow } from './art/Swallow'
+import { Bird } from './art/Bird'
 
 const MapScreen = lazy(() => import('./screens/MapScreen'))
 const TargetScreen = lazy(() => import('./screens/TargetScreen'))
@@ -19,7 +19,7 @@ const Onboarding = lazy(() => import('./screens/Onboarding'))
 function Splash() {
   return (
     <div style={{ minHeight: '80dvh', display: 'grid', placeItems: 'center' }} aria-busy="true">
-      <div className="floaty"><Swallow pose="fly" size={160} title="Schwa" /></div>
+      <div className="floaty"><Bird pose="fly" size={160} title="Schwa" /></div>
     </div>
   )
 }

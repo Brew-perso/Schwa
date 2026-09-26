@@ -14,7 +14,7 @@ import { Planet } from '../art/Planet'
 import { Logo } from '../art/Logo'
 import { Paper } from '../components/Paper'
 import { IconArrowRight, IconBook, IconEar, IconMic, IconRepeat, IconSpeech } from '../art/Icons'
-import { Swallow } from '../art/Swallow'
+import { Bird } from '../art/Bird'
 
 const STEP_LABEL = {
   discover: { fr: 'Découvrir', en: 'Discover' }, hear: { fr: 'Entendre', en: 'Hear' }, produce: { fr: 'Produire', en: 'Produce' },
@@ -102,7 +102,7 @@ export default function Today() {
           </p>
         </Paper>
       </div>
-      <div className="center" style={{ opacity: 0.9 }}><Swallow pose="fly" size={140} /></div>
+      <div className="center" style={{ opacity: 0.9 }}><Bird pose="perch" size={104} /></div>
     </div>
   )
 }
@@ -125,7 +125,7 @@ function WeekRing({ pct, label, title }: { pct: number; label: string; title: st
   return (
     <div className="row" title={title} aria-label={`${title} ${label}`} style={{ gap: 8 }}>
       <svg width="46" height="46" viewBox="0 0 46 46" className="ring">
-        <circle cx="23" cy="23" r={r} fill="none" stroke="var(--paper-3)" strokeWidth="5" />
+        <circle cx="23" cy="23" r={r} fill="none" stroke="color-mix(in srgb, var(--ink) 16%, transparent)" strokeWidth="5" />
         <circle cx="23" cy="23" r={r} fill="none" stroke="var(--teal)" strokeWidth="5" strokeDasharray={`${pct * c} ${c}`} strokeLinecap="round" />
       </svg>
       <span style={{ fontWeight: 800 }}>{label}</span>

@@ -62,7 +62,7 @@ affiné sur le corpus humain (GPU requis, voir 2), pourrait être proposé comme
 
 ## 4. Illustrations
 
-Les illustrations actuelles sont des SVG faits main : hirondelle, planètes en trame demi-teinte, cartes du ciel, papier découpé.
+Les illustrations actuelles sont des SVG faits main : oiseau (passereau gris-bleu de la maquette), planètes en trame demi-teinte, cartes du ciel, papier découpé.
 Elles sont légères et ne dépendent d'aucun service. Pour des collages plus riches dans l'esprit de la maquette (liège, gravures anciennes) :
 
 - **Tenté dans cette session** : le jeton `HF_TOKEN` est bien présent (compte Hugging Face `ggrluoy`, scope `inference-api` inclus) et les Spaces

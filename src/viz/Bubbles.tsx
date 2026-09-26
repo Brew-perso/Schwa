@@ -1,4 +1,5 @@
 import type { RefWord } from '../content/types'
+import { useT } from '../i18n'
 
 const REDUCED = new Set([36]) // unit index of ə in the engine inventory (checked at runtime too)
 
@@ -15,6 +16,7 @@ export function Bubbles({ word, units, stress, learner, perceived, compact = fal
   compact?: boolean
   labels?: boolean
 }) {
+  const t = useT()
   const expected = stress ?? word.st ?? 0
   // which syllables have a reduced vowel?
   let k = 0
@@ -34,7 +36,7 @@ export function Bubbles({ word, units, stress, learner, perceived, compact = fal
   const H = (learnR ? 2 : 1) * (62 * R) + 8
   const W = colW * word.syl.length
   return (
-    <figure style={{ margin: 0 }} aria-label={`Syllabes de ${word.w} : ${word.syl.map((s, i) => (i === expected ? s.l.toUpperCase() : s.l)).join('-')}`}>
+    <figure style={{ margin: 0 }} aria-label={t('bubbles_aria', { w: word.w, syl: word.syl.map((s, i) => (i === expected ? s.l.toUpperCase() : s.l)).join('-') })}>
       <svg viewBox={`0 0 ${W} ${H + (labels ? 22 : 0)}`} width="100%" style={{ maxWidth: Math.min(560, W * 1.2), display: 'block', margin: '0 auto', overflow: 'visible' }}>
         {word.syl.map((s, i) => {
           const cx = colW * i + colW / 2
