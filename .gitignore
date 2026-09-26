@@ -25,6 +25,9 @@ dist-ssr
 
 # Schwa
 tools/models/
+tools/engine/work/
+tools/engine/data/
+tools/engine/enc_feat.onnx
 __pycache__/
 *.pyc
 test-results/

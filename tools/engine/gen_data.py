@@ -3,6 +3,7 @@ os.environ['OMP_NUM_THREADS']='1'
 import onnxruntime as ort
 from units import *
 from misaki import en
+from weak_forms import g2p_weak
 from kokoro_onnx import Kokoro
 import nltk
 from nltk.corpus import brown, gutenberg, webtext
@@ -111,7 +112,7 @@ while len(feats)<N:
         brit = rng.random()<0.4
         if r<0.55: text=sents[(i*nw+wid)%len(sents)]
         else: text=' '.join(rng.sample(words, rng.randint(1,4)))
-        ph,_=G[brit](text)
+        ph,_=g2p_weak(G[brit],text)
         if '❓' in ph or len(ph)>200 or len(ph)<3: continue
         mode='native'
         pool = GB if brit else US

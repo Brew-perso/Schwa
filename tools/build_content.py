@@ -97,6 +97,10 @@ WEAK_RULES = {
     'the': ('ðə', 'ðə'), 'or': ('əɹ', 'ə'), 'your': ('jəɹ', 'jə'), 'her': ('həɹ', 'hə'),
 }
 _VOWEL_START = set('aeiouæɑɐɒɔəɛɜɪʊʌAIOQWYᵊ')
+# Stranded prepositions and auxiliaries strengthen at the end of a clause ("What are you
+# looking at?", "Yes, I can."). Conjunctions and object pronouns don't get that exception —
+# they stay weak even right before a comma or full stop ("Come and see us.").
+_STRONG_AT_CLAUSE_END = {'to', 'for', 'at', 'of', 'can', 'was', 'were', 'does', 'has', 'have', 'or'}
 
 
 def apply_weak_forms(toks, variety):
@@ -107,9 +111,11 @@ def apply_weak_forms(toks, variety):
         lw = t['t'].lower()
         if lw not in WEAK_RULES or 'ˈ' in t['ph']:
             continue
-        # final in its sentence/clause -> strong form
+        # final in its sentence/clause -> strong form, but only for words that actually
+        # strengthen when stranded (see _STRONG_AT_CLAUSE_END above)
         nxt = toks[i + 1] if i + 1 < len(toks) else None
-        if nxt is None or (not nxt['word'] and nxt['t'] in '.?!,;:'):
+        clause_final = nxt is None or (not nxt['word'] and nxt['t'] in '.?!,;:')
+        if clause_final and lw in _STRONG_AT_CLAUSE_END:
             continue
         weak = WEAK_RULES[lw][0 if variety == 'GA' else 1]
         if lw == 'the':

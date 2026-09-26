@@ -7,6 +7,7 @@ so=ort.SessionOptions(); so.intra_op_num_threads=2
 enc.sess=ort.InferenceSession('enc_feat.onnx', so, providers=['CPUExecutionProvider'])
 from misaki import en
 from units import *
+from weak_forms import g2p_weak
 from scipy.signal import butter, lfilter
 G=en.G2P(trf=False,british=False,fallback=None)
 S=os.environ.get('SCHWA_WORK', 'work') + '/' + 'hf/openslr__librispeech_asr/all/'
@@ -25,7 +26,7 @@ for f in files:
         for r in batch.to_pylist():
             a,sr=sf.read(io.BytesIO(r['audio']['bytes'])); a=a.astype(np.float32)
             if len(a)>16000*16: continue
-            ph,_=G(r['text'].lower())
+            ph,_=g2p_weak(G,r['text'].lower())
             if '❓' in ph: continue
             try: u=to_units(ph)
             except KeyError: continue
