@@ -28,6 +28,7 @@ tools/models/
 tools/engine/work/
 tools/engine/data/
 tools/engine/enc_feat.onnx
+tools/engine/head.pt
 __pycache__/
 *.pyc
 test-results/
