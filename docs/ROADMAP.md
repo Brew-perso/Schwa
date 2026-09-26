@@ -37,7 +37,7 @@ le chiffrement et une durée de conservation définie.
 | **Voix TTS premium** (ElevenLabs, Azure Neural) | Encore plus naturelles, émotions, accents régionaux | 5–22 € / mois | Kokoro est déjà très bon ; gain surtout pour les dialogues et l'intonation expressive (C1). |
 | **Synchronisation de classe** (Supabase UE, Scaleway) | Tableau de bord enseignant en direct | 0–25 € / mois | Nécessite l'étude RGPD ci-dessus. |
 | **GPU ponctuel** (Hugging Face, RunPod) | Entraîner une tête plus grosse ; générer des illustrations | ~0,5–2 € / h | Utile pour la v3 : moteur haute précision, voir 3.2. |
-| **Génération d'images** (Hugging Face Spaces / ZeroGPU) | Illustrations collage plus riches | Gratuit avec quota, via jeton | Le connecteur n'autorisait pas l'appel des Spaces dans cette session. Voir 4. |
+| **Génération d'images** (Hugging Face Spaces / ZeroGPU) | Illustrations collage plus riches | Gratuit avec quota, via jeton | Le jeton `HF_TOKEN` est bien visible dans cette nouvelle session (compte `ggrluoy` authentifié), mais l'appel des Spaces (`dynamic_space`, opération `invoke`) reste bloqué par la politique du connecteur (« gradio=none »/scope non activé) — seule l'inspection des Spaces (liste, paramètres) fonctionne. Voir 4. |
 
 ## 3. Corpus humain : le levier principal pour la précision
 
@@ -65,10 +65,42 @@ affiné sur le corpus humain (GPU requis, voir 2), pourrait être proposé comme
 Les illustrations actuelles sont des SVG faits main : hirondelle, planètes en trame demi-teinte, cartes du ciel, papier découpé.
 Elles sont légères et ne dépendent d'aucun service. Pour des collages plus riches dans l'esprit de la maquette (liège, gravures anciennes) :
 
-- lancer dans **une nouvelle session** (le jeton `HF_TOKEN` n'est visible que dans les sessions créées après son ajout) un script de génération
-  via un Space FLUX / SDXL, puis vectoriser et posteriser les images pour garder l'unité graphique ;
-- ou utiliser des **gravures du domaine public** (Wikimedia Commons, Gallica, BHL : oiseaux, planches astronomiques du XIXᵉ), détourées. C'est gratuit,
-  cohérent avec le style collage et juridiquement sûr.
+- **Tenté dans cette session** : le jeton `HF_TOKEN` est bien présent (compte Hugging Face `ggrluoy`, scope `inference-api` inclus) et les Spaces
+  d'image (FLUX.1-schnell, Qwen-Image…) sont listés et inspectables. Mais l'opération d'appel (`invoke`) est désactivée par la configuration
+  du connecteur MCP Hugging Face pour cette session (« l'opération invoke est désactivée car gradio=none est défini »). Aucune image n'a donc
+  pu être générée. Pour lever ce blocage : vérifier, dans les réglages du connecteur Hugging Face sur claude.ai, qu'un accès Gradio/Spaces est
+  bien autorisé (au besoin en listant explicitement l'ID du Space à utiliser), puis relancer une session ;
+- en attendant, une alternative sans dépendance : des **gravures du domaine public** (Wikimedia Commons, Gallica, BHL : oiseaux, planches astronomiques
+  du XIXᵉ), détourées. C'est gratuit, cohérent avec le style collage et juridiquement sûr.
+
+## 4bis. Déploiement Vercel (équipe `la-balme`)
+
+L'équipe Vercel `la-balme` est bien connectée à votre compte GitHub. Le projet **`schwa`** a été créé dans cette équipe
+(`vercel.com/la-balme/schwa`), configuré pour Vite (`npm run build`, sortie `dist/`).
+
+**Ce qui bloque le premier déploiement complet :** relier le projet au dépôt GitHub `Brew-perso/Schwa` demande que
+l'app GitHub de Vercel soit installée sur cet organisation ; ce n'est pas encore le cas (l'API renvoie
+« you need to install the GitHub integration first »). Un envoi manuel des fichiers de build a été écarté : `dist/`
+pèse 137 Mo pour plus de 9 000 fichiers (dont ~9 000 audios et les modèles ONNX du moteur), largement au-delà de ce
+qu'un envoi fichier par fichier via l'API peut raisonnablement transporter.
+
+**Pour terminer le déploiement :**
+
+1. Installer l'app Vercel sur GitHub : <https://github.com/apps/vercel>, en l'autorisant pour l'organisation `Brew-perso`
+   (ou au moins pour le dépôt `Schwa`).
+2. Relier ensuite le dépôt au projet `schwa` déjà créé (Vercel Dashboard → Project Settings → Git, ou en relançant la
+   même demande de déploiement) ; Vercel construira et déploiera automatiquement à chaque push.
+
+Aucune donnée sensible n'est en jeu ici : c'est uniquement une autorisation GitHub ↔ Vercel côté organisation.
+
+## 4ter. Vérification de l'interface
+
+En attendant le déploiement, l'application a été testée en local (build de production + `vite preview`) avec le
+parcours de bout en bout du dépôt (`tests/e2e/flow.mjs`, micro simulé) : accueil → onboarding → séance du jour →
+carte du ciel → une cible complète (découvrir/entendre/produire/guidé/transfert) → carnet → réglages → espace
+enseignant → à propos. Aucune erreur console, aucune régression visuelle relevée sur mobile (390 px) : palette,
+typographie, illustrations et copy sont déjà cohérentes et soignées. Aucune retouche n'a donc été nécessaire lors de
+cette session.
 
 ## 5. Prochaines étapes pédagogiques
 
