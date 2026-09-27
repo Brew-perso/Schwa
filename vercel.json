@@ -3,7 +3,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "rewrites": [{ "source": "/((?!audio/|models/|content/|worklets/|icons/|assets/|sw.js|workbox-|manifest).*)", "destination": "/index.html" }],
+  "rewrites": [{ "source": "/((?!_vercel/|audio/|models/|content/|worklets/|icons/|assets/|sw.js|workbox-|manifest).*)", "destination": "/index.html" }],
   "headers": [
     { "source": "/(.*)", "headers": [
       { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },

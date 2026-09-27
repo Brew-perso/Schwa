@@ -6,6 +6,7 @@ import { ArtDefs } from './art/Defs'
 import { BottomNav } from './components/Nav'
 import Today from './screens/Today'
 import { Bird } from './art/Bird'
+import { startAnalytics } from './data/analytics'
 
 const MapScreen = lazy(() => import('./screens/MapScreen'))
 const TargetScreen = lazy(() => import('./screens/TargetScreen'))
@@ -57,7 +58,9 @@ function Shell() {
 
 export default function App() {
   const hydrate = useSettings((st) => st.hydrate)
+  const ready = useSettings((st) => st.ready)
   useEffect(() => { void hydrate() }, [hydrate])
+  useEffect(() => { if (ready) startAnalytics() }, [ready])
   return (
     <BrowserRouter>
       <ArtDefs />

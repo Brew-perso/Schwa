@@ -36,7 +36,7 @@ export interface Settings {
   predict: boolean
   weeklyGoal: number
   affect: Record<string, number>
-  consent: { storeAudio: boolean; research: boolean; askedAt?: number }
+  consent: { storeAudio: boolean; research: boolean; stats: boolean; askedAt?: number }
   priorities: string[]
   phono: Record<string, number>   // per-domain estimate 0..1 from diagnostic + practice
   calibration?: Calibration
@@ -65,7 +65,7 @@ export const DEFAULTS: Settings = {
   predict: true,
   weeklyGoal: 4,
   affect: {},
-  consent: { storeAudio: true, research: false },
+  consent: { storeAudio: true, research: false, stats: true },
   priorities: [],
   phono: {},
   classCode: '',
@@ -84,7 +84,7 @@ export const useSettings = create<Store>((set, get) => ({
   ready: false,
   hydrate: async () => {
     const saved = await kvGet<Partial<Settings>>('settings', {})
-    const s = { ...DEFAULTS, ...saved }
+    const s = { ...DEFAULTS, ...saved, consent: { ...DEFAULTS.consent, ...saved.consent } }
     set({ s, ready: true })
     applyDocumentSettings(s)
   },
