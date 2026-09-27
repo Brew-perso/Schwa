@@ -259,9 +259,9 @@ export function PerceptionItemView({ item, target, onAnswer, onNext }: {
         <p className="label" style={{ margin: 0 }}><IpaSafe text={pickBi(q, lang, s.register)} /></p>
       </div>
       <div className="row" style={{ justifyContent: 'center', gap: 6 }}>
-        <Bird pose="perch" size={84} />
-        <button className="audio-btn" style={{ width: 76, height: 76 }} onClick={replay} aria-label={t('listen')}><IconPlay /></button>
         <span style={{ width: 84 }} aria-hidden="true" />
+        <button className="audio-btn" style={{ width: 76, height: 76 }} onClick={replay} aria-label={t('listen')}><IconPlay /></button>
+        <Bird pose="listen" size={84} />
       </div>
       {body}
       {answered && (

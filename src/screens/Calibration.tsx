@@ -139,7 +139,7 @@ export function CalibrationFlow({ onDone }: { onDone: () => void }) {
       {phase === 'done' && (
         <Paper seed="cal-done" tone="mint">
           <div className="stack center" style={{ ['--stack' as string]: '12px' }}>
-            <Bird pose="perch" size={110} />
+            <Bird pose="cheer" size={110} />
             <p style={{ margin: 0, fontWeight: 700 }}>{L('[Votre|Ta] voix est calibrée.', 'Your voice is calibrated.')}</p>
             <p className="small muted" style={{ margin: 0 }}>{L('La mélodie et la carte des voyelles seront affichées par rapport à [votre|ta] propre voix — jamais par rapport à une hauteur « normale ».', 'Melody and vowel map will be shown relative to your own voice — never to a "normal" pitch.')}</p>
             <button className="btn primary" onClick={onDone}>{L('Continuer', 'Continue')} <IconArrowRight width={20} height={20} /></button>
