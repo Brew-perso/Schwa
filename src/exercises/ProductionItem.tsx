@@ -15,6 +15,7 @@ import { Bubbles } from '../viz/Bubbles'
 import { Melody } from '../viz/Melody'
 import { VowelMap, normaliseFormants, VOWEL_Z } from '../viz/VowelMap'
 import { IconAB, IconSlow, IconRepeat, IconArrowRight, IconEar, IconInfo } from '../art/Icons'
+import { Bird } from '../art/Bird'
 import { db, pruneAttemptAudio } from '../data/db'
 import { toWav } from '../audio/dsp'
 import type { State } from '../engine/evaluate'
@@ -231,7 +232,10 @@ function Feedback({ result, item, target, prep, lang, register, units, variety, 
           <span className="small muted">{t('machine_understood')} : « {result.transcript} »</span>
         )}
       </div>
-      <p className="fb-consigne" style={{ margin: 0 }}>{consigne}</p>
+      <div className="fb-coach">
+        <Bird pose="perch" size={72} />
+        <p className="fb-consigne" style={{ margin: 0 }}>{consigne}</p>
+      </div>
       {cards && (
         <div className="cmp-cards">
           <div className="cmp-card aim">
@@ -278,7 +282,7 @@ function Feedback({ result, item, target, prep, lang, register, units, variety, 
                 words={ref.words.map((w) => w.w)} />
             )}
             {vowelZ && vowelTargets.length >= 2 && (
-              <div className="center"><VowelMap targets={vowelTargets.slice(0, 3)} learner={{ z: vowelZ, label: lang === 'fr' ? 'vous' : 'you' }} lang={lang} /></div>
+              <div className="center"><VowelMap targets={vowelTargets.slice(0, 3)} learner={{ z: vowelZ, label: t('viz_you') }} lang={lang} /></div>
             )}
             {result.checks.length > 0 && (
               <ul className="small" style={{ margin: 0, paddingLeft: 18 }}>

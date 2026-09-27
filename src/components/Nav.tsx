@@ -2,6 +2,7 @@ import { NavLink, useNavigate } from 'react-router'
 import { IconArrowLeft, IconJournal, IconMap, IconMore, IconSun } from '../art/Icons'
 import { useT } from '../i18n'
 import type { ReactNode } from 'react'
+import { IpaSafe } from './IpaSafe'
 
 export function BottomNav() {
   const t = useT()
@@ -12,7 +13,7 @@ export function BottomNav() {
     { to: '/settings', label: t('nav_more'), icon: <IconMore /> },
   ]
   return (
-    <nav className="nav" aria-label="Navigation principale">
+    <nav className="nav" aria-label={t('main_nav')}>
       <div className="nav-inner">
         {items.map((i) => (
           <NavLink key={i.to} to={i.to} end={i.end} className={({ isActive }) => (isActive ? 'active' : '')}>
@@ -35,7 +36,7 @@ export function TopBar({ title, back = true, right, onBack }: { title?: ReactNod
           <IconArrowLeft width={20} height={20} /> {t('back')}
         </button>
       ) : <span />}
-      {title && <div className="label" style={{ textAlign: 'center', flex: 1 }}>{title}</div>}
+      {title && <div className="label" style={{ textAlign: 'center', flex: 1 }}>{typeof title === 'string' ? <IpaSafe text={title} /> : title}</div>}
       <div style={{ minWidth: 44, display: 'flex', justifyContent: 'flex-end' }}>{right}</div>
     </div>
   )

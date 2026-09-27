@@ -1,5 +1,6 @@
 import { curveBasis, line } from 'd3-shape'
 import type { AudioRef } from '../content/types'
+import { useT } from '../i18n'
 
 /**
  * Melody curve (charte §4.1): a heavily smoothed contour over the model's, no Hz axis — only the shape counts
@@ -33,6 +34,7 @@ export function Melody({ model, learner, learnerSpan, words, height = 150 }: {
   words?: string[]
   height?: number
 }) {
+  const t = useT()
   const W = 560, H = height
   const mT0 = model?.wt?.find(Boolean)?.[0] ?? 0
   const mT1 = [...(model?.wt ?? [])].reverse().find(Boolean)?.[1] ?? (model?.d ?? 1)
@@ -53,7 +55,7 @@ export function Melody({ model, learner, learnerSpan, words, height = 150 }: {
   }
   return (
     <figure style={{ margin: 0 }}>
-      <svg viewBox={`0 0 ${W} ${H + 26}`} width="100%" role="img" aria-label="Courbe mélodique : modèle en pointillés, votre voix en trait plein">
+      <svg viewBox={`0 0 ${W} ${H + 26}`} width="100%" role="img" aria-label={t('melody_aria')}>
         <line x1="16" x2={W - 16} y1={y(0)} y2={y(0)} stroke="var(--rule)" strokeDasharray="2 5" />
         {runs(m).map((r, i) => <path key={'m' + i} d={gen(r) ?? ''} fill="none" stroke="var(--indigo)" strokeWidth="5" strokeLinecap="round" strokeDasharray="1 9" opacity=".75" />)}
         {runs(l).map((r, i) => <path key={'l' + i} d={gen(r) ?? ''} fill="none" stroke="var(--coral)" strokeWidth="4.5" strokeLinecap="round" filter="url(#rough)" />)}
@@ -65,8 +67,8 @@ export function Melody({ model, learner, learnerSpan, words, height = 150 }: {
         })}
       </svg>
       <figcaption className="small muted" style={{ display: 'flex', gap: 16, justifyContent: 'center' }}>
-        <span><svg width="28" height="8"><line x1="2" x2="26" y1="4" y2="4" stroke="var(--indigo)" strokeWidth="4" strokeDasharray="1 6" strokeLinecap="round" /></svg> modèle</span>
-        {learner && <span><svg width="28" height="8"><line x1="2" x2="26" y1="4" y2="4" stroke="var(--coral)" strokeWidth="4" strokeLinecap="round" /></svg> vous</span>}
+        <span><svg width="28" height="8"><line x1="2" x2="26" y1="4" y2="4" stroke="var(--indigo)" strokeWidth="4" strokeDasharray="1 6" strokeLinecap="round" /></svg> {t('viz_model')}</span>
+        {learner && <span><svg width="28" height="8"><line x1="2" x2="26" y1="4" y2="4" stroke="var(--coral)" strokeWidth="4" strokeLinecap="round" /></svg> {t('viz_you')}</span>}
       </figcaption>
     </figure>
   )

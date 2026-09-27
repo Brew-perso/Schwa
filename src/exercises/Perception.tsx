@@ -6,6 +6,8 @@ import { pickBi, reg, useT } from '../i18n'
 import { playKey, preload, stopAll } from '../audio/player'
 import { sfx } from '../audio/sfx'
 import { IconArrowRight, IconEar, IconPlay } from '../art/Icons'
+import { Bird } from '../art/Bird'
+import { IpaSafe } from '../components/IpaSafe'
 import { db } from '../data/db'
 import { Bubbles } from '../viz/Bubbles'
 
@@ -243,7 +245,7 @@ export function PerceptionItemView({ item, target, onAnswer, onNext }: {
         <p className="center" style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', margin: 0 }}>{answered ? item.text : shown}</p>
         {!answered && (
           <form className="row" onSubmit={(e) => { e.preventDefault(); const ok = norm(typed) === norm(blanks.join(' ')); void finish(ok, -1) }}>
-            <input type="text" value={typed} onChange={(e) => setTyped(e.target.value)} placeholder={blanks.map(() => '…').join(' / ')} aria-label="Mots manquants" autoFocus />
+            <input type="text" value={typed} onChange={(e) => setTyped(e.target.value)} placeholder={blanks.map(() => '…').join(' / ')} aria-label={t('missing_words')} autoFocus />
             <button className="btn small" type="submit">OK</button>
           </form>
         )}
@@ -254,10 +256,12 @@ export function PerceptionItemView({ item, target, onAnswer, onNext }: {
   return (
     <div className="stack" style={{ ['--stack' as string]: '18px' }}>
       <div className="center">
-        <p className="label" style={{ margin: 0 }}>{pickBi(q, lang, s.register)}</p>
+        <p className="label" style={{ margin: 0 }}><IpaSafe text={pickBi(q, lang, s.register)} /></p>
       </div>
-      <div className="row" style={{ justifyContent: 'center' }}>
+      <div className="row" style={{ justifyContent: 'center', gap: 6 }}>
+        <span style={{ width: 84 }} aria-hidden="true" />
         <button className="audio-btn" style={{ width: 76, height: 76 }} onClick={replay} aria-label={t('listen')}><IconPlay /></button>
+        <Bird pose="listen" size={84} />
       </div>
       {body}
       {answered && (

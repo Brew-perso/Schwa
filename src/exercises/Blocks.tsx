@@ -13,7 +13,7 @@ import type { Step } from '../learning/plan'
 import { Paper } from '../components/Paper'
 import { IconArrowRight, IconInfo } from '../art/Icons'
 import { sfx } from '../audio/sfx'
-import { Swallow } from '../art/Swallow'
+import { Bird } from '../art/Bird'
 import { engine } from '../engine/client'
 
 export interface StepSummary { xp: number; newLevel: NLevel | null; done: boolean; stats?: { ok: number; n: number } }
@@ -156,7 +156,7 @@ export function BlockSummary({ target, summary, kind, onContinue }: { target: Ta
   return (
     <Paper tone={summary.newLevel ? 'mint' : 'card'} seed={target.id + kind} tape={lang === 'fr' ? 'Bilan' : 'Wrap-up'}>
       <div className="stack center" style={{ ['--stack' as string]: '12px' }}>
-        {summary.newLevel ? <Swallow pose="fly" size={170} /> : <Swallow pose="perch" size={110} />}
+        {summary.newLevel ? <Bird pose="fly" size={130} /> : <Bird pose="cheer" size={110} />}
         {summary.newLevel && (
           <h2 className="pop-in" style={{ margin: 0 }}>{summary.newLevel} — {pickBi(LEVEL_TEXT[summary.newLevel], lang, s.register)}</h2>
         )}

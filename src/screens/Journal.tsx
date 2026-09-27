@@ -82,14 +82,14 @@ export default function Journal() {
         {port.length === 0 && <p className="muted" style={{ margin: 0 }}>{lang === 'fr' ? reg('[Vos|Tes] enregistrements choisis (diagnostic, parole libre) apparaîtront ici. Ils restent sur [votre|ton] appareil.', s.register) : 'Your chosen recordings (diagnostic, free speech) will appear here. They stay on your device.'}</p>}
         {port.map((p) => (
           <div key={p.id} className="portfolio-row">
-            <button className="audio-btn" style={{ width: 42, height: 42 }} onClick={() => void play(p)} aria-label="Écouter"><IconEar /></button>
+            <button className="audio-btn" style={{ width: 42, height: 42 }} onClick={() => void play(p)} aria-label={lang === 'fr' ? 'Écouter' : 'Listen'}><IconEar /></button>
             <div>
               <div style={{ fontWeight: 700 }}>{p.label}</div>
               <div className="small muted">{new Date(p.ts).toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-GB')} · {Math.round(p.duration)} s{p.transcript ? ` · « ${p.transcript.slice(0, 60)}${p.transcript.length > 60 ? '…' : ''} »` : ''}</div>
             </div>
             <div className="row" style={{ gap: 6 }}>
-              <button className="icon-btn" aria-label="Télécharger" onClick={() => { const a = document.createElement('a'); a.href = URL.createObjectURL(p.audio); a.download = `schwa-${p.kind}-${new Date(p.ts).toISOString().slice(0, 10)}.wav`; a.click() }}><IconDownload /></button>
-              <button className="icon-btn" aria-label="Supprimer" onClick={async () => { if (confirm(lang === 'fr' ? 'Supprimer cet enregistrement ?' : 'Delete this recording?')) { await db.portfolio.delete(p.id!); reload() } }}><IconTrash /></button>
+              <button className="icon-btn" aria-label={lang === 'fr' ? 'Télécharger' : 'Download'} onClick={() => { const a = document.createElement('a'); a.href = URL.createObjectURL(p.audio); a.download = `schwa-${p.kind}-${new Date(p.ts).toISOString().slice(0, 10)}.wav`; a.click() }}><IconDownload /></button>
+              <button className="icon-btn" aria-label={lang === 'fr' ? 'Supprimer' : 'Delete'} onClick={async () => { if (confirm(lang === 'fr' ? 'Supprimer cet enregistrement ?' : 'Delete this recording?')) { await db.portfolio.delete(p.id!); reload() } }}><IconTrash /></button>
             </div>
           </div>
         ))}

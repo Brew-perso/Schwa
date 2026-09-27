@@ -4,7 +4,7 @@ import { useSettings, type Settings } from '../data/settings'
 import { reg } from '../i18n'
 import { Paper } from '../components/Paper'
 import { StarChart } from '../art/StarChart'
-import { Swallow } from '../art/Swallow'
+import { Bird } from '../art/Bird'
 import { Logo } from '../art/Logo'
 import { IconArrowRight, IconArrowLeft } from '../art/Icons'
 import { CalibrationFlow } from './Calibration'
@@ -50,7 +50,7 @@ export default function Onboarding() {
           <section className="hero" style={{ minHeight: 420, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
             <StarChart night className="starchart" seed={3} style={{ width: 520, height: 520, right: -120, top: -120 }} />
             <div style={{ position: 'absolute', top: 26, left: 20 }}><span style={{ color: '#f3ead7' }}><Logo size={40} /></span></div>
-            <div style={{ position: 'absolute', top: 70, right: 16 }} className="floaty"><Swallow pose="fly" size={210} /></div>
+            <div style={{ position: 'absolute', top: 18, right: 14 }} className="floaty"><Bird pose="fly" size={124} /></div>
             <div style={{ position: 'relative' }}>
               <h1 style={{ fontSize: 'clamp(2.1rem, 7vw, 3.3rem)', maxWidth: '12ch' }}>{L('[Gagnez|Gagne] en clarté.', 'Speak clearly.')}</h1>
               <p style={{ color: '#e2d8c2', fontSize: '1.15rem', maxWidth: '36ch' }}>{L('Une prononciation anglaise pensée pour les francophones : être compris facilement, sans renier son accent.', 'English pronunciation designed for French speakers: be understood easily, without giving up your accent.')}</p>

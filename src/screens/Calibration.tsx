@@ -9,7 +9,7 @@ import { AudioButton } from '../components/AudioButton'
 import { Paper } from '../components/Paper'
 import { IconHeadphones, IconMic, IconCheck, IconArrowRight } from '../art/Icons'
 import { yin } from '../engine/acoustics'
-import { Swallow } from '../art/Swallow'
+import { Bird } from '../art/Bird'
 
 /**
  * "Calibrage du micro" (30 s): permission, level & background noise, then five short neutral phrases
@@ -117,7 +117,7 @@ export function CalibrationFlow({ onDone }: { onDone: () => void }) {
               </>
             ) : (
               <>
-                <p style={{ margin: 0 }}><IconCheck width={20} height={20} style={{ color: 'var(--teal)', verticalAlign: '-4px' }} /> {noiseDb < -50 ? L('Pièce calme : parfait.', 'Quiet room: perfect.') : noiseDb < -38 ? L('Un peu de bruit de fond, ça ira.', 'A little background noise, that’s fine.') : L('La pièce est bruyante : si l’analyse hésite, [essayez|essaie] le mode « maintenir pour parler » ou un casque.', 'The room is noisy: if the analysis hesitates, try "hold to talk" or a headset.')}</p>
+                <p style={{ margin: 0 }}><IconCheck width={20} height={20} style={{ color: 'var(--teal)', verticalAlign: '-4px' }} /> {noiseDb < -50 ? L('Pièce calme : idéal.', 'Quiet room: ideal.') : noiseDb < -38 ? L('Un peu de bruit de fond, ça ira.', 'A little background noise, that’s fine.') : L('La pièce est bruyante : si l’analyse hésite, [essayez|essaie] le mode « maintenir pour parler » ou un casque.', 'The room is noisy: if the analysis hesitates, try "hold to talk" or a headset.')}</p>
                 {applied && <p className="small muted" style={{ margin: 0 }}>{L('Traitements du navigateur désactivés pour une analyse fidèle', 'Browser processing disabled for faithful analysis')} : echo {String(applied.echoCancellation ?? '—')}, noise {String(applied.noiseSuppression ?? '—')}, AGC {String(applied.autoGainControl ?? '—')}.</p>}
                 <button className="btn primary" onClick={() => setPhase('phrases')}>{L('Continuer', 'Continue')} <IconArrowRight width={20} height={20} /></button>
               </>
@@ -139,7 +139,7 @@ export function CalibrationFlow({ onDone }: { onDone: () => void }) {
       {phase === 'done' && (
         <Paper seed="cal-done" tone="mint">
           <div className="stack center" style={{ ['--stack' as string]: '12px' }}>
-            <Swallow pose="listen" size={110} />
+            <Bird pose="cheer" size={110} />
             <p style={{ margin: 0, fontWeight: 700 }}>{L('[Votre|Ta] voix est calibrée.', 'Your voice is calibrated.')}</p>
             <p className="small muted" style={{ margin: 0 }}>{L('La mélodie et la carte des voyelles seront affichées par rapport à [votre|ta] propre voix — jamais par rapport à une hauteur « normale ».', 'Melody and vowel map will be shown relative to your own voice — never to a "normal" pitch.')}</p>
             <button className="btn primary" onClick={onDone}>{L('Continuer', 'Continue')} <IconArrowRight width={20} height={20} /></button>

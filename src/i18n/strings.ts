@@ -50,6 +50,12 @@ export const STRINGS = {
   understood_pair: { fr: "J'ai compris :", en: 'I understood:' },
 
   legend_title: { fr: 'Légende', en: 'Key' },
+  viz_model: { fr: 'modèle', en: 'model' },
+  viz_you: { fr: '[vous|toi]', en: 'you' },
+  melody_aria: { fr: 'Courbe mélodique : modèle en pointillés, [votre|ta] voix en trait plein', en: 'Melody curve: model dotted, your voice solid' },
+  bubbles_aria: { fr: 'Syllabes de {w} : {syl}', en: 'Syllables of {w}: {syl}' },
+  missing_words: { fr: 'Mots manquants', en: 'Missing words' },
+  main_nav: { fr: 'Navigation principale', en: 'Main navigation' },
   xp: { fr: 'points d’effort', en: 'effort points' },
   week_goal: { fr: 'Objectif de la semaine', en: 'Weekly goal' },
   sessions: { fr: 'séances', en: 'sessions' },

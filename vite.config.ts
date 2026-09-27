@@ -31,7 +31,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,woff2,png,json}'],
+        globPatterns: ['**/*.{js,css,html,svg,woff2,png,webp,json}'],
         globIgnores: ['**/audio/**', '**/models/**', 'content/targets/**'],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         navigateFallbackDenylist: [/^\/audio\//, /^\/models\//],

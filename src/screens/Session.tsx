@@ -16,7 +16,7 @@ import type { SrsCard } from '../data/db'
 import type { Target } from '../content/types'
 import { logSession, XP } from '../learning/xp'
 import { IconArrowRight, IconCheck } from '../art/Icons'
-import { Swallow } from '../art/Swallow'
+import { Bird } from '../art/Bird'
 import { sfx } from '../audio/sfx'
 import { closeMic } from '../audio/recorder'
 
@@ -120,7 +120,7 @@ function Reflect({ onDone, xp, register }: { onDone: (r: { improved?: string; wa
     <Paper tone="kraft" seed="reflect" tape={lang === 'fr' ? 'Clôture' : 'Wrap-up'}>
       <div className="stack" style={{ ['--stack' as string]: '14px' }}>
         <div className="row" style={{ alignItems: 'center' }}>
-          <Swallow pose="perch" size={96} />
+          <Bird pose="cheer" size={96} />
           <div>
             <h2 style={{ margin: 0 }}>{lang === 'fr' ? 'Séance terminée' : 'Session complete'}</h2>
             <p className="muted" style={{ margin: 0 }}>+{xp} {lang === 'fr' ? 'points d’effort' : 'effort points'}</p>

@@ -14,7 +14,7 @@
 | ONNX Runtime Web | Microsoft | MIT | Exécution des modèles |
 | Praat / parselmouth | Boersma & Weenink / Jadoul et al. | GPL-3.0 (outil de build uniquement, non distribué) | Manipulation PSOLA de l'intonation, mesures F0 |
 | Fraunces, Atkinson Hyperlegible Next, Charis SIL | Undercase Type ; Braille Institute ; SIL | OFL-1.1 | Polices (auto-hébergées via Fontsource) |
-| Illustrations (hirondelle, planètes, cartes du ciel, papier) | Dessinées en SVG pour ce projet | CC BY-NC-SA 4.0 | Interface |
+| Illustrations (oiseau, planètes, cartes du ciel, papier) | Dessinées en SVG pour ce projet | CC BY-NC-SA 4.0 | Interface |
 | Textes pédagogiques, fiches, items | Rédigés pour ce projet d'après le cadre didactique fourni | CC BY-NC-SA 4.0 | `content/` |
 
 Remarque : les voix Kokoro sont des voix de synthèse. L'écran « À propos » l'indique à l'apprenant.
