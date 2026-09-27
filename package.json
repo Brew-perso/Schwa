@@ -15,6 +15,7 @@
     "@fontsource-variable/fraunces": "^5.3.0",
     "@fontsource/atkinson-hyperlegible-next": "^5.3.0",
     "@fontsource/charis-sil": "^5.3.0",
+    "@vercel/analytics": "^2.0.1",
     "d3-shape": "^3.2.0",
     "dexie": "^4.4.6",
     "onnxruntime-web": "^1.30.0",
@@ -38,5 +39,5 @@
     "vitest": "^5.0.2"
   },
   "license": "EUPL-1.2",
-  "description": "Schwa \u2014 English pronunciation training for French speakers (A2\u2013C1), on-device speech analysis."
+  "description": "Schwa — English pronunciation training for French speakers (A2–C1), on-device speech analysis."
 }

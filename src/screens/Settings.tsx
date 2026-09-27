@@ -139,6 +139,10 @@ export default function Settings() {
           <div><div className="s-title">{L('Garder mes essais pour la réécoute', 'Keep my attempts for replay')}</div><div className="s-sub">{L('Les 5 derniers essais par item, sur cet appareil.', 'Last 5 attempts per item, on this device.')}</div></div>
           <input type="checkbox" checked={s.consent.storeAudio} onChange={(e) => up({ consent: { ...s.consent, storeAudio: e.target.checked } })} />
         </label>
+        <label className="setting switch">
+          <div><div className="s-title">{L('Statistiques de fréquentation anonymes', 'Anonymous usage statistics')}</div><div className="s-sub">{L('Compte les pages consultées (par exemple la cible et l’étape ouvertes), sans cookie ni identifiant. Aucun enregistrement ni aucune réponse n’est envoyé.', 'Counts the pages viewed (for example which target and step), with no cookie or identifier. No recording or answer is ever sent.')}</div></div>
+          <input type="checkbox" checked={s.consent.stats !== false} onChange={(e) => up({ consent: { ...s.consent, stats: e.target.checked } })} />
+        </label>
         <div className="setting">
           <div><div className="s-title">{L('Exporter toutes mes données', 'Export all my data')}</div></div>
           <button className="btn small" onClick={async () => downloadJson(await exportAll(), `schwa-donnees-${new Date().toISOString().slice(0, 10)}.json`)}><IconDownload width={18} height={18} /> JSON</button>

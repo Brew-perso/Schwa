@@ -7,7 +7,11 @@ Il liste aussi les questions qui restent à trancher.
 
 **Conception actuelle : minimisation maximale.**
 
-- Pas de compte, pas de serveur applicatif, pas de cookie, pas de mesure d'audience, pas de police ni de CDN tiers : tout est auto-hébergé.
+- Pas de compte, pas de serveur applicatif, pas de cookie, pas de police ni de CDN tiers : tout est auto-hébergé.
+- **Mesure d'audience anonyme** (Vercel Web Analytics, script servi par le même domaine) : pages vues uniquement, sans cookie ni identifiant durable
+  (empreinte de visite recalculée chaque jour). Elle indique la fréquentation et les cibles et étapes consultées (l'adresse de la page les contient).
+  Aucun événement personnalisé, aucune réponse ni aucun enregistrement. Activée par défaut, désactivable dans Réglages ; public visé : adultes
+  (étudiants du supérieur, particuliers). Résultats dans Vercel → projet schwa → onglet Analytics.
 - La voix est analysée **dans le navigateur**. Les enregistrements restent **sur l'appareil** (IndexedDB) pour la réécoute et le portfolio :
   seules les 5 dernières tentatives par item sont gardées, et l'option se désactive dans Réglages.
 - Le partage avec l'enseignant se fait par **export volontaire** d'un fichier JSON, remis par l'apprenant (ENT, clé USB…).

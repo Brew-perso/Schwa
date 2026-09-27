@@ -32,6 +32,7 @@ export default function About() {
 
       <Paper seed="a3" tape={L('Confidentialité', 'Privacy')} tapeTone="teal">
         <p style={{ marginBottom: 0 }}>{L('Schwa ne crée pas de compte et n’envoie aucun enregistrement : tout est stocké sur [votre|ton] appareil (IndexedDB). [Vous pouvez|Tu peux] exporter ou effacer [vos|tes] données à tout moment dans les réglages. Partager un bilan ou un enregistrement avec [votre|ton] enseignant·e se fait uniquement par un fichier que [vous choisissez|tu choisis] d’envoyer.', 'Schwa has no accounts and sends no recordings: everything is stored on your device (IndexedDB). You can export or erase your data at any time in settings. Sharing a report or recording with your teacher only happens through a file you choose to send.')}</p>
+        <p style={{ marginBottom: 0 }}>{L('Pour savoir quelles cibles servent le plus, Schwa compte les pages consultées de façon anonyme (Vercel Web Analytics) : pas de cookie, pas d’identifiant durable, seulement des totaux par page, pays et type d’appareil. [Vous pouvez|Tu peux] couper ce comptage dans les réglages.', 'To learn which targets are used most, Schwa counts page views anonymously (Vercel Web Analytics): no cookie, no durable identifier, only totals per page, country and device type. You can turn this off in settings.')}</p>
       </Paper>
 
       <Paper seed="a4" tone="kraft" tape={L('Licences et crédits', 'Licences & credits')} tapeTone="indigo">
